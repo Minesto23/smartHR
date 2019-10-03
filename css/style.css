@@ -1,0 +1,81 @@
+@import url('https://fonts.googleapis.com/css?family=Oxygen&display=swap');
+/* barra de navegacion */
+#principal-bar{
+  background-color: #F7FaF0;
+}
+
+.logo{
+  width: 70px;
+  /* height:0px; */
+}
+
+
+/* --------------------------MAIN */
+
+#main_bg{
+  background: url("../images/edificio.png") no-repeat fixed;
+  background-size: cover;
+  height:700px;
+  justify-content: center;
+}
+
+#main_title{
+  background-color: #F7FaF0;
+  color: #323335;
+  padding-top: 100px;
+  padding-left: 250px 
+}
+
+.title{
+  font-size: 95px;
+}
+/*------------------- About us --------------------------*/
+
+#about-us{
+  background-color: #F7FaF0;
+  margin-top: 400px;
+}
+
+#about-us h3{
+  color: #CA636D;
+  padding-left: 200px;
+  font-size: 20px;
+  font-style: italic;
+}
+
+#about-us p{
+  color: #323335;
+  padding-left: 200px;
+  padding-right: 200px;
+  font-size: 25px;
+  text-align: justify;
+}
+
+#services{
+  background-color: white
+}
+
+#services h3{
+  color: #CA636D;
+  font-size: 20px;
+  font-style: italic;
+  padding-left: 200px;
+}
+
+#green-service{
+  background-color: #63B3AA;
+  max-width: 400px;
+  max-height: 400px;
+}
+#red-service{
+  background-color: #CA636D;
+  max-width: 400px;
+  max-height: 400px;
+}
+
+#buttonMore{
+  background-color: #CA636D;
+  border: none;
+  font-size: 20px;
+  width: 120px;
+}
