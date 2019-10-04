@@ -49,6 +49,8 @@
   text-align: justify;
 }
 
+/*-------------------------- Services ------------------------- */
+
 #services{
   background-color: white;
   padding-top: 100px;
@@ -58,26 +60,27 @@
 #services h3{
   color: #CA636D;
   font-size: 20px;
-  padding-left: 200px;
 }
 
 #green-service{
   background-color: #63B3AA;
-  max-width: 400px;
-  max-height: 400px;
 }
 #red-service{
   background-color: #CA636D;
-  max-width: 400px;
-  max-height: 400px;
+}
+
+#red-service , #green-service{
+  height: 300px;
 }
 
 #buttonMore{
   background-color: #CA636D;
   border: none;
   font-size: 20px;
-  width: 120px;
+  width: 140px;
 }
+
+/* ------------------ questions -----------------------------*/
 
 #questions{
   background-color: #CA636D;
@@ -100,3 +103,83 @@
   margin-bottom: 20px;
 }
 
+/*---------------- news --------------------------- */
+
+#main2_bg{
+  background: url("../images/sociedades.jpg") no-repeat fixed;
+  background-size: cover;
+  height:900px;
+  justify-content: center;
+}
+
+.news{
+  justify-content: space-around;
+}
+.new{
+  background-color: white;
+  height: 350px;
+  min-width: 300px;
+  margin-top: 25px;
+  margin-bottom: 25px;
+  /* border: solid 1px white;
+  padding: 0px;
+  box-shadow: 4px 4px #ced1d4; */
+}
+
+.new img{
+  width: 100%;
+  /* height: auto; */
+  height: 200px;
+}
+
+.new a p{
+  font-size: 20px;
+  color: #323335;
+  margin: 15px;
+  height: 75px;
+}
+
+.new a{
+  text-decoration: none;
+}
+
+.new a:hover{
+  text-decoration: none;
+}
+
+.vistas{
+  border-top: solid 1px gray;
+  color: gray;
+}
+
+.vistas img{
+  width: 30px;
+  height: 30px;
+  margin-right: 10px;
+}
+
+.vistas a{
+margin-left: 10px;
+}
+
+/*------------------------ footer ------------------- */
+
+#footer{
+  background-color: #CA636D;
+  color: #F7FaF0;
+  padding-top: 50px;
+  font-size: 18px;
+}
+
+.form-control{
+  border-color: #323335;
+  border-style: solid;
+  border-width: 3px;
+  font-size: 19px;
+}
+
+#send{
+  background-color: #323335;
+  border: none;
+  width: 100%;
+}
