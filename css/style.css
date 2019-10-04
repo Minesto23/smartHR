@@ -2,6 +2,7 @@
 /* barra de navegacion */
 #principal-bar{
   background-color: white;
+  font-size: 20px;
 }
 
 .logo{
@@ -64,9 +65,11 @@
 
 #green-service{
   background-color: #63B3AA;
+  color: #F7FaF0;
 }
 #red-service{
   background-color: #CA636D;
+  color: #F7FaF0;
 }
 
 #red-service , #green-service{
@@ -91,7 +94,10 @@
 #questions-title{
   text-decoration: underline  #F7FaF0;
   text-underline-position: under;
-  font-size: 30px;
+  font-size: 40px;
+}
+#question-text{
+  font-size: 20px;
 }
 
 #button-question{
@@ -133,10 +139,10 @@
 }
 
 .new a p{
-  font-size: 20px;
+  font-size: 18px;
   color: #323335;
   margin: 15px;
-  height: 75px;
+  height: 60px;
 }
 
 .new a{
