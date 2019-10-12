@@ -1,0 +1,106 @@
+{% extends 'core/base.html' %}
+
+{% load static %}
+
+{% block title%}Consulting Services{% endblock %}
+
+{% block content %}
+
+<!-- main            -->
+      <main>
+        <div class="container">
+          <div class="row text-justify justify-content-around OurServices wow slideInUp">
+            <div class="col-5">
+              <h3>Labore laboris pariatur consectetur ut occaecat commodo sint adipisicing amet.Enim anim anim mollit anim in cillum non ad nisi pariatur excepteur laborum.</h3>
+            </div>
+            {% for our_service in our_services %}
+            <div class="col-5">
+              <h3 id="our-service">Our Services</h3>
+              <p>{{our_service.content|safe}}</p>
+            </div>
+            {% endfor %}
+          </div>
+        </div>
+      </main> 
+
+       <div class="container-fluid pl-0 pt-5 mt-5">
+        <div class="row text-center">
+        {% for service in services %}
+          {% if forloop.counter == 1  %}
+          <div class="col-6 wow fadeIn" data-wow-delay="0.3s">
+            <div class="row">
+              <div class="col-6">
+                <img src="{{service.image.url}}" alt="" id="image-services">
+              </div>
+              <div class="col-6 text-service">
+                <h3>{{service.title}}</h3>
+                <p>{{service.content|safe}}</p>
+              </div>
+            </div>
+          </div>
+          {% elif forloop.counter == 2 %}
+          <div class="col-6 wow fadeIn" data-wow-delay="0.6s">
+            <div class="row">
+              <div class="col-6">
+                <img src="{{service.image.url}}" alt="" id="image-services">
+              </div>
+              <div class="col-6 text-service">
+                <h3>{{service.title}}</h3>
+                <p>{{service.content|safe}}</p>
+              </div>
+            </div>
+          </div>
+          {% elif forloop.counter == 3  %}
+          <div class="col-6 wow fadeIn" data-wow-delay="0.9s">
+            <div class="row">
+              <div class="col-6 text-service">
+                <h3>{{service.title}}</h3>
+                <p>{{service.content|safe}}</p>
+              </div>
+              <div class="col-6">
+                <img src="{{service.image.url}}" alt="" id="image-services">
+              </div>
+            </div>
+          </div>
+          {% elif forloop.counter == 4 %}
+          <div class="col-6 wow fadeIn" data-wow-delay="0.3s">
+            <div class="row">
+              <div class="col-6 text-service">
+                <h3>{{service.title}}</h3>
+                <p>{{service.content|safe}}</p>
+              </div>
+              <div class="col-6">
+                <img src="{{service.image.url}}" alt="" id="image-services">
+              </div>
+            </div>
+          </div>
+          {% elif forloop.counter == 5 %}
+          <div class="col-6 wow fadeIn" data-wow-delay="0.6s">
+            <div class="row">
+              <div class="col-6">
+                <img src="{{service.image.url}}" alt="" id="image-services">
+              </div>
+              <div class="col-6 text-service">
+                <h3>{{service.title}}</h3>
+                <p>{{service.content|safe}}</p>
+              </div>
+            </div>
+          </div>
+          {% elif forloop.counter == 6 %}
+          <div class="col-6 wow fadeIn" data-wow-delay="0.9s">
+            <div class="row">
+              <div class="col-6">
+                <img src="{{service.image.url}}" alt="" id="image-services">
+              </div>
+              <div class="col-6 text-service">
+                <h3>{{service.title}}</h3>
+                <p>{{service.content|safe}}</p>
+              </div>
+            </div>
+          </div>
+          {% endif %}
+          {% endfor %}
+        </div>
+      </div>
+
+{% endblock %}
