@@ -1,0 +1,62 @@
+@media(max-width: 600px){
+
+    .title{
+        font-size: -webkit-xxx-large;
+        margin-left: 75px;
+    }
+
+    #about-us p{
+        padding-left: 15px;
+        padding-right: 0px;
+    }
+
+    #about-us h3{
+        padding-left: 15px;
+        padding-right: 0px;
+    }
+   
+    #about-us p{
+        font-size: 14px;
+    }
+
+    #q_div_l{
+        margin-left: 10px;
+        max-width: auto;
+    }
+    
+    #q_div_r{
+        margin-left: 10px;
+        margin-right: 0px;
+        max-width: auto;
+    }  
+    
+    #main2_bg{
+        height: 1500px;
+    }
+
+    .info{
+        text-align: center;
+    }
+
+    .team h1 b{
+        font-size: -webkit-xxx-large;
+    }
+    
+    .posts-text{
+        padding: 20px;
+    }
+
+    .posts-text h3 b{
+        font-size: 22px;
+    }
+
+    .posts-text h1 b{
+        font-size: 30px;
+    }
+
+    .posts-text p{
+        font-size: 16px;
+        text-align: justify;
+    }
+
+}

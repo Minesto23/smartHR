@@ -30,12 +30,12 @@ body{
 #main_title{
   background-color: white;
   color: #323335;
-  padding-top: 100px;
-  padding-left: 250px 
+  padding-top: 100px; 
 }
 
 .title{
   font-size: 95px;
+  margin-left: 200px;
 }
 /*------------------- About us --------------------------*/
 
@@ -92,6 +92,16 @@ body{
 
 /* ------------------ questions -----------------------------*/
 
+#q_div_l{
+  margin-left: 100px;
+  max-width: 650px;
+}
+
+#q_div_r{
+  margin-right: 100px;
+  max-width: 650px;
+}
+
 #questions{
   background-color: #CA636D;
   color: #F7FaF0;
@@ -114,6 +124,7 @@ body{
   font-size: 20px;
   width: 120px;
   margin-bottom: 20px;
+  margin-right: 100px;
 }
 
 /*---------------- news --------------------------- */

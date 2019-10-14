@@ -9,58 +9,53 @@
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/who.css">
     <link rel="stylesheet" href="css/questions.css">
+    <link rel="stylesheet" href="css/mobile.css">
     <link href="https://fonts.googleapis.com/css?family=Oxygen&display=swap" rel="stylesheet">
     <link rel="shortcut icon" href="images/logo-Positivo.png" type="image.png">
     <title>Our Team | SmartHR</title>
 </head>
-<body>
-    
-    <script>new WOW.init();</script>
+<body>    
 
     <!-- barra de navegacion -->
     <header id="topheader">
-      <nav class="navbar fixed-top navbar-expand-sm navbar-light animated fadeInDown " id="principal-bar">
-        <div class="container">
-          <div class="col-1">
-            <button class="navbar-toggler d-lg-none" type="button" data-toggle="collapse" data-target="#collapsibleNavId" aria-controls="collapsibleNavId"
+        <nav class="navbar fixed-top navbar-expand-lg navbar-light bg-light animated fadeInDown " id="principal-bar">
+          <div class="container">
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navigation" aria-controls="#navigation"
                 aria-expanded="false" aria-label="Toggle navigation">
               <span class="navbar-toggler-icon"></span>
-            </button>
-          </div>
-          <a class="navbar-brand" href="index.html">
-            <div class="row">
-              <div class="col offset-2">
-                <img src="images/logo-Positivo.png" alt="" class="logo">
-              </div>
-            </div>
-          </a>
-          <div class="col offset-4">
-            <div class="collapse navbar-collapse" id="collapsibleNavId">
-              <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
-                <li class="nav-item">
-                  <a class="nav-link" href="index.html"> Home  </a>
-                </li>
-                <li class="nav-item active">
-                  <a class="nav-link" href="who.html"> Our Team </a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="services.html"> Consulting Services </a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="questions.html"> Questions </a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="blog.html"> Blog </a>
-                </li>
-              </ul>
+            </button>            
+            <a class="navbar-brand" href="index.html">
+              <div class="row">
+                <div class="col offset-2">
+                  <img src="images/logo-Positivo.png" alt="" class="logo">
+                </div>
+              </div> 
+            </a>         
+            <div class="col offset-lg-4 offset-sm-0 navbar-collapse" >
+                <ul class="navbar-nav mr-auto mt-2 mt-lg-0 text-center" id="navigation">
+                  <li class="nav-item active">
+                    <a class="nav-link" href="index.html"> Home  </a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="who.html"> Our Team </a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="services.html"> Consulting Services </a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="questions.html"> Questions </a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="blog.html"> Blog </a>
+                  </li>
+                </ul>
             </div>
           </div>
-        </div>
-      </nav>
-    </header>
+        </nav>
+      </header>
 
     <!-- who we are  -->
-    <div class="container-fluid">
+    <div class="container-fluid pb-5">
         <div class="row">
             <div class="col-12 pb-5 animated wow slideInUp" id="about-us">
                 <h3 style="padding-top: 220px;">Who we are</h3>
@@ -70,23 +65,23 @@
       </div>
 
     <!-- team -->
-    <div class="container">
+    <div class="container pt-5">
       <div class="row justify-content-center pb-5 mb-3">
-        <div class="col-4 team wow fadeInUp" data-wow-delay="1.2s">
+        <div class="col-xs-12 col-lg-4 team wow fadeInUp pb-5" data-wow-delay="1.2s">
           <img src="images/t2.png" alt="">
           <p class="job">Partner</p>
           <h1><b>Sarah<br>Genie</b></h1>
           <p>Calibri Calibri Calibri Calibri<br>Calibri Calibri Calibri Calibri<br>Calibri Calibri Calibri Calibri.</p>
           <p>info@mysite.com<br>+123-***-****</p>
         </div>
-        <div class="col-4 team wow fadeInUp" data-wow-delay="1.5s">
+        <div class="col-xs-12 col-lg-4 team wow fadeInUp pb-5" data-wow-delay="1.5s">
           <img src="images/t1.png" alt="">
           <p class="job">Senior Associate</p>
           <h1><b>Mike<br>Williams</b></h1>
           <p>Calibri Calibri Calibri Calibri<br>Calibri Calibri Calibri Calibri<br>Calibri Calibri Calibri Calibri.</p>
           <p>info@mysite.com<br>+123-***-****</p>
         </div>
-        <div class="col-4 team wow fadeInUp" data-wow-delay="1.8s">
+        <div class="col-xs-12 col-lg-4 team wow fadeInUp pb-5" data-wow-delay="1.8s">
           <img src="images/t3.png" alt="">
           <p class="job">Associate</p>
           <h1><b>Christine<br>Harper</b></h1>
@@ -105,12 +100,12 @@
     <footer>
         <div class="container-fluid">
           <div class="row justify-content-center" id="footer">
-            <div class="col-4 wow slideInUp" >
+            <div class="col-xs-12 col-lg-4 wow slideInUp info">
               <p>Smart HR Services</p>
               <p>500 Jerry Francis Street <br>San Francisco, CA 92358</p>
               <p>123-***-****</p>
             </div>
-            <div class="col-4 wow slideInUp " >
+            <div class="col-xs-12 col-lg-4 wow slideInUp " >
                 <p>Send Us a Message</p>
                   <form action="#" class="">
                     <div class="row">
@@ -131,14 +126,13 @@
                     <div class="form-group" >
                       <input type="submit" value="Send" class="btn btn-primary py-3 px-5" id="send">
                     </div>
-                  </form>
-              
+                  </form>              
             </div>
           </div>
         </div>
         <div class="container">
-            <div class="row justify-content-start ">
-              <div class="col-4 pt-3 pb-0 wow slideInUp">
+            <div class="row">
+              <div class="col-12 pt-3 pb-0 wow slideInUp">
                 <p>© 2019 Smart HR Services</p> 
               </div>
               </div>
@@ -150,8 +144,8 @@
           new WOW().init();
       </script>
       
+      <script src="js/jquery-3.3.1.min.js"></script>
+      <script src="js/popper.min.js"></script>
       <script src="js/bootstrap.min.js"></script>
-      <script src="js/jquery-3.4.1.min.js"></script>
-
 </body>
 </html>

@@ -9,33 +9,30 @@
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/who.css">
     <link rel="stylesheet" href="css/questions.css">
+    <link rel="stylesheet" href="css/mobile.css">
     <link href="https://fonts.googleapis.com/css?family=Oxygen&display=swap" rel="stylesheet">
     <link rel="shortcut icon" href="images/logo-Positivo.png" type="image.png">
     <title>Home | SmartHR</title>
   </head>
   <body>
-      <script>new WOW.init();</script>
 
       <!-- barra de navegacion -->
       <header id="topheader">
-        <nav class="navbar fixed-top navbar-expand-sm navbar-light animated fadeInDown " id="principal-bar">
+        <nav class="navbar fixed-top navbar-expand-lg navbar-light bg-light animated fadeInDown " id="principal-bar">
           <div class="container">
-            <div class="col-1">
-              <button class="navbar-toggler d-lg-none" type="button" data-toggle="collapse" data-target="#collapsibleNavId" aria-controls="collapsibleNavId"
-                  aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-              </button>
-            </div>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navigation" aria-controls="#navigation"
+                aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>            
             <a class="navbar-brand" href="index.html">
               <div class="row">
                 <div class="col offset-2">
                   <img src="images/logo-Positivo.png" alt="" class="logo">
                 </div>
               </div> 
-            </a>
-            <div class="col offset-4">
-              <div class="collapse navbar-collapse" id="collapsibleNavId">
-                <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+            </a>         
+            <div class="col offset-lg-4 offset-sm-0 navbar-collapse" >
+                <ul class="navbar-nav mr-auto mt-2 mt-lg-0 text-center" id="navigation">
                   <li class="nav-item active">
                     <a class="nav-link" href="index.html"> Home  </a>
                   </li>
@@ -52,7 +49,6 @@
                     <a class="nav-link" href="blog.html"> Blog </a>
                   </li>
                 </ul>
-              </div>
             </div>
           </div>
         </nav>
@@ -62,7 +58,7 @@
       <main>
         <div class="container-fluid" id="main_bg">
           <div class="row">
-              <div class="col-12 animated fadeIn slow" id="main_title" >
+              <div class="col-12 animated fadeIn slow " id="main_title" >
                   <h1 class="title" >Smart HR</h1>
                   <h1 class="title" >Services</h1>
               </div>
@@ -86,31 +82,31 @@
               <div class="col-12 pl-8 animated wow slideInUp" id="services">
                   <h3>Services</h3>
                 </div>
-                <div class="col-4 animated wow fadeIn" id="red-service" data-wow-delay="0.3s">
+                <div class="col-xs-12 col-lg-4 animated wow fadeIn" id="red-service" data-wow-delay="0.3s">
                     <img src="" alt="">imagen
                     <h3>HR Audits - Consulting</h3>
                   </div>
-                  <div class="col-4 wow fadeIn" id="green-service" data-wow-delay="0.6s">
+                  <div class="col-xs-12 col-lg-4 wow fadeIn" id="green-service" data-wow-delay="0.6s">
                     <img src="" alt="">imagen
                     <h3>Workplace Investigations</h3>
                   </div>
-                  <div class="col-4 wow fadeIn" id="red-service" data-wow-delay="0.9s">
+                  <div class="col-xs-12 col-lg-4  wow fadeIn" id="red-service" data-wow-delay="0.9s">
                     <img src="" alt="">imagen
                     <h3>Employee Relations</h3>
                   </div>
-                  <div class="col-4 wow fadeIn" id="green-service" data-wow-delay="1.2s">
+                  <div class="col-xs-12 col-lg-4  wow fadeIn" id="green-service" data-wow-delay="1.2s">
                       <img src="" alt="">imagen
                       <h3>Staffing & Recluiting</h3>
                   </div>
-                  <div class="col-4 wow fadeIn" id="red-service" data-wow-delay="1.5s">
+                  <div class="col-xs-12 col-lg-4  wow fadeIn" id="red-service" data-wow-delay="1.5s">
                       <img src="" alt="">imagen
                       <h3>Compensations Market Analisys Services</h3>
                   </div>
-                  <div class="col-4 wow fadeIn" id="green-service" data-wow-delay="1.8s">
+                  <div class="col-xs-12 col-lg-4  wow fadeIn" id="green-service" data-wow-delay="1.8s">
                       <img src="" alt="">imagen
                       <h3>Management & Supervisory Coaching</h3>
                   </div>
-                  <div class="col-3 pt-4 offset-10 wow fadeIn" id="about-us"data-wow-delay="0.9s">
+                  <div class="col-12 pt-4 wow fadeIn d-flex justify-content-end" data-wow-delay="0.9s">
                       <a name="" id="buttonMore" class="btn btn-primary" href="#" role="button">MORE</a>
                   </div>
                   <div class="col-12 animated wow slideInUp" id="services">
@@ -121,19 +117,20 @@
         <!-- frequent questions -->
 
       <div class="container-fluid" id="main2_bg">
-        <div class="row">
-          
-            <div class="col-12 pt-5 animated wow slideInLeft" id="questions" style="padding-left: 200px; padding-right: 500px;">
-              <p id="questions-title">Quis reprehenderit magna irure</p>
-              <p id="question-text">Eu proident duis cillum commodo ex excepteur aliquip minim pariatur laborum labore. Incididunt amet culpa eiusmod proident excepteur amet minim Lorem minim eiusmod excepteur fugiat. Exercitation occaecat occaecat magna consectetur tempor ea do occaecat occaecat do ut ea.</p>
+        <div class="row">          
+            <div class="col-12 pt-5 animated wow slideInLeft d-flex justify-content-start" id="questions">
+              <div class="question_div" id="q_div_l">
+                <p id="questions-title">Quis reprehenderit magna irure</p>
+                <p id="question-text">Eu proident duis cillum commodo ex excepteur aliquip minim pariatur laborum labore. Incididunt amet culpa eiusmod proident excepteur amet minim Lorem minim eiusmod excepteur fugiat. Exercitation occaecat occaecat magna consectetur tempor ea do occaecat occaecat do ut ea.</p>
+              </div>
             </div>
-            <div class="col-12 pt-5 animated wow slideInRight" id="questions" style=" direction: rtl;  padding-left: 500px; padding-right: 200px; ">
-              <p id="questions-title">Quis reprehenderit magna irure</h2>
-              <p id="question-text">Eu proident duis cillum commodo ex excepteur aliquip minim pariatur laborum labore. Incididunt amet culpa eiusmod proident excepteur amet minim Lorem minim eiusmod excepteur fugiat. Exercitation occaecat occaecat magna consectetur tempor ea do occaecat occaecat do ut ea.</p>          
-            </div>
-            <div class="col-9 pt-4 animated wow slideInUp" id="questions">
-            </div>
-            <div class="col-3 pt-4 pb-3 animated wow slideInUp" id="questions">
+            <div class="col-12 pt-5 animated wow slideInRight d-flex justify-content-end " id="questions">
+              <div class="question_div" id="q_div_r">
+                <p class="text-right" id="questions-title">Quis reprehenderit magna irure</h2>
+                <p class="text-justify" id="question-text" >Eu proident duis cillum commodo ex excepteur aliquip minim pariatur laborum labore. Incididunt amet culpa eiusmod proident excepteur amet minim Lorem minim eiusmod excepteur fugiat. Exercitation occaecat occaecat magna consectetur tempor ea do occaecat occaecat do ut ea.</p>          
+              </div>
+            </div>            
+            <div class="col-12 pt-4 pb-3 animated wow slideInUp d-flex justify-content-end" id="questions">
                 <a name="" id="button-question" class="btn btn-primary" href="#" role="button">MORE</a>
             </div>    
         </div>
@@ -141,7 +138,7 @@
 
       <!-- news -->
 
-      <div class="container">
+      <div class="container" id="content_new">
             <div class="row p-5 d-flex news">
                 <div class="col-12 wow fadeInUp" >
                     <h3>Recent News</h3>
@@ -170,21 +167,21 @@
                         <p>0</p>                            
                     </div>
                 </div>
-                <div class="col-3 pt-4 offset-10 wow fadeInUp" id="about-us" data-wow-delay="0.12s">
+                <div class="col-12 wow fadeIn d-flex justify-content-end" data-wow-delay="1.2s">
                     <a name="" id="buttonMore" class="btn btn-primary" href="#" role="button">MORE</a>
                 </div>
             </div>
-      </div>
+      </div> 
 
       <footer>
         <div class="container-fluid">
           <div class="row justify-content-center" id="footer">
-            <div class="col-4 wow slideInUp" >
+            <div class="col-xs-12 col-lg-4 wow slideInUp info">
               <p>Smart HR Services</p>
               <p>500 Jerry Francis Street <br>San Francisco, CA 92358</p>
               <p>123-***-****</p>
             </div>
-            <div class="col-4 wow slideInUp " >
+            <div class="col-xs-12 col-lg-4 wow slideInUp " >
                 <p>Send Us a Message</p>
                   <form action="#" class="">
                     <div class="row">
@@ -205,14 +202,13 @@
                     <div class="form-group" >
                       <input type="submit" value="Send" class="btn btn-primary py-3 px-5" id="send">
                     </div>
-                  </form>
-              
+                  </form>              
             </div>
           </div>
         </div>
         <div class="container">
-            <div class="row justify-content-start ">
-              <div class="col-4 pt-3 pb-0 wow slideInUp">
+            <div class="row">
+              <div class="col-12 pt-3 pb-0 wow slideInUp">
                 <p>© 2019 Smart HR Services</p> 
               </div>
               </div>
@@ -225,7 +221,8 @@
           new WOW().init();
       </script>
       
-      <script src="js/bootstrap.min.js"></script>
-      <script src="js/jquery-3.4.1.min.js"></script>
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
   </body>
 </html>
