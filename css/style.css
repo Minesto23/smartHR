@@ -207,3 +207,75 @@ margin-left: 10px;
   border: none;
   width: 100%;
 }
+
+/*----------------------------- contact ----------------------------------------------- */
+.form-control::-webkit-input-placeholder { color: white; font-size: 16px; }  /* WebKit, Blink, Edge */
+.form-control:-moz-placeholder { color: white;  font-size: 16px;}  /* Mozilla Firefox 4 to 18 */
+.form-control::-moz-placeholder { color: white;  font-size: 16px;}  /* Mozilla Firefox 19+ */
+.form-control:-ms-input-placeholder { color: white; font-size: 16px; }  /* Internet Explorer 10-11 */
+.form-control::-ms-input-placeholder { color: white; font-size: 16px; }  /* Microsoft Edge */
+
+.form-control{
+  background-color: #CA636D;
+  color: #F7FaF0;
+  border: none;
+}
+
+#form_message{
+  font-size: 30px;
+  /* padding-left: 100px; */
+}
+
+.form-group label{
+  font-size: 20px;
+}
+
+.buttonSend{
+  width: 250px; 
+  background-color: white;
+  color: #323335;
+  font-size: 20px;
+  border-color: #CA636D;
+  border-style: solid;
+}
+
+.buttonSend:hover{
+  background-color: #CA636D;
+  color: white;
+  border-color: #CA636D;
+  border-style: solid;
+}
+
+#Mybtn{
+  background-color: #63B3AA;
+  border-color: #63B3AA;
+  font-size: 20px;
+  border-radius: 10px;
+  width: 100px;
+  margin-bottom: 30px;
+}
+
+#Mybtn:hover{
+  background-color: rgb(73, 138, 130);
+}
+
+.quotes{
+  background-color: #63B3AA;
+}
+
+.buttonSend2{
+  width: 200px; 
+  background-color: #63B3AA;
+  color: white;
+  font-size: 20px;
+  border-color: #63B3AA;
+  border-style: solid;
+}
+
+.buttonSend2:hover{
+  background-color: rgb(73, 138, 130);
+  color: white;
+  border-color: #63B3AA;
+  border-style: solid;
+}
+

@@ -58,5 +58,8 @@
         font-size: 16px;
         text-align: justify;
     }
-
+    
+    #our-service{
+        margin-top: 20px;
+    }
 }
