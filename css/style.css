@@ -70,13 +70,8 @@ body{
   font-size: 20px;
 }
 
-#green-service{
-  background-color: #63B3AA;
-  color: #F7FaF0;
-}
-#red-service{
-  background-color: #CA636D;
-  color: #F7FaF0;
+#service img{
+  width: 100%;
 }
 
 #red-service , #green-service{
@@ -88,6 +83,7 @@ body{
   border: none;
   font-size: 20px;
   width: 140px;
+  height: 40px;
 }
 
 /* ------------------ questions -----------------------------*/
