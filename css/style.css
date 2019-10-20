@@ -229,7 +229,7 @@ margin-left: 10px;
 .buttonSend{
   width: 250px; 
   background-color: white;
-  color: #323335;
+  color: #CA636D;
   font-size: 20px;
   border-color: #CA636D;
   border-style: solid;
@@ -284,4 +284,20 @@ margin-left: 10px;
 
 .contactf{
   background-color: white;
+}
+
+.buttonSend3{
+  width: 250px; 
+  background-color: white;
+  color:#63B3AA ;
+  font-size: 20px;
+  border-color: #63B3AA;
+  border-style: solid;
+}
+
+.buttonSend3:hover{
+  background-color: #63B3AA;
+  color: white;
+  border-color: #63B3AA;
+  border-style: solid;
 }
