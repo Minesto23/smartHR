@@ -259,6 +259,10 @@ margin-left: 10px;
   background-color: #63B3AA;
 }
 
+.quotesDate{
+  background-color: rgba(99, 179, 170, 0.651);
+}
+
 .buttonSend2{
   width: 200px; 
   background-color: #63B3AA;
