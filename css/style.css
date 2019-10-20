@@ -21,7 +21,7 @@ body{
 /* --------------------------MAIN */
 
 #main_bg{
-  background: url("../images/edificio.png") no-repeat fixed;
+  background: url("../images/PortadaHome.jpg") no-repeat fixed;
   background-size: cover;
   height:800px;
   justify-content: center;
@@ -126,7 +126,7 @@ body{
 /*---------------- news --------------------------- */
 
 #main2_bg{
-  background: url("../images/sociedades.jpg") no-repeat fixed;
+  background: url("../images/HomeParteAbajo.jpg") no-repeat fixed;
   background-size: cover;
   height:900px;
   justify-content: center;
@@ -275,3 +275,13 @@ margin-left: 10px;
   border-style: solid;
 }
 
+.contactbg{
+  background: url("../images/contacts.jpg") no-repeat fixed;
+  background-size: cover;
+  height:300px;
+  justify-content: center;
+}
+
+.contactf{
+  background-color: white;
+}
