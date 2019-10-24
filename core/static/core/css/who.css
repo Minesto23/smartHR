@@ -1,5 +1,4 @@
-.team{
-  padding-top: 300px;
+.team{  
   color: #323335;
 }
 
@@ -29,8 +28,8 @@
 }
 
 #who_bg{
-  background: url("../images/edificio.png") no-repeat fixed;
+  background: url("../images/OurTeam.jpg") no-repeat fixed;
   background-size: cover;
-  height:400px;
+  height:300px;
   justify-content: center;
 }

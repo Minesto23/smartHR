@@ -21,7 +21,7 @@ body{
 /* --------------------------MAIN */
 
 #main_bg{
-  background: url("../images/edificio.png") no-repeat fixed;
+  background: url("../images/PortadaHome.jpg") no-repeat fixed;
   background-size: cover;
   height:800px;
   justify-content: center;
@@ -30,12 +30,12 @@ body{
 #main_title{
   background-color: white;
   color: #323335;
-  padding-top: 100px;
-  padding-left: 250px 
+  padding-top: 100px; 
 }
 
 .title{
   font-size: 95px;
+  margin-left: 200px;
 }
 /*------------------- About us --------------------------*/
 
@@ -70,13 +70,8 @@ body{
   font-size: 20px;
 }
 
-#green-service{
-  background-color: #63B3AA;
-  color: #F7FaF0;
-}
-#red-service{
-  background-color: #CA636D;
-  color: #F7FaF0;
+#service img{
+  width: 100%;
 }
 
 #red-service , #green-service{
@@ -88,9 +83,20 @@ body{
   border: none;
   font-size: 20px;
   width: 140px;
+  height: 40px;
 }
 
 /* ------------------ questions -----------------------------*/
+
+#q_div_l{
+  margin-left: 100px;
+  max-width: 650px;
+}
+
+#q_div_r{
+  margin-right: 100px;
+  max-width: 650px;
+}
 
 #questions{
   background-color: #CA636D;
@@ -114,12 +120,13 @@ body{
   font-size: 20px;
   width: 120px;
   margin-bottom: 20px;
+  margin-right: 100px;
 }
 
 /*---------------- news --------------------------- */
 
 #main2_bg{
-  background: url("../images/sociedades.jpg") no-repeat fixed;
+  background: url("../images/HomeParteAbajo.jpg") no-repeat fixed;
   background-size: cover;
   height:900px;
   justify-content: center;
@@ -195,4 +202,106 @@ margin-left: 10px;
   background-color: #323335;
   border: none;
   width: 100%;
+}
+
+/*----------------------------- contact ----------------------------------------------- */
+.form-control::-webkit-input-placeholder { color: white; font-size: 16px; }  /* WebKit, Blink, Edge */
+.form-control:-moz-placeholder { color: white;  font-size: 16px;}  /* Mozilla Firefox 4 to 18 */
+.form-control::-moz-placeholder { color: white;  font-size: 16px;}  /* Mozilla Firefox 19+ */
+.form-control:-ms-input-placeholder { color: white; font-size: 16px; }  /* Internet Explorer 10-11 */
+.form-control::-ms-input-placeholder { color: white; font-size: 16px; }  /* Microsoft Edge */
+
+.form-control{
+  background-color: #CA636D;
+  color: #F7FaF0;
+  border: none;
+}
+
+#form_message{
+  font-size: 30px;
+  /* padding-left: 100px; */
+}
+
+.form-group label{
+  font-size: 20px;
+}
+
+.buttonSend{
+  width: 250px; 
+  background-color: white;
+  color: #CA636D;
+  font-size: 20px;
+  border-color: #CA636D;
+  border-style: solid;
+}
+
+.buttonSend:hover{
+  background-color: #CA636D;
+  color: white;
+  border-color: #CA636D;
+  border-style: solid;
+}
+
+#Mybtn{
+  background-color: #63B3AA;
+  border-color: #63B3AA;
+  font-size: 20px;
+  border-radius: 10px;
+  width: 100px;
+  margin-bottom: 30px;
+}
+
+#Mybtn:hover{
+  background-color: rgb(73, 138, 130);
+}
+
+.quotes{
+  background-color: #63B3AA;
+}
+
+.quotesDate{
+  background-color: rgba(99, 179, 170, 0.651);
+}
+
+.buttonSend2{
+  width: 200px; 
+  background-color: #63B3AA;
+  color: white;
+  font-size: 20px;
+  border-color: #63B3AA;
+  border-style: solid;
+}
+
+.buttonSend2:hover{
+  background-color: rgb(73, 138, 130);
+  color: white;
+  border-color: #63B3AA;
+  border-style: solid;
+}
+
+.contactbg{
+  background: url("../images/contacts.jpg") no-repeat fixed;
+  background-size: cover;
+  height:300px;
+  justify-content: center;
+}
+
+.contactf{
+  background-color: white;
+}
+
+.buttonSend3{
+  width: 250px; 
+  background-color: white;
+  color:#63B3AA ;
+  font-size: 20px;
+  border-color: #63B3AA;
+  border-style: solid;
+}
+
+.buttonSend3:hover{
+  background-color: #63B3AA;
+  color: white;
+  border-color: #63B3AA;
+  border-style: solid;
 }

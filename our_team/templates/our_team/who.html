@@ -6,12 +6,18 @@
 
 {% block content %}
 
-<!-- who we are  -->
-    <div class="container-fluid">
+    <div class="container-fluid" id="who_bg">
+      <div class="row" >
+        <div class="col-12"></div>
+      </div>
+    </div>
+
+    <!-- who we are  -->
+    <div class="container-fluid pb-5">
         <div class="row">
         {% for who in Who_We_Are %}
-              <div class="col-12 pb-5 animated wow slideInUp" id="about-us">
-                <h3 style="padding-top: 220px;">{{who.title}}</h3>
+            <div class="col-12 pb-5 animated wow slideInUp" id="about-us">
+                <h3 style="padding-top: 30px;">{{who.title}}</h3>
                 <p style="padding-top: 10px;">{{who.content|safe}}</p>
               </div>
         {% endfor %}
@@ -19,33 +25,33 @@
       </div>
 
     <!-- team -->
-    <div class="container">
+    <div class="container pt-5">
       <div class="row justify-content-center pb-5 mb-3">
-        {% for worker in object_list %}
-          {% if forloop.counter == 1  %}
-          <div class="col-4 team wow fadeInUp" data-wow-delay="1.2s">
-            <img src="{% static 'core/images/t2.png' %}" alt="">
-            <p class="job">{{worker.job}}</p>
-            <h1><b>{{worker.name}}<br>{{worker.lastname}}</b></h1>
-            <p>{{worker.info|safe}}</p>
-            <p>{{worker.email}}<br>{{worker.phone_number}}</p>
-          </div>
-          {% elif forloop.counter == 2 %}
-          <div class="col-4 team wow fadeInUp" data-wow-delay="1.5s">
-            <img src="{% static 'core/images/t2.png' %}" alt="">
-            <p class="job">{{worker.job}}</p>
-            <h1><b>{{worker.name}}<br>{{worker.lastname}}</b></h1>
-            <p>{{worker.info|safe}}</p>
-            <p>{{worker.email}}<br>{{worker.phone_number}}</p>
-          </div>
-          {% elif forloop.counter == 3 %}
-          <div class="col-4 team wow fadeInUp" data-wow-delay="1.8s">
-            <img src="{% static 'core/images/t2.png' %}" alt="">
-            <p class="job">{{worker.job}}</p>
-            <h1><b>{{worker.name}}<br>{{worker.lastname}}</b></h1>
-            <p>{{worker.info|safe}}</p>
-            <p>{{worker.email}}<br>{{worker.phone_number}}</p>
-          </div>
+      {% for worker in object_list %}
+        {% if forloop.counter == 1  %}
+        <div class="col-xs-12 col-lg-4 team wow fadeInUp pb-5" data-wow-delay="1.2s">
+          <img src="{{worker.photo.url}}" alt="">
+          <p class="job">{{worker.job}}</p>
+          <h1><b>{{worker.name}}<br>{{worker.lastname}}</b></h1>
+          <p>{{worker.info|safe}}</p>
+          <p>{{worker.email}}<br>{{worker.phone_number}}</p>
+        </div>
+        {% elif forloop.counter == 2 %}
+        <div class="col-xs-12 col-lg-4 team wow fadeInUp pb-5" data-wow-delay="1.5s">
+          <img src="{{worker.photo.url}}" alt="">
+          <p class="job">{{worker.job}}</p>
+          <h1><b>{{worker.name}}<br>{{worker.lastname}}</b></h1>
+          <p>{{worker.info|safe}}</p>
+          <p>{{worker.email}}<br>{{worker.phone_number}}</p>
+        </div>
+        {% elif forloop.counter == 3 %}
+        <div class="col-xs-12 col-lg-4 team wow fadeInUp pb-5" data-wow-delay="1.8s">
+          <img src="{{worker.photo.url}}" alt="">
+          <p class="job">{{worker.job}}</p>
+          <h1><b>{{worker.name}}<br>{{worker.lastname}}</b></h1>
+          <p>{{worker.info|safe}}</p>
+          <p>{{worker.email}}<br>{{worker.phone_number}}</p>
+        </div>
         {% endif %}
         {% endfor %}
       </div>     

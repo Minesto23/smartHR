@@ -12,6 +12,8 @@
     <link rel="stylesheet" href="{% static 'core/css/services.css' %}">
     <link rel="stylesheet" href="{% static 'core/css/questions.css' %}">
     <link rel="stylesheet" href="{% static 'core/css/blog.css' %}">
+    <link rel="stylesheet" href="{% static 'core/css/mobile.css' %}">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <link href="https://fonts.googleapis.com/css?family=Oxygen&display=swap" rel="stylesheet">
     <link rel="shortcut icon" href="{% static 'core/images/logo-Positivo.png' %}" type="image.png">
     <title>{% block title %}{% endblock %} | SmartHR</title>
@@ -20,25 +22,22 @@
       <script>new WOW.init();</script>
 
       <!-- barra de navegacion -->
-      <header id="topheader">
-        <nav class="navbar fixed-top navbar-expand-sm navbar-light animated fadeInDown " id="principal-bar">
+    <header id="topheader">
+        <nav class="navbar fixed-top navbar-expand-lg navbar-light bg-light animated fadeInDown " id="principal-bar">
           <div class="container">
-            <div class="col-1">
-              <button class="navbar-toggler d-lg-none" type="button" data-toggle="collapse" data-target="#collapsibleNavId" aria-controls="collapsibleNavId"
-                  aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-              </button>
-            </div>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navigation" aria-controls="#navigation"
+                aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>            
             <a class="navbar-brand" href="{% url 'home' %}">
               <div class="row">
                 <div class="col offset-2">
                   <img src="{% static 'core/images/logo-Positivo.png' %}" alt="" class="logo">
                 </div>
               </div> 
-            </a>
-            <div class="col offset-4">
-              <div class="collapse navbar-collapse" id="collapsibleNavId">
-                <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+            </a>         
+            <div class="col offset-lg-4 offset-sm-0 navbar-collapse collapse"  id="navigation">
+                <ul class="navbar-nav mr-auto mt-2 mt-lg-0 text-center">
                   <li class="nav-item {% if request.path == '/' %}active{% endif %}">
                     <a class="nav-link" href="{% url 'home' %}"> Home  </a>
                   </li>
@@ -54,8 +53,10 @@
                   <li class="nav-item {% if request.path == '/blog/' %}active{% endif %}">
                     <a class="nav-link" href="{% url 'blog' %}"> Blog </a>
                   </li>
+                  <li class="nav-item {% if request.path == '/contact/' %}active{% endif %}">
+                    <a class="nav-link" href="{% url 'contact' %}"> Contact </a>
+                  </li>
                 </ul>
-              </div>
             </div>
           </div>
         </nav>
@@ -68,45 +69,51 @@
         <div class="container-fluid">
           <div class="row justify-content-center" id="footer">
             <div class="col-4 wow slideInUp" >
-              <p>Smart HR Services</p>
+                <img src="{% static 'core/images/logo-blanco.png' %}"  alt="" style="height: 60px; width: 60px;">
+              <p style="padding-top: 20px;">Smart HR Services</p>
               <p>500 Jerry Francis Street <br>San Francisco, CA 92358</p>
               <p>123-***-****</p>
             </div>
-            <div class="col-4 wow slideInUp " >
-                <p>Send Us a Message</p>
-                  <form action="#" class="">
-                    <div class="row">
-                        <div class="col-6">
-                            <div class="form-group">
-                                <input type="text" class="form-control" placeholder="Email*">
-                            </div> 
-                        </div>
-                        <div class="col-6">
-                            <div class="form-group">
-                                <input type="text" class="form-control" placeholder="Subject*">
-                            </div> 
-                        </div>
-                    </div>
-                    <div class="form-group">
-                      <textarea name="" id="" cols="10" rows="2" class="form-control" placeholder="Message*"></textarea>
-                    </div>
-                    <div class="form-group" >
-                      <input type="submit" value="Send" class="btn btn-primary py-3 px-5" id="send">
-                    </div>
-                  </form>
-              
+            <div class="col-4 wow slideInUp" >
+              <div class="row pt-5 mt-5">
+              {% if LINK_FACEBOOK %}
+                <div class="col-2">
+                  <a href="{{LINK_FACEBOOK}}"><img src="{% static 'core/images/facebook.png' %}" alt="" style=" width: 25%;"></a>
+                </div>
+              {% endif %}
+              {% if LINK_INSTAGRAM %}
+                <div class="col-2 ">
+                  <a href="{{LINK_INSTAGRAM}}"><img src="{% static 'core/images/instagram.png' %}" alt="" style=" width: 50%;"></a>
+                </div>
+              {% endif %}
+              {% if LINK_LINKEDIN %}
+                <div class="col-2">
+                  <a href="{{LINK_LINKEDIN}}"><img src="{% static 'core/images/linkedin.png' %}" alt="" style=" width: 50%;"></a>
+                </div>
+              {% endif %}
+              {% if LINK_TWITTER %}
+                <div class="col-2">
+                  <a href="{{LINK_TWITTER}}"><img src="{% static 'core/images/twitter.png' %}" alt="" style=" width: 50%;"></a>
+                </div>
+              {% endif %}
+              {% if LINK_YOUTUBE %}
+                <div class="col-2">
+                  <a href="{{LINK_YOUTUBE}}"><img src="{% static 'core/images/youtube.png' %}" alt="" style=" width: 50%;"></a>
+                </div>
+              {% endif %}
+
+              </div>
             </div>
           </div>
         </div>
         <div class="container">
             <div class="row justify-content-start ">
-              <div class="col-4 pt-3 pb-0 wow slideInUp">
+              <div class="col-12 pt-3 pb-0 wow slideInUp">
                 <p>© 2019 Smart HR Services</p> 
               </div>
               </div>
         </div>
       </footer>
-
 
 
       <script src="{% static 'core/js/wow.min.js' %}"></script>    
@@ -116,6 +123,11 @@
       
       <script src="{% static 'core/js/bootstrap.min.js' %}"></script>
       <script src="{% static 'core/js/jquery-3.4.1.min.js' %}"></script>
+      <script src="{% static 'core/js/jquery-3.3.1.min.js' %}"></script>
+      <script src="{% static 'core/js/popper.min.js' %}"></script>
+      <script src="{% static 'core/js/jquery-3.4.1.slim.js' %}"></script>
+      <script src="{% static 'core/js/services.js' %}"></script>
+
 
   </body>
 </html>

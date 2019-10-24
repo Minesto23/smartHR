@@ -1,10 +1,10 @@
 .OurServices{
   padding-top: 200px;
-  padding-bottom: 100px;
+  padding-bottom: 20px;
 }
 
 .OurServices p{
-  padding-top: 8px;
+  padding-top: 20px;
   font-size: 18px;
 }
 
@@ -32,4 +32,37 @@
 
 .text-service p{
   font-size: 18px;
+}
+
+.texto{
+  margin-left: 50px;
+  width: 50%;
+}
+
+#category_1{
+  background: url('../images/Categoria1.jpg');
+  background-size: cover;
+  width: 100%;
+  height: auto;
+}
+
+#category_2{
+  background: url('../images/Categoria2.jpg');
+  background-size: cover;
+  width: 100%;
+  height: auto;
+}
+
+#category_3{
+  background: url('../images/Categoria3.jpg');
+  background-size: cover;
+  width: 100%;
+  height: auto;
+}
+
+#category_4{
+  background: url('../images/Categoria4.jpg');
+  background-size: cover;
+  width: 100%;
+  height: auto;
 }

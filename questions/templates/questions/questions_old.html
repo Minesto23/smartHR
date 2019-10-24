@@ -1,0 +1,72 @@
+{% extends 'core/base.html' %}
+
+{% load static %}
+
+{% block title%}Questions{% endblock %}
+
+{% block content %}
+
+<div class="container wow fadeIn">
+        <div class="row question">
+          <div class="col-12 pb-3">
+            <h3>Frequent questions</h3>
+          </div>
+        </div>
+      </div>
+      <!-- main            -->
+      <main>
+        <div class="container-fluid pb-5">
+          <div class="row questions justify-content-center">
+          {% for question in question_list %}
+             {% if forloop.counter == 1 %}
+            <div class="col-3 m-2 text-center question-bg wow fadeIn" data-wow-delay="0.2s">
+              <h2><b>{{question.question}}</b></h2>
+              <p>{{question.content|safe}}</p>
+            </div>
+            {% elif forloop.counter == 2 %}
+            <div class="col-3 m-2 text-center question-bg wow fadeIn" data-wow-delay="0.3s">
+              <h2><b>{{question.question}}</b></h2>
+              <p>{{question.content|safe}}</p>
+            </div>
+            {% elif forloop.counter == 3 %}
+            <div class="col-3 m-2 text-center question-bg wow fadeIn" data-wow-delay="0.4s">
+              <h2><b>{{question.question}}</b></h2>
+              <p>{{question.content|safe}}</p>
+            </div>
+            {% elif forloop.counter == 4 %}
+            <div class="col-3 m-2 text-center question-bg wow fadeIn" data-wow-delay="0.5s">
+              <h2><b>{{question.question}}</b></h2>
+              <p>{{question.content|safe}}</p>
+            </div>
+            {% elif forloop.counter == 5 %}
+            <div class="col-3 m-2 text-center question-bg wow fadeIn" data-wow-delay="0.6s">
+              <h2><b>{{question.question}}</b></h2>
+              <p>{{question.content|safe}}</p>
+            </div>
+            {% elif forloop.counter == 6 %}
+            <div class="col-3 m-2 text-center question-bg wow fadeIn" data-wow-delay="0.7s">
+              <h2><b>{{question.question}}</b></h2>
+              <p>{{question.content|safe}}</p>
+            </div>
+            {% elif forloop.counter == 7 %}
+            <div class="col-3 m-2 text-center question-bg wow fadeIn" data-wow-delay="0.2s">
+              <h2><b>{{question.question}}</b></h2>
+              <p>{{question.content|safe}}</p>
+            </div>
+            {% elif forloop.counter == 8 %}
+            <div class="col-3 m-2 text-center question-bg wow fadeIn" data-wow-delay="0.3s">
+              <h2><b>{{question.question}}</b></h2>
+              <p>{{question.content|safe}}</p>
+            </div>
+            {% elif forloop.counter == 9 %}
+            <div class="col-3 m-2 text-center question-bg wow fadeIn" data-wow-delay="0.4s">
+              <h2><b>{{question.question}}</b></h2>
+              <p>{{question.content|safe}}</p>
+            </div> 
+          {% endif %}
+          {% endfor %}
+          </div>
+        </div>
+      </main> 
+
+{% endblock %}

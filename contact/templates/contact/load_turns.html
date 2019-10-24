@@ -1,0 +1,6 @@
+<option value="" disabled selected>Select Your Turn</option>
+{% for model_quote in date %}
+    {% for turns  in model_quote.turn.all %}
+    <option value="{{turns.name}}">{{ turns.name }}</option>
+    {% endfor %}
+{% endfor %}
