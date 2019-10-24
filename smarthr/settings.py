@@ -149,11 +149,12 @@ CKEDITOR_CONFIGS = {
     }
 }
 
-# Emanil COnfig
-
-EMAIL_HOST = 'smtp.mailtrap.io'
-EMAIL_HOST_USER = '43f9efe53af8bc'
-EMAIL_HOST_PASSWORD = 'f1d1a07b406e96'
-EMAIL_PORT = '2525'
+# Email Config
+#EMAIL_BACKEND = 'Django.core.mail.backends.smtp.EmailBackend'
+EMAIL_USE_TLS = True
+EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_HOST_USER = 'smarthr.noreply.test@gmail.com'
+EMAIL_HOST_PASSWORD = 'wfwzyteljncyoqno'
+EMAIL_PORT = 587
 
 CSRF_COOKIE_HTTPONLY = 'TRUE'

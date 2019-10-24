@@ -6,13 +6,8 @@ from .models import Quote, Turns, Model_Quote
 from django.views.generic.edit import CreateView
 from django.urls import reverse_lazy
 from django.urls import reverse
-
-class QuoteCreate(CreateView):
-     model = Quote
-     form_class = QuoteForm
-     template_name = 'contact/contact.html'
-     success_url = reverse_lazy('contact')
-
+from django.core.mail import EmailMessage
+from django.conf import settings
 
 def contact(request):
       contact_form = ContactForm()
@@ -34,9 +29,9 @@ def contact(request):
                   if quote_number == 0:
                         if quote_form.is_valid():
                               print('Guardando')
-                              quote = quote_form.save()
-                              quote.turn = request.POST['turn']
-                              quote.save()      
+                              quote_n = quote_form.save()
+                              quote_n.turn = request.POST['turn']
+                              quote_n.save()      
                               return redirect(reverse('contact')+"?ok_q")
                         else:
                               quote_form = QuoteForm()
@@ -46,7 +41,9 @@ def contact(request):
                                     if date_comp != quote.date and turn_comp != quote.turn:
                                           print('no es igual')
                                           val = 0
-                                    else:
+                                    elif date_comp == quote.date and turn_comp == quote.turn:
+                                          print(str(quote.date))
+                                          print(str(quote.turn))
                                           print('es igual')
                                           val = 1
                                           break
@@ -62,12 +59,60 @@ def contact(request):
                               print('Guardando')
                               quote = quote_form.save()
                               quote.turn = request.POST['turn']
-                              quote.save()      
-                              return redirect(reverse('contact')+"?ok_q")
+                              quote.save()  
+                              #enviamos correo
+                              name = request.POST.get('name', '')
+                              lastname = request.POST.get('lastname','')
+                              email = request.POST.get('email', '')
+                              phone_number = request.POST.get('phone_number','')
+                              date = request.POST.get('date', '')
+                              turn = request.POST.get('turn', '')
+
+                              # Creamos el correo
+                              email = EmailMessage(
+                              "SmartHR: New Quote",
+                              "From {} <{}>\n\nPhone number:{}\n\nDate:{}\n\nTurn:{}".format(name, email,phone_number,date,turn),
+                              "it@smarthrfl.com",
+                              to=['minesto23@gmail.com','Info@smarthrfl.com'],
+                              reply_to=[email]
+                              )
+                              # Lo enviamos y redireccionamos
+                              try:
+                                    email.send()
+                                    return redirect(reverse('contact')+"?ok_q")
+                              except:
+                                    # Algo no ha ido bien, redireccionamos a FAIL
+                                    return redirect(reverse('contact')+"?fail")
+
 
             elif request.POST.get('button') == 'email':
-                  print('envia un correo')                            
+                  contact_form = ContactForm(data=request.POST)
+                  if contact_form.is_valid():
+                              name = request.POST.get('name', '')
+                              lastname = request.POST.get('lastname','')
+                              email = request.POST.get('email', '')
+                              subject = request.POST.get('subject','')
+                              content = request.POST.get('content', '')
+
+                              # Creamos el correo
+                              email = EmailMessage(
+                              "SmartHR: New Message ({})".format(subject),
+                              "De {} <{}>\n\nWrite:\n\n{}".format(name, email, content),
+                              "it@smarthrfl.com",
+                              to=['minesto23@gmail.com','Info@smarthrfl.com'],
+                              reply_to=[email]
+                              )
+
+                              # Lo enviamos y redireccionamos
+                              try:
+                                    email.send()
+                                    # Todo ha ido bien, redireccionamos a OK
+                                    return redirect(reverse('contact')+"?ok")
+                              except:
+                                    # Algo no ha ido bien, redireccionamos a FAIL
+                                    return redirect(reverse('contact')+"?fail")
       return render(request,"contact/contact.html",{'form_quote':quote_form,'form_email':contact_form})
+
 
 def Load_Turns(request):
       date_cap = str_to_weekday(request.GET.get('date'))

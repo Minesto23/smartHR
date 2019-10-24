@@ -65,13 +65,22 @@
             </form>
           </div>
         </div>
-        <div class="col-xs-12 col-lg-6">
+        <div class="col-xs-12 col-lg-6 text-center">
             <h5 class="text-center" id="form_message">If you got any questions <br>please do not hesitate to send us a message</h5>
-            {% if 'ok_e' in request.GET %}
-                  <p><b>Your message was sent, We'll in contact with you</b></p>
+            {% if 'ok' in request.GET %}
+                  <p style="font-size: 24px; color: green; padding-top: 10px;">Your message was sent, We'll in contact with you</p>
             {% endif %}
-            {% if 'not_e' in request.GET %}
-                  <p><b>Your message was not send, Please enter your data again</b></p>
+            {% if 'fail' in request.GET %}
+                  <p style="font-size: 24px; color: red; padding-top: 10px;">Your message was not send, Please enter your data again</p>
+            {% endif %}
+            {% if 'ok_q' in request.GET %}
+                  <h3 style="font-size: 24px; color: green; padding-top: 10px;">Your quote was saved, We'll in contact with you</h3>
+            {% endif %}
+            {% if 'not_q' in request.GET %}
+                  <h3 style="font-size: 24px; color: red; padding-top: 10px;">Your quote was not saved, Please enter data again</h3>
+            {% endif %}
+            {% if 'same_q' in request.GET %}
+                  <p style="font-size: 24px; color: red; padding-top: 10px;"><b>Your quote was not saved, The turn was not disponible please choose another</b></p>
             {% endif %}
         </div>
       </div>
@@ -82,15 +91,6 @@
     <div class="container pt-4">
       <div class="row">
         <div class="col-12">
-          {% if 'ok_q' in request.GET %}
-                  <h3 style="font-size: 24px; color: #63B3AA;">Your quote was saved, We'll in contact with you</h3>
-          {% endif %}
-          {% if 'not_q' in request.GET %}
-                  <h3 style="font-size: 24px; color: #63B3AA;">Your quote was not saved, Please enter data again</h3>
-          {% endif %}
-          {% if 'same_q' in request.GET %}
-                  <p><b>Your quote was not saved, The turn was not disponible please choose another</b></p>
-          {% endif %}
           <h3 style="font-size: 24px; color: #63B3AA;">Book your 30 minutes free phone consulting</h3>
           <button id="Mybtn" type="button" class="btn btn-info" data-toggle="collapse" data-target="#form">Here</button>
         </div>
