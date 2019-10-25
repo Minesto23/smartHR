@@ -1,1 +1,1 @@
-web: gunicorn sobicapital.wsgi --log-file -
+web: gunicorn smarthr.wsgi --log-file -
