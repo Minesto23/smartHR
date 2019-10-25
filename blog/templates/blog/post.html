@@ -1,0 +1,68 @@
+{% extends 'core/base.html' %}
+
+{% load static %}
+{% load hitcount_tags %}
+{% block title%}{{post.title}}{% endblock %}
+
+{% block content %}
+
+  <!-- main            -->
+      <main class="container pt-5 mt-5 pb-4 wow fadeIn">
+           <nav class="navbar navbar-expand-sm navbar-light " id="category-bar">
+               <button class="navbar-toggler d-lg-none" type="button" data-toggle="collapse" data-target="#collapsibleNavId" aria-controls="collapsibleNavId"
+                   aria-expanded="false" aria-label="Toggle navigation">
+                   <span class="navbar-toggler-icon"></span>
+               </button>
+               <div class="collapse navbar-collapse" id="collapsibleNavId">
+                   <ul class="navbar-nav mr-auto mt-2 mt-lg-0 text-center ml">
+                       <li class="nav-item active">
+                           <a class="nav-link" href="#">All <span class="sr-only">(current)</span></a>
+                       </li>
+                            {% for category in categories  %}
+                            <li class="nav-item" id="category-name">
+                                <a class="nav-link" href="{% url 'category' category.id %}">{{category.name}}</a>
+                            </li>
+                            {% endfor %}
+                   </ul>
+                   <form>
+                    <input class="search" type="text" name="search" placeholder="Search..">
+                  </form>
+               </div>
+           </nav>
+        </main>
+
+      <div class="container wow fadeInUp">
+        <div class="row">
+            <div class="col-12 pt-5 mt-2 pb-5 posts-text">
+              <h2>{{post.author}}</h2>
+              <h1><b>{{post.title}}</b></h1>
+              <h5>Update:{{post.published|date:"SHORT_DATE_FORMAT"}}</h5>
+            </div>
+          <div class="col-12 ">
+            <div class="col-12 posts">
+              <a href=""><img src="{{post.image.url}}" alt=""></a>
+            </div>
+          </div>
+          <div class="col-12 pt-5 mt-2 pb-5 posts-text text-justify">
+              <p>
+              {{post.content|safe}}
+              </p>
+          </div>
+          <div class="col-12 pt-5 mt-2  posts-text">
+              <div class="row categories-icons">
+                <div class="col-6">
+                  <p>iconos</p>
+                </div>
+                <div class="col-6 text-right">
+                  <p>{{post.categories.name}}</p>
+                </div>
+              </div>
+          </div>
+          <div class="col-12 pb-5 posts-text">
+              <h6 class="views">{{visits|safe}}</h6>
+          </div>
+        </div>
+      </div>
+
+
+{% endblock %}

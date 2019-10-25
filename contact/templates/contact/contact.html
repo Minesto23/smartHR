@@ -1,0 +1,171 @@
+{% extends 'core/base.html' %}
+
+{% load static %}
+{% load widget_tweaks %}
+
+{% block title%}Contact{% endblock %}
+
+{% block content %}
+  <div class="container-fluid contactbg">
+      <div class="row" >
+        <div class="col-12">
+        </div>
+      </div>
+  </div>
+
+  <!-- Main -->
+  <div class="container-fluid ">
+      <div class="row">
+          <div class="col-12 pb-5 animated wow slideInUp" id="about-us">
+              <h3 style="padding-top: 30px; padding-button:10px;">Contact</h3>
+              <p>Smart HR Services’ Team is focused on helping you succeed by taking care of the things that may be distracting you from the bigger picture “Your Business”.</p>
+          </div>
+      </div>
+  </div>
+
+  <div class="container">
+      <div class="row wow fadeInUp">
+        <div class="col-xs-12 col-lg-6 contactf">
+          <div class="container">
+            <form action="" id="send_email" name="sendemail" method="post">
+              {% csrf_token %}
+              <div class="form-group row">
+                <div class="col-sm-1-12 pl-3">
+                  <label for="">*Your Name</label>
+                  {{form_email.name}}
+                </div>
+                {{form_email.name.errors}}
+                <div class="col-sm-1-12 pl-3">
+                  <label for="">*Your LastName</label>
+                  {{form_email.lastname}}
+                </div>
+                {{form_email.lastname.errors}}
+              </div>
+              <div class="form-group row pt-4">
+                <div class="col-sm-1-12 pl-3">
+                    <label for="">*Your Email</label>
+                    {{form_email.email}}
+                </div>
+                {{form_email.email.errors}}
+                <div class="col-sm-1-12 pl-3">
+                    <label for="">*Subject</label>
+                    {{form_email.subject}}
+                </div>
+                {{form_email.subject.errors}}
+              </div>
+              <div class="form-group">
+                <label for="">Message</label>
+                {{form_email.content}}
+              </div>
+              {{form_email.content.errors}}
+              <div class="form-group row justify-content-center">
+                <div class="offset-sm-2 col-sm-10 pl-5 pt-3 pb-2">
+                  <button type="submit" name="button" class="btn btn-primary py-2 buttonSend" value="email">Send</button>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+        <div class="col-xs-12 col-lg-6 text-center">
+            <h5 class="text-center" id="form_message">If you got any questions <br>please do not hesitate to send us a message</h5>
+            {% if 'ok' in request.GET %}
+                  <p style="font-size: 24px; color: green; padding-top: 10px;">Your message was sent, We'll in contact with you</p>
+            {% endif %}
+            {% if 'fail' in request.GET %}
+                  <p style="font-size: 24px; color: red; padding-top: 10px;">Your message was not send, Please enter your data again</p>
+            {% endif %}
+            {% if 'ok_q' in request.GET %}
+                  <h3 style="font-size: 24px; color: green; padding-top: 10px;">Your quote was saved, We'll in contact with you</h3>
+            {% endif %}
+            {% if 'not_q' in request.GET %}
+                  <h3 style="font-size: 24px; color: red; padding-top: 10px;">Your quote was not saved, Please enter data again</h3>
+            {% endif %}
+            {% if 'same_q' in request.GET %}
+                  <p style="font-size: 24px; color: red; padding-top: 10px;"><b>Your quote was not saved, The turn was not disponible please choose another</b></p>
+            {% endif %}
+        </div>
+      </div>
+  </div>
+
+   
+    
+    <div class="container pt-4">
+      <div class="row">
+        <div class="col-12">
+          <h3 style="font-size: 24px; color: #63B3AA;">Book your 30 minutes free phone consulting</h3>
+          <button id="Mybtn" type="button" class="btn btn-info" data-toggle="collapse" data-target="#form">Here</button>
+        </div>
+        <div class="col-12">
+            <div class="container"  >
+              <div class="collapse" id="form">
+                  <form action="" id="quoteform" name="quote_form" method="post" data-turns-url="{% url 'ajax-loadturns' %}">
+                    {% csrf_token %}
+                      <div class="form-group row">
+                        <div class="col-sm-1-12 pl-3">
+                          <label for="">*Your Name</label>
+                          {{form_quote.name}}
+                        </div>
+                        {{form_quote.name.errors}}
+                        <div class="col-sm-1-12 pl-3">
+                          <label for="">*Your LastName</label>
+                          {{form_quote.lastname}}
+                        </div>
+                        {{form_quote.name.errors}}
+                        </div>
+                        <div class="form-group row pt-4">
+                          <div class="col-sm-1-12 pl-3">
+                              <label for="">*Your Email</label>
+                              {{form_quote.email}}
+                          </div>
+                          {{form_quote.email.errors}}
+                        <div class="col-sm-1-12 pl-3">
+                            <label for="">*Your Cell-Phone</label>
+                          {{form_quote.phone_number|attr:"type:number"}}
+                        </div>
+                        {{form_quote.phone_number.errors}}
+                      </div>
+                      <div class="form-group row pt-4">
+                        <div class="col-sm-1-12 pl-3">
+                            <label for="">Date</label>
+                            {{form_quote.date|attr:"type:date"|attr:"class:form-control quotes"}}
+                      </div>
+                        {{form_quote.date.errors}}
+                        <div class="col-sm-1-12 pl-3">
+                            <label for="">Turn</label>
+                            <select class="form-control quotes" name="turn" id="id_turn">
+                            <option value="" disabled selected>Select Your Turn</option>
+                             </select>
+                            </div>
+                        </div>
+                      <div class="form-group row justify-content-center">
+                        <div class="offset-sm-2 col-sm-10 pl-0 pt-3">
+                          <button type="submit" name="button" class="btn btn-primary py-2 buttonSend2" value="quote">Send</button>
+                        </div>
+                      </div>
+                  </form>
+              </div>  
+            </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script>
+    $("#id_date").change(function () {
+      var url = $("#quoteform").attr("data-turns-url");
+      var dateId = $(this).val();
+
+      $.ajax({
+        url: url,
+        data: {
+          'date': dateId
+        },
+        success: function (data) {
+          $("#id_turn").html(data);
+        }
+      });
+
+    });
+  </script>
+    
+{% endblock %}
