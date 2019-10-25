@@ -34,7 +34,7 @@ urlpatterns = [
     path('who/', include('our_team.urls')),
     #Path del admin
     path('admin/', include('material.admin.urls')),
-]+static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
+]+ static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
 
 
 #Personalizacion del admin
