@@ -1,0 +1,1 @@
+web: gunicorn sobicapital.wsgi --log-file -

@@ -19,6 +19,10 @@ from django.urls import path, include
 from django.conf import settings
 from material.admin.sites import site
 
+#para el deploy
+from django.conf.urls.static import static
+
+
 urlpatterns = [
     path('', include('core.urls')),
     path('i18n/', include('django.conf.urls.i18n')), # < here
@@ -30,11 +34,8 @@ urlpatterns = [
     path('who/', include('our_team.urls')),
     #Path del admin
     path('admin/', include('material.admin.urls')),
-]
+]+static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
 
-if settings.DEBUG:
-    from django.conf.urls.static import static
-    urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 
 #Personalizacion del admin
 site.site_header = ('SmartHR Admin Portal')
