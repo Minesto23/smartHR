@@ -1,12 +1,13 @@
-from django.contrib import admin
+from material.admin.options import MaterialModelAdmin
+from material.admin.sites import site
 from .models import WorkTeam, Who_We_Are
 
 # Register your models here.
-class WorkTeamAdmin(admin.ModelAdmin):
+class WorkTeamAdmin(MaterialModelAdmin):
     readonly_fields = ('created','updated')
 
-class Who_We_AreAdmin(admin.ModelAdmin):
+class Who_We_AreAdmin(MaterialModelAdmin):
     readonly_fields = ('created','updated')
 
-admin.site.register(WorkTeam, WorkTeamAdmin)
-admin.site.register(Who_We_Are, Who_We_AreAdmin)
+site.register(WorkTeam, WorkTeamAdmin)
+site.register(Who_We_Are, Who_We_AreAdmin)

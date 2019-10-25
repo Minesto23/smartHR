@@ -1,8 +1,10 @@
-from django.contrib import admin
+from material.admin.options import MaterialModelAdmin
+from material.admin.sites import site
 from .models import Link
 
 # Register your models here.
-class LinkAdmin(admin.ModelAdmin):
+class LinkAdmin(MaterialModelAdmin):
     readonly_fields = ('created','updated')
+    icon_name = 'share'
 
-admin.site.register(Link, LinkAdmin)
+site.register(Link, LinkAdmin)

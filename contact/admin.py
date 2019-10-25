@@ -1,16 +1,17 @@
-from django.contrib import admin
+from material.admin.options import MaterialModelAdmin
+from material.admin.sites import site
 from .models import Quote, Turns, Model_Quote
 
 # Register your models here.
-class TurnsAdmin(admin.ModelAdmin):
+class TurnsAdmin(MaterialModelAdmin):
     readonly_fields = ('created', 'updated')
 
-class QuoteAdmin(admin.ModelAdmin):
+class QuoteAdmin(MaterialModelAdmin):
     readonly_fields = ('created','updated')
 
-class ModelQAdmin(admin.ModelAdmin):
+class ModelQAdmin(MaterialModelAdmin):
     readonly_fields = ('created','updated')
 
-admin.site.register(Turns, TurnsAdmin) 
-admin.site.register(Quote, QuoteAdmin)
-admin.site.register(Model_Quote, ModelQAdmin)
+site.register(Turns, TurnsAdmin) 
+site.register(Quote, QuoteAdmin)
+site.register(Model_Quote, ModelQAdmin)

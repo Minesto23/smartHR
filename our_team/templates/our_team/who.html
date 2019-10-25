@@ -1,10 +1,12 @@
 {% extends 'core/base.html' %}
 
 {% load static %}
+{% load i18n %}
 
-{% block title%}Our Team{% endblock %}
+{% block title%}{% trans "Our Team" %}{% endblock %}
 
 {% block content %}
+
 
     <div class="container-fluid" id="who_bg">
       <div class="row" >
@@ -17,12 +19,14 @@
         <div class="row">
         {% for who in Who_We_Are %}
             <div class="col-12 pb-5 animated wow slideInUp" id="about-us">
-                <h3 style="padding-top: 30px;">{{who.title}}</h3>
+                <h3 style="padding-top: 30px;">{% trans "Our Culture" %}</h3>
                 <p style="padding-top: 10px;">{{who.content|safe}}</p>
               </div>
         {% endfor %}
         </div>
       </div>
+
+     
 
     <!-- team -->
     <div class="container pt-5">

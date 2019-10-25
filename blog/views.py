@@ -12,7 +12,8 @@ class PostListView(ListView):
     model = Post
     template_name = 'blog/blog.html'
     ordering = ['-created']
-    paginate_by = 4
+    
+    paginate_by = 3
 
     def get_context_data(self, **kwargs):
         context = super(PostListView,self).get_context_data(**kwargs)

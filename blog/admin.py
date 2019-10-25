@@ -1,12 +1,17 @@
-from django.contrib import admin
+# from django.contrib import admin
+from material.admin.options import MaterialModelAdmin
+from material.admin.sites import site
+
 from .models import Post, Category
 
 # Register your models here.
-class CategoryAdmin(admin.ModelAdmin):
+class CategoryAdmin(MaterialModelAdmin):
     readonly_fields = ('created', 'updated')
+    icon_name = 'book'
 
-class PostAdmin(admin.ModelAdmin):
+class PostAdmin(MaterialModelAdmin):
     readonly_fields = ('created','updated')
+    icon_name = 'chrome_reader_mode'
 
-admin.site.register(Category, CategoryAdmin)
-admin.site.register(Post, PostAdmin)
+site.register(Category, CategoryAdmin)
+site.register(Post, PostAdmin)

@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 {% load static %}
+{% load i18n %}
 <html lang="en">
   <head>
     <meta charset="UTF-8">
@@ -36,7 +37,7 @@
                 </div>
               </div> 
             </a>         
-            <div class="col offset-lg-4 offset-sm-0 navbar-collapse collapse"  id="navigation">
+            <div class="col offset-lg-3 offset-sm-0 navbar-collapse collapse"  id="navigation">
                 <ul class="navbar-nav mr-auto mt-2 mt-lg-0 text-center">
                   <li class="nav-item {% if request.path == '/' %}active{% endif %}">
                     <a class="nav-link" href="{% url 'home' %}"> Home  </a>
@@ -56,6 +57,22 @@
                   <li class="nav-item {% if request.path == '/contact/' %}active{% endif %}">
                     <a class="nav-link" href="{% url 'contact' %}"> Contact </a>
                   </li>
+                  <li class="nav-item pt-2 pl-4">
+                    <form name="myform" action="{% url 'set_language' %}" method="post">{% csrf_token %}
+                        <input name="next" type="hidden" value="{{ redirect_to }}" >
+                        <select name="language" onchange="myform.submit()" style=" background-color: #63B3AA; border-radius: 20%; border-color: #63B3AA; color: white; text-transform: capitalize;">
+                            {% get_current_language as LANGUAGE_CODE %}
+                            {% get_available_languages as LANGUAGES %}
+                            {% get_language_info_list for LANGUAGES as languages %}
+                            {% for language in languages %}
+                                <option style="text-transform: capitalize;"  value="{{ language.code }}"{% if language.code == LANGUAGE_CODE %} selected{% endif %}>
+                                    {{ language.code }}
+                                </option>
+                            {% endfor %}
+                        </select>                    
+                      </form>                   </li>
+                     
+                    
                 </ul>
             </div>
           </div>
