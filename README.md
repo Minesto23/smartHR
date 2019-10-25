@@ -1,2 +1,0 @@
-# smartHR
-Webpage for SmartHR
