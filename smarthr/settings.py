@@ -190,3 +190,5 @@ CSRF_COOKIE_HTTPONLY = 'TRUE'
 LOCALE_PATHS = [
     os.path.join(BASE_DIR, 'locale'),
 ]
+
+STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
