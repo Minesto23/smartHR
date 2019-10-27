@@ -1,0 +1,139 @@
+{% extends 'core/base.html' %}
+
+{% load static %}
+{% load i18n %}
+{% load hitcount_tags %}
+{% block title%}{{post.title}}{% endblock %}
+
+{% block content %}
+
+  <!-- main            -->
+      <main class="container pt-5 mt-5 pb-4 wow fadeIn">
+           <nav class="navbar navbar-expand-sm navbar-light " id="category-bar">
+               <button class="navbar-toggler d-lg-none" type="button" data-toggle="collapse" data-target="#collapsibleNavId" aria-controls="collapsibleNavId"
+                   aria-expanded="false" aria-label="Toggle navigation">
+                   <span class="navbar-toggler-icon"></span>
+               </button>
+               <div class="collapse navbar-collapse" id="collapsibleNavId">
+                   <ul class="navbar-nav mr-auto mt-2 mt-lg-0 text-center ml">
+                       <li class="nav-item active">
+                           <a class="nav-link" href="#">All <span class="sr-only">(current)</span></a>
+                       </li>
+                            {% for category in categories  %}
+                            <li class="nav-item" id="category-name">
+                                {% if LANGUAGE_CODE == "es" %}
+                                  <a class="nav-link" href="{% url 'category' category.id %}">{{category.name_es}}</a>
+                                {% elif LANGUAGE_CODE == "en" %}
+                                  <a class="nav-link" href="{% url 'category' category.id %}">{{category.name_en}}</a>
+                                {% endif %}
+                            </li>
+                            {% endfor %}
+                   </ul>
+                   <form action="{% url 'search' %}" method="get">
+                    <input class="search" type="text" name="q" placeholder="Search..">
+                  </form>
+               </div>
+           </nav>
+        </main>
+
+      <div class="container wow fadeInUp">
+        <div class="row">
+             <div class="col-12 pt-5 mt-2 pb-5 posts-text">
+              <h2>{{post.author}}</h2>
+              {% if LANGUAGE_CODE == "es" %}
+                <h1><b>{{post.title_es}}</b></h1>
+              {% elif LANGUAGE_CODE == "en" %}
+                <h1><b>{{post.title_en}}</b></h1>
+              {% endif %}
+              <h5>{% trans "Update:" %}{{post.published|date:"SHORT_DATE_FORMAT"}}</h5>
+            </div>
+          <div class="col-12 ">
+            <div class="col-12 posts">
+              <a href=""><img src="{{post.image.url}}" alt=""></a>
+            </div>
+          </div>
+          <div class="col-12 pt-5 mt-2 pb-5 posts-text text-justify">
+              <p>
+              {% if LANGUAGE_CODE == "es" %}
+                {{post.content_es|safe}}
+              {% elif LANGUAGE_CODE == "en" %}
+                {{post.content_en|safe}}
+              {% endif %}
+              </p>
+          </div>
+          <div class="col-12 pt-5 mt-2  ">
+              <div class="row categories-icons">
+                <div class="col-6">
+                  <div class="row" >
+                    <img src="{% static 'core/images/eye.png' %}" alt="" style="width: 30px; height: 30px; margin-right: 10px;">
+                    <h6 class="pt-1">{{visits|safe}}</h6>
+                  </div>
+                </div>
+                <div class="col-6 text-right">
+                {% for category in post.categories.all %}
+                  {% if LANGUAGE_CODE == "es" %}
+                    <a href="{% url 'category' category.id %}" class="link" style="color: #63B3AA">{{category.name_es}}</a>{% if not forloop.last %},{% endif %}
+                  {% elif LANGUAGE_CODE == "en" %}
+                    <a href="{% url 'category' category.id %}" class="link" style="color: #63B3AA">{{category.name_en}}</a>{% if not forloop.last %},{% endif %}
+                  {% endif %}
+                {% endfor %} 
+                </div>
+              </div>
+          </div>
+        </div>
+      </div>
+
+       <div class="container" id="content_new">
+            <div class="row p-5 d-flex news">
+                <div class="col-12 wow fadeInUp" >
+                    <h3>{% trans "Recent News" %}</h3>
+                </div>
+                {% for post in posts %}
+                {% if forloop.counter == 1 %}
+                <div class="col-8 col-md-3 new  wow fadeInUp" data-wow-delay="0.3s">
+                    <img src="{{post.image.url}}" alt="" >
+                    {% if LANGUAGE_CODE == "es" %}
+                      <a href="{% url 'post' post.id post.title_es|slugify %}"><p>{{post.title_es|truncatewords:5}}</p></a>
+                    {% elif LANGUAGE_CODE == "en" %}
+                      <a href="{% url 'post' post.id post.title_en|slugify %}"><p>{{post.title_en|truncatewords:5}}</p></a>
+                    {% endif%}
+                    <div class="d-flex vistas"> 
+                        <img src="{% static 'core/images/eye.png' %}" alt="">
+                        <p>{{post.views}}</p>
+                    </div>
+                </div>
+                {% elif forloop.counter == 2 %}
+                <div class="col-8 col-md-3 new wow fadeInUp" data-wow-delay="0.6s">
+                    <img src="{{post.image.url}}" alt="">
+                    {% if LANGUAGE_CODE == "es" %}
+                      <a href="{% url 'post' post.id post.title_es|slugify %}"><p>{{post.title_es|truncatewords:5}}</p></a>
+                    {% elif LANGUAGE_CODE == "en" %}
+                      <a href="{% url 'post' post.id post.title_en|slugify %}"><p>{{post.title_en|truncatewords:5}}</p></a>
+                    {% endif%}
+                    <div class="d-flex vistas">
+                        <img src="{% static 'core/images/eye.png' %}" alt="">
+                        <p>{{post.views}}</p>                            
+                    </div>
+                </div>
+                {% elif forloop.counter == 3 %}
+                <div class="col-8 col-md-3 new wow fadeInUp" data-wow-delay="0.9s">
+                    <img src="{{post.image.url}}" alt="">
+                    {% if LANGUAGE_CODE == "es" %}
+                      <a href="{% url 'post' post.id post.title_es|slugify %}"><p>{{post.title_es|truncatewords:5}}</p></a>
+                    {% elif LANGUAGE_CODE == "en" %}
+                      <a href="{% url 'post' post.id post.title_en|slugify %}"><p>{{post.title_en|truncatewords:5}}</p></a>
+                    {% endif%}
+                    <div class="d-flex vistas">
+                        <img src="{% static 'core/images/eye.png' %}" alt="">
+                        <p>{{post.views}}</p>                            
+                    </div>
+                </div>
+                {% endif %}
+                {% endfor %}
+                <div class="col-12 wow fadeIn d-flex justify-content-end" data-wow-delay="1.2s">
+                    <a name="" id="buttonMore" class="btn btn-primary" href="{% url 'blog' %}" role="button">{% trans "MORE" %}</a>
+                </div>
+            </div>
+      </div>
+
+{% endblock %}

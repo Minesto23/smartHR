@@ -1,0 +1,78 @@
+{% extends 'core/base.html' %}
+
+{% load static %}
+
+{% block title%}Blog{% endblock %}
+
+{% block content %}
+
+<!-- main            -->
+      <main class="container pt-5 mt-5 pb-4 wow fadeIn">
+           <nav class="navbar navbar-expand-sm navbar-light " id="category-bar">
+               <button class="navbar-toggler d-lg-none" type="button" data-toggle="collapse" data-target="#collapsibleNavId" aria-controls="collapsibleNavId"
+                   aria-expanded="false" aria-label="Toggle navigation">
+                   <span class="navbar-toggler-icon"></span>
+               </button>
+               <div class="collapse navbar-collapse" id="collapsibleNavId">
+                   <ul class="navbar-nav mr-auto mt-2 mt-lg-0 text-center ml">
+                       <li class="nav-item">
+                           <a class="nav-link" href="{% url 'blog' %}">All <span class="sr-only">(current)</span></a>
+                       </li>
+                            {% for cat in categories  %}
+                            <li class="nav-item {% if forloop.counter == category.id %}active{% endif %}" id="category-name">
+                                {% if LANGUAGE_CODE == "es" %}
+                                  <a class="nav-link" href="{% url 'category' cat.id %}">{{cat.name_es}}</a>
+                                {% elif LANGUAGE_CODE == "en" %}
+                                  <a class="nav-link" href="{% url 'category' cat.id %}">{{cat.name_en}}</a>
+                                {% endif %}
+                            </li>
+                            {% endfor %}
+                   </ul>
+                   <form action="{% url 'search' %}" method="get">
+                    <input class="search" type="text" name="q" placeholder="Search..">
+                  </form>
+               </div>
+           </nav>
+        </main>
+
+      <div class="container">
+        <div class="row">
+        {% for post in categori %}
+           <div class="col-12 wow slideInUp">
+              <div class="col-12 posts">
+                {% if LANGUAGE_CODE == "es" %}
+                  <a href="{% url 'post' post.id post.title_es|slugify %}"><img src="{{post.image.url}}" alt=""></a>
+                {% elif LANGUAGE_CODE == "en" %}
+                  <a href="{% url 'post' post.id post.title_en|slugify %}"><img src="{{post.image.url}}" alt=""></a>
+                {% endif %}
+              </div>
+              <div class="col-12 pt-5 mt-2 pb-5 posts-text">
+                <h2>{{post.author}}</h2>
+                {% if LANGUAGE_CODE == "es" %}
+                  <h3><b>{{post.title_es}}</b></h3>
+                  <p>{{post.content_es|safe}}</p>
+                {% elif LANGUAGE_CODE == "en" %}
+                  <h3><b>{{post.title_en}}</b></h3>
+                  <p>{{post.content_en|safe}}</p>
+                {% endif %}
+                 <div class="row" >
+                    <img src="{% static 'core/images/eye.png' %}" alt="" style="width: 30px; height: 30px; margin-right: 10px;">
+                    <h6 class="pt-1" style="border: none;">{{post.views}}</h6>
+                    <div class="col-12 text-right">
+                      {% for category in post.categories.all %}
+                        {% if LANGUAGE_CODE == "es" %}
+                          <a href="{% url 'category' category.id %}" class="link" style="color: #63B3AA">{{category.name_es}}</a>{% if not forloop.last %},{% endif %}
+                        {% elif LANGUAGE_CODE == "en" %}
+                          <a href="{% url 'category' category.id %}" class="link" style="color: #63B3AA">{{category.name_en}}</a>{% if not forloop.last %},{% endif %}
+                        {% endif %}
+                      {% endfor %} 
+                    </div>
+                </div>
+              </div>
+            </div> 
+        {% endfor %}
+        </div>
+      </div>
+       {% include 'blog/page-bar2.html' %}
+
+{% endblock %}
