@@ -19,10 +19,14 @@
                            <a class="nav-link" href="{% url 'blog' %}">All <span class="sr-only">(current)</span></a>
                        </li>
                        {% for category in categories  %}
-                            <li class="nav-item" id="category-name" >
-                                <a class="nav-link" href="{% url 'category' category.id %}">{{category.name}}</a>
+                            <li class="nav-item" id="category-name">
+                              {% if LANGUAGE_CODE == "es" %}
+                                <a class="nav-link" href="{% url 'category' category.id %}">{{category.name_es}}</a>
+                              {% elif LANGUAGE_CODE == "en" %}
+                                <a class="nav-link" href="{% url 'category' category.id %}">{{category.name_en}}</a>
+                              {% endif %}
                             </li>
-                       {% endfor %} 
+                       {% endfor %}
                    </ul>
                    <form action="{% url 'search' %}" method="get">
                     <input class="search" type="text" name="q" placeholder="Search..">
@@ -36,13 +40,34 @@
         {% for post in post_list  %}
           <div class="col-12 wow slideInUp">
               <div class="col-12 posts">
-                <a href="{% url 'post' post.id post.title|slugify %}"><img src="{{post.image.url}}" alt=""></a>
+              {% if LANGUAGE_CODE == "es" %}
+                <a href="{% url 'post' post.id post.title_es|slugify %}"><img src="{{post.image.url}}" alt=""></a>
+              {% elif LANGUAGE_CODE == "en" %}
+                <a href="{% url 'post' post.id post.title_en|slugify %}"><img src="{{post.image.url}}" alt=""></a>
+              {% endif %}
               </div>
               <div class="col-12 pt-5 mt-2 pb-5 posts-text">
                 <h2>{{post.author}}</h2>
-                <h3><b>{{post.title}}</b></h3>
-                <p>{{post.content|safe|truncatewords:30}}</p>
-                <h6>{{post.views}} views</h6>
+                {% if LANGUAGE_CODE == "es" %}
+                  <h3><b>{{post.title_es}}</b></h3>
+                  <p>{{post.content_es|safe|truncatewords:30}}</p>
+                {% elif LANGUAGE_CODE == "en" %}
+                  <h3><b>{{post.title_en}}</b></h3>
+                  <p>{{post.content_en|safe|truncatewords:30}}</p>
+                {% endif %}
+                <div class="row" >
+                    <img src="{% static 'core/images/eye.png' %}" alt="" style="width: 30px; height: 30px; margin-right: 10px;">
+                    <h6 class="pt-1" style="border: none;">{{post.views}}</h6>
+                    <div class="col-12 text-right">
+                      {% for category in post.categories.all %}
+                        {% if LANGUAGE_CODE == "es" %}
+                          <a href="{% url 'category' category.id %}" class="link" style="color: #63B3AA">{{category.name_es}}</a>{% if not forloop.last %},{% endif %}
+                        {% elif LANGUAGE_CODE == "en" %}
+                          <a href="{% url 'category' category.id %}" class="link" style="color: #63B3AA">{{category.name_en}}</a>{% if not forloop.last %},{% endif %}
+                        {% endif %}
+                      {% endfor %} 
+                    </div>
+                </div>
               </div>
             </div> 
         {% endfor %}

@@ -1,9 +1,10 @@
 {% extends 'core/base.html' %}
 
+{% load i18n %}
 {% load static %}
 {% load widget_tweaks %}
 
-{% block title%}Contact{% endblock %}
+{% block title%}{% trans "Contact" %}{% endblock %}
 
 {% block content %}
   <div class="container-fluid contactbg">
@@ -17,8 +18,8 @@
   <div class="container-fluid ">
       <div class="row">
           <div class="col-12 pb-5 animated wow slideInUp" id="about-us">
-              <h3 style="padding-top: 30px; padding-button:10px;">Contact</h3>
-              <p>Smart HR Services’ Team is focused on helping you succeed by taking care of the things that may be distracting you from the bigger picture “Your Business”.</p>
+              <h3 style="padding-top: 30px; padding-button:10px;">{% trans Contact %}</h3>
+              <p>{% trans "Smart HR Services’ Team is focused on helping you succeed by taking care of the things that may be distracting you from the bigger picture “Your Business”." %}</p>
           </div>
       </div>
   </div>
@@ -31,57 +32,77 @@
               {% csrf_token %}
               <div class="form-group row">
                 <div class="col-sm-1-12 pl-3">
-                  <label for="">*Your Name</label>
-                  {{form_email.name}}
+                  <label for="">{% trans "*Your Name" %}</label>
+                  {% if LANGUAGE_CODE == "es" %}
+                    {{form_email.name|attr:"placeholder:*Nombres"}}
+                  {% elif LANGUAGE_CODE == "en" %}
+                    {{form_email.name|attr:"placeholder:*Your Name"}}
+                  {% endif %}
                 </div>
                 {{form_email.name.errors}}
                 <div class="col-sm-1-12 pl-3">
-                  <label for="">*Your LastName</label>
-                  {{form_email.lastname}}
+                  <label for="">{% trans "*Your LastName" %}</label>
+                  {% if LANGUAGE_CODE == "es" %}
+                    {{form_email.lastname|attr:"placeholder:*Apellidos"}}
+                  {% elif LANGUAGE_CODE == "en" %}
+                    {{form_email.lastname|attr:"placeholder:*Your Lastname"}}
+                  {% endif %}
                 </div>
                 {{form_email.lastname.errors}}
               </div>
               <div class="form-group row pt-4">
                 <div class="col-sm-1-12 pl-3">
-                    <label for="">*Your Email</label>
-                    {{form_email.email}}
+                    <label for="">{% trans "*Your Email" %}</label>
+                    {% if LANGUAGE_CODE == "es" %}
+                      {{form_email.email|attr:"placeholder:*Correo Electrónico"}}
+                    {% elif LANGUAGE_CODE == "en" %}
+                      {{form_email.email|attr:"placeholder:*Your Email"}}
+                    {% endif %}
                 </div>
                 {{form_email.email.errors}}
                 <div class="col-sm-1-12 pl-3">
-                    <label for="">*Subject</label>
-                    {{form_email.subject}}
+                    <label for="">{% trans "*Subject" %}</label>
+                    {% if LANGUAGE_CODE == "es" %}
+                      {{form_email.subject|attr:"placeholder:*Asunto"}}
+                    {% elif LANGUAGE_CODE == "en" %}
+                      {{form_email.subject|attr:"placeholder:*Subject"}}
+                    {% endif %}
                 </div>
                 {{form_email.subject.errors}}
               </div>
               <div class="form-group">
-                <label for="">Message</label>
-                {{form_email.content}}
+                <label for="">{% trans "Message" %}</label>
+                {% if LANGUAGE_CODE == "es" %}
+                  {{form_email.content|attr:"placeholder:*Mensaje"}}
+                {% elif LANGUAGE_CODE == "en" %}
+                  {{form_email.content|attr:"placeholder:*Message"}}
+                {% endif %}
               </div>
               {{form_email.content.errors}}
               <div class="form-group row justify-content-center">
                 <div class="offset-sm-2 col-sm-10 pl-5 pt-3 pb-2">
-                  <button type="submit" name="button" class="btn btn-primary py-2 buttonSend" value="email">Send</button>
+                  <button type="submit" name="button" class="btn btn-primary py-2 buttonSend" value="email">{% trans "Send" %}</button>
                 </div>
               </div>
             </form>
           </div>
         </div>
         <div class="col-xs-12 col-lg-6 text-center">
-            <h5 class="text-center" id="form_message">If you got any questions <br>please do not hesitate to send us a message</h5>
+            <h5 class="text-center" id="form_message">{% trans "If you got any questions <br>please do not hesitate to send us a message" %}</h5>
             {% if 'ok' in request.GET %}
-                  <p style="font-size: 24px; color: green; padding-top: 10px;">Your message was sent, We'll in contact with you</p>
+                  <p style="font-size: 24px; color: green; padding-top: 10px;">{% trans "Your message was sent, We'll in contact with you" %}</p>
             {% endif %}
             {% if 'fail' in request.GET %}
-                  <p style="font-size: 24px; color: red; padding-top: 10px;">Your message was not send, Please enter your data again</p>
+                  <p style="font-size: 24px; color: red; padding-top: 10px;">{% trans "Your message was not send, Please enter your data again" %}</p>
             {% endif %}
             {% if 'ok_q' in request.GET %}
-                  <h3 style="font-size: 24px; color: green; padding-top: 10px;">Your quote was saved, We'll in contact with you</h3>
+                  <h3 style="font-size: 24px; color: green; padding-top: 10px;">{% trans "Your quote was saved, We'll in contact with you" %}</h3>
             {% endif %}
             {% if 'not_q' in request.GET %}
-                  <h3 style="font-size: 24px; color: red; padding-top: 10px;">Your quote was not saved, Please enter data again</h3>
+                  <h3 style="font-size: 24px; color: red; padding-top: 10px;">{% trans "Your quote was not saved, Please enter data again" %}</h3>
             {% endif %}
             {% if 'same_q' in request.GET %}
-                  <p style="font-size: 24px; color: red; padding-top: 10px;"><b>Your quote was not saved, The turn was not disponible please choose another</b></p>
+                  <p style="font-size: 24px; color: red; padding-top: 10px;"><b>{% trans "Your quote was not saved, The turn was not disponible please choose another" %}</b></p>
             {% endif %}
         </div>
       </div>
@@ -92,8 +113,8 @@
     <div class="container pt-4">
       <div class="row">
         <div class="col-12">
-          <h3 style="font-size: 24px; color: #63B3AA;">Book your 30 minutes free phone consulting</h3>
-          <button id="Mybtn" type="button" class="btn btn-info" data-toggle="collapse" data-target="#form">Here</button>
+          <h3 style="font-size: 24px; color: #63B3AA;">{% trans "Book your 30 minutes free phone consulting" %}</h3>
+          <button id="Mybtn" type="button" class="btn btn-info" data-toggle="collapse" data-target="#form">{% trans "Here" %}</button>
         </div>
         <div class="col-12">
             <div class="container"  >
@@ -102,44 +123,64 @@
                     {% csrf_token %}
                       <div class="form-group row">
                         <div class="col-sm-1-12 pl-3">
-                          <label for="">*Your Name</label>
-                          {{form_quote.name}}
+                              <label for="">{% trans "*Your Name" %}</label>
+                              {% if LANGUAGE_CODE == "es" %}
+                                {{form_quote.name|attr:"placeholder:*Por Ejemplo:Kat"}}
+                              {% elif LANGUAGE_CODE == "en" %}
+                                {{form_quote.name|attr:"placeholder:*For Example:Kat"}}
+                              {% endif %}
                         </div>
                         {{form_quote.name.errors}}
                         <div class="col-sm-1-12 pl-3">
-                          <label for="">*Your LastName</label>
-                          {{form_quote.lastname}}
+                              <label for="">{% trans "*Your LastName" %}</label>
+                              {% if LANGUAGE_CODE == "es" %}
+                                {{form_quote.lastname|attr:"placeholder:*Por Ejemplo:Smith"}}
+                              {% elif LANGUAGE_CODE == "en" %}
+                                {{form_quote.lastname|attr:"placeholder:*For Example:Smith"}}
+                              {% endif %}
                         </div>
                         {{form_quote.name.errors}}
                         </div>
                         <div class="form-group row pt-4">
                           <div class="col-sm-1-12 pl-3">
-                              <label for="">*Your Email</label>
-                              {{form_quote.email}}
+                              <label for="">{% trans "*Your Email" %}</label>
+                              {% if LANGUAGE_CODE == "es" %}
+                                {{form_quote.email|attr:"placeholder:*Por Ejemplo:katj@email.com"}}
+                              {% elif LANGUAGE_CODE == "en" %}
+                                {{form_quote.email|attr:"placeholder:*For Example:katj@email.com"}}
+                              {% endif %}
                           </div>
                           {{form_quote.email.errors}}
                         <div class="col-sm-1-12 pl-3">
-                            <label for="">*Your Cell-Phone</label>
-                          {{form_quote.phone_number|attr:"type:number"}}
+                            <label for="">{% trans "*Your Cell-Phone" %}</label>
+                            {% if LANGUAGE_CODE == "es" %}
+                              {{form_quote.phone_number|attr:"type:number"|attr:"placeholder:*Por Ejemplo: 123-0000-000"}}
+                            {% elif LANGUAGE_CODE == "en" %}
+                              {{form_quote.phone_number|attr:"type:number"|attr:"placeholder:*For Exmaple: 123-0000-000"}}
+                            {% endif %}
                         </div>
                         {{form_quote.phone_number.errors}}
                       </div>
                       <div class="form-group row pt-4">
                         <div class="col-sm-1-12 pl-3">
-                            <label for="">Date</label>
-                            {{form_quote.date|attr:"type:date"|attr:"class:form-control quotes"}}
+                            <label for="">{% trans "Date" %}</label>
+                            {% if LANGUAGE_CODE == "es" %}
+                              {{form_quote.date|attr:"type:date"|attr:"class:form-control quotes"}}
+                            {% elif LANGUAGE_CODE == "en" %}
+                              {{form_quote.date|attr:"type:date"|attr:"class:form-control quotes"}}
+                            {% endif %}
                       </div>
                         {{form_quote.date.errors}}
                         <div class="col-sm-1-12 pl-3">
-                            <label for="">Turn</label>
+                            <label for="">{% trans "Turn" %}</label>
                             <select class="form-control quotes" name="turn" id="id_turn">
-                            <option value="" disabled selected>Select Your Turn</option>
+                            <option value="" disabled selected>{% trans "Select Your Turn" %}</option>
                              </select>
                             </div>
                         </div>
                       <div class="form-group row justify-content-center">
                         <div class="offset-sm-2 col-sm-10 pl-0 pt-3">
-                          <button type="submit" name="button" class="btn btn-primary py-2 buttonSend2" value="quote">Send</button>
+                          <button type="submit" name="button" class="btn btn-primary py-2 buttonSend2" value="quote">{% trans "Send" %}</button>
                         </div>
                       </div>
                   </form>

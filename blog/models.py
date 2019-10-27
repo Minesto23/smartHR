@@ -5,7 +5,8 @@ from ckeditor.fields import RichTextField
 
 # Create your models here.
 class Category(models.Model):
-    name = models.CharField(max_length=100,verbose_name="Name")
+    name_en = models.CharField(max_length=100,verbose_name="Name EN",null=False, unique=True)
+    name_es = models.CharField(max_length=100,verbose_name="Name ES",null=False, unique=True)   
     created = models.DateTimeField(auto_now_add=True, verbose_name="Created")
     updated = models.DateTimeField(auto_now=True, verbose_name="Updated")
 
@@ -15,11 +16,13 @@ class Category(models.Model):
         ordering = ['created']
     
     def __str__(self):
-        return self.name
+        return self.name_en
 
 class Post(models.Model):
-    title = models.CharField(max_length=200, verbose_name="Title")
-    content = RichTextField(verbose_name="Content")
+    title_en = models.CharField(max_length=200, verbose_name="Title EN")
+    title_es = models.CharField(max_length=200, verbose_name="Title ES")
+    content_en = RichTextField(verbose_name="Content EN")
+    content_es = RichTextField(verbose_name="Content ES")
     published = models.DateField(verbose_name="Published", default=now)
     views = models.IntegerField(verbose_name="Visits", default=0)
     image = models.ImageField(verbose_name="Image", upload_to="blog", null=True, blank=True)
@@ -34,4 +37,4 @@ class Post(models.Model):
         ordering = ['-created']
     
     def __str__(self):
-        return self.title
+        return self.title_en

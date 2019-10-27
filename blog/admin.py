@@ -10,7 +10,7 @@ class CategoryAdmin(MaterialModelAdmin):
     icon_name = 'book'
 
 class PostAdmin(MaterialModelAdmin):
-    readonly_fields = ('created','updated')
+    readonly_fields = ('created','updated','views')
     icon_name = 'chrome_reader_mode'
 
 site.register(Category, CategoryAdmin)
