@@ -1,0 +1,307 @@
+@import url('https://fonts.googleapis.com/css?family=Oxygen&display=swap');
+body{
+  font-family: 'Oxygen', sans-serif;
+}
+
+/* barra de navegacion */
+#principal-bar{
+  background-color: white;
+  font-size: 20px;
+}
+
+.logo{
+  width: 70px;
+  /* height:0px; */
+}
+
+#topheader .navbar-nav li.active > a {
+	color: #63B3AA;
+}
+
+/* --------------------------MAIN */
+
+#main_bg{
+  background: url("../images/PortadaHome.jpg") no-repeat fixed;
+  background-size: cover;
+  height:800px;
+  justify-content: center;
+}
+
+#main_title{
+  background-color: white;
+  color: #323335;
+  padding-top: 100px; 
+}
+
+.title{
+  font-size: 95px;
+  margin-left: 200px;
+}
+/*------------------- About us --------------------------*/
+
+#about-us{
+  background-color: white;
+}
+
+#about-us h3{
+  color: #CA636D;
+  padding-left: 200px;
+  font-size: 20px;
+}
+
+#about-us p{
+  color: #323335;
+  padding-left: 200px;
+  padding-right: 200px;
+  font-size: 25px;
+  text-align: justify;
+}
+
+/*-------------------------- Services ------------------------- */
+
+#services{
+  background-color: white;
+  padding-top: 100px;
+  padding-bottom: 20px;
+}
+
+#services h3{
+  color: #CA636D;
+  font-size: 20px;
+}
+
+#service img{
+  width: 100%;
+}
+
+#red-service , #green-service{
+  height: 300px;
+}
+
+#buttonMore{
+  background-color: #CA636D;
+  border: none;
+  font-size: 20px;
+  width: 140px;
+  height: 40px;
+}
+
+/* ------------------ questions -----------------------------*/
+
+#q_div_l{
+  margin-left: 100px;
+  max-width: 650px;
+}
+
+#q_div_r{
+  margin-right: 100px;
+  max-width: 650px;
+}
+
+#questions{
+  background-color: #CA636D;
+  color: #F7FaF0;
+  text-align: justify;
+}
+
+#questions-title{
+  text-decoration: underline  #F7FaF0;
+  text-underline-position: under;
+  font-size: 40px;
+}
+#question-text{
+  font-size: 20px;
+}
+
+#button-question{
+  background-color: white;
+  color: #CA636D;
+  border: none;
+  font-size: 20px;
+  width: 120px;
+  margin-bottom: 20px;
+  margin-right: 100px;
+}
+
+/*---------------- news --------------------------- */
+
+#main2_bg{
+  background: url("../images/HomeParteAbajo.jpg") no-repeat fixed;
+  background-size: cover;
+  height:900px;
+  justify-content: center;
+}
+
+.news{
+  justify-content: space-around;
+}
+.new{
+  background-color: white;
+  height: 350px;
+  min-width: 300px;
+  margin-top: 25px;
+  margin-bottom: 25px;
+  /* border: solid 1px white;
+  padding: 0px;
+  box-shadow: 4px 4px #ced1d4; */
+}
+
+.new img{
+  width: 100%;
+  /* height: auto; */
+  height: 200px;
+}
+
+.new a p{
+  font-size: 18px;
+  color: #323335;
+  margin: 15px;
+  height: 60px;
+}
+
+.new a{
+  text-decoration: none;
+}
+
+.new a:hover{
+  text-decoration: none;
+}
+
+.vistas{
+  border-top: solid 1px gray;
+  color: gray;
+}
+
+.vistas img{
+  width: 30px;
+  height: 30px;
+  margin-right: 10px;
+}
+
+.vistas a{
+margin-left: 10px;
+}
+
+/*------------------------ footer ------------------- */
+
+#footer{
+  background-color: #CA636D;
+  color: #F7FaF0;
+  padding-top: 50px;
+  font-size: 18px;
+}
+
+.form-control{
+  border-color: #323335;
+  border-style: solid;
+  border-width: 3px;
+  font-size: 19px;
+}
+
+#send{
+  background-color: #323335;
+  border: none;
+  width: 100%;
+}
+
+/*----------------------------- contact ----------------------------------------------- */
+.form-control::-webkit-input-placeholder { color: white; font-size: 16px; }  /* WebKit, Blink, Edge */
+.form-control:-moz-placeholder { color: white;  font-size: 16px;}  /* Mozilla Firefox 4 to 18 */
+.form-control::-moz-placeholder { color: white;  font-size: 16px;}  /* Mozilla Firefox 19+ */
+.form-control:-ms-input-placeholder { color: white; font-size: 16px; }  /* Internet Explorer 10-11 */
+.form-control::-ms-input-placeholder { color: white; font-size: 16px; }  /* Microsoft Edge */
+
+.form-control{
+  background-color: #CA636D;
+  color: #F7FaF0;
+  border: none;
+}
+
+#form_message{
+  font-size: 30px;
+  /* padding-left: 100px; */
+}
+
+.form-group label{
+  font-size: 20px;
+}
+
+.buttonSend{
+  width: 250px; 
+  background-color: white;
+  color: #CA636D;
+  font-size: 20px;
+  border-color: #CA636D;
+  border-style: solid;
+}
+
+.buttonSend:hover{
+  background-color: #CA636D;
+  color: white;
+  border-color: #CA636D;
+  border-style: solid;
+}
+
+#Mybtn{
+  background-color: #63B3AA;
+  border-color: #63B3AA;
+  font-size: 20px;
+  border-radius: 10px;
+  width: 100px;
+  margin-bottom: 30px;
+}
+
+#Mybtn:hover{
+  background-color: rgb(73, 138, 130);
+}
+
+.quotes{
+  background-color: #63B3AA;
+}
+
+.quotesDate{
+  background-color: rgba(99, 179, 170, 0.651);
+}
+
+.buttonSend2{
+  width: 200px; 
+  background-color: #63B3AA;
+  color: white;
+  font-size: 20px;
+  border-color: #63B3AA;
+  border-style: solid;
+}
+
+.buttonSend2:hover{
+  background-color: rgb(73, 138, 130);
+  color: white;
+  border-color: #63B3AA;
+  border-style: solid;
+}
+
+.contactbg{
+  background: url("../images/contacts.jpg") no-repeat fixed;
+  background-size: cover;
+  height:300px;
+  justify-content: center;
+}
+
+.contactf{
+  background-color: white;
+}
+
+.buttonSend3{
+  width: 250px; 
+  background-color: white;
+  color:#63B3AA ;
+  font-size: 20px;
+  border-color: #63B3AA;
+  border-style: solid;
+}
+
+.buttonSend3:hover{
+  background-color: #63B3AA;
+  color: white;
+  border-color: #63B3AA;
+  border-style: solid;
+}
