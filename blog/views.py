@@ -6,6 +6,7 @@ from .models import Post, Category
 from hitcount.models import HitCount
 from hitcount.views import HitCountMixin
 from django.core.paginator import Paginator
+from django.db.models import Q
 # Create your views here.
 class PostListView(ListView):
 
@@ -47,3 +48,9 @@ class PostDetailView(DetailView):
         context["posts"]= Post.objects.all().order_by('-created')[:3]
 
         return context
+
+def search(request):
+    query = request.GET.get('q')
+    posts = Post.objects.filter(Q(title__icontains=query))
+    categories = Category.objects.all()
+    return render(request, 'blog/search.html', {'posts': posts, 'categories':categories, 'query':query})

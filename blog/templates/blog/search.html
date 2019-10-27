@@ -33,7 +33,8 @@
 
       <div class="container">
         <div class="row">
-        {% for post in post_list  %}
+        <h4 style="padding-bottom: 20px;">Posts containing '{{query}}'</h4> 
+        {% for post in posts %}
           <div class="col-12 wow slideInUp">
               <div class="col-12 posts">
                 <a href="{% url 'post' post.id post.title|slugify %}"><img src="{{post.image.url}}" alt=""></a>
@@ -50,5 +51,9 @@
       </div>
 
       {% include 'blog/page-bar.html' %}
+
+      <script>
+        $('body').highlight("{{query_string}}");
+      </script>
 
 {% endblock %}
