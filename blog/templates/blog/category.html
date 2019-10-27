@@ -33,7 +33,7 @@
 
       <div class="container">
         <div class="row">
-        {% for post in category.get_posts.all %}
+        {% for post in categori %}
           <div class="col-12 wow slideInUp">
               <div class="col-12 posts">
                 <a href="{% url 'post' post.id post.title|slugify %}"><img src="{{post.image.url}}" alt=""></a>
@@ -48,5 +48,6 @@
         {% endfor %}
         </div>
       </div>
+       {% include 'blog/page-bar2.html' %}
 
 {% endblock %}

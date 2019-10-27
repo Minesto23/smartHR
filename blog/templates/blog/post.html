@@ -48,21 +48,63 @@
               {{post.content|safe}}
               </p>
           </div>
-          <div class="col-12 pt-5 mt-2  posts-text">
+          <div class="col-12 pt-5 mt-2  ">
               <div class="row categories-icons">
                 <div class="col-6">
-                  <p>iconos</p>
+                  <div class="row" >
+                    <img src="{% static 'core/images/eye.png' %}" alt="" style="width: 30px; height: 30px; margin-right: 10px;">
+                    <h6 class="pt-1">{{visits|safe}}</h6>
+                  </div>
                 </div>
                 <div class="col-6 text-right">
-                  <p>{{post.categories.name}}</p>
+                {% for category in post.categories.all %}
+                   <a href="{% url 'category' category.id %}" class="category-link" style="color: #63B3AA">{{category.name}}</a>{% if not forloop.last %},{% endif %} 
+                {% endfor %} 
                 </div>
               </div>
-          </div>
-          <div class="col-12 pb-5 posts-text">
-              <h6 class="views">{{visits|safe}}</h6>
           </div>
         </div>
       </div>
 
+      <div class="container" id="content_new">
+            <div class="row p-5 d-flex news">
+                <div class="col-12 wow fadeInUp" >
+                    <h3>Recent News</h3>
+                </div>
+                {% for post in posts %}
+                {% if forloop.counter == 1 %}
+                <div class="col-8 col-md-3 new  wow fadeInUp" data-wow-delay="0.3s">
+                    <img src="{{post.image.url}}" alt="" >
+                    <a href="{% url 'post' post.id post.title|slugify %}"><p style="text-align: center; font-size: 20px;"><b>{{post.title|truncatewords:5}}</b></p></a>
+                    <div class="d-flex vistas"> 
+                        <img src="{% static 'core/images/eye.png' %}" alt="">
+                        <p>{{post.views}}</p>
+                    </div>
+                </div>
+                {% elif forloop.counter == 2 %}
+                <div class="col-8 col-md-3 new wow fadeInUp" data-wow-delay="0.6s">
+                    <img src="{{post.image.url}}" alt="">
+                    <a href="{% url 'post' post.id post.title|slugify %}"><p style="text-align: center; font-size: 20px;"><b>{{post.title|truncatewords:5}}</b></p></a>
+                    <div class="d-flex vistas">
+                        <img src="{% static 'core/images/eye.png' %}" alt="">
+                        <p>{{post.views}}</p>                            
+                    </div>
+                </div>
+                {% elif forloop.counter == 3 %}
+                <div class="col-8 col-md-3 new wow fadeInUp" data-wow-delay="0.9s">
+                    <img src="{{post.image.url}}" alt="">
+                    <a href="{% url 'post' post.id post.title|slugify %}"><p style="text-align: center; font-size: 20px;"><b>{{post.title|truncatewords:5}}</b></p></a>
+                    <div class="d-flex vistas">
+                        <img src="{% static 'core/images/eye.png' %}" alt="">
+                        <p>{{post.views}}</p>                            
+                    </div>
+                </div>
+                {% endif %}
+                {% endfor %}
+                <div class="col-12 wow fadeIn d-flex justify-content-end" data-wow-delay="1.2s">
+                    <a name="" id="buttonMore" class="btn btn-primary" href="{% url 'blog' %}" role="button">MORE</a>
+                </div>
+            </div>
+      </div> 
 
 {% endblock %}
