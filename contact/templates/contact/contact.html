@@ -26,37 +26,37 @@
 
   <div class="container">
       <div class="row wow fadeInUp">
-        <div class="col-xs-12 col-lg-6 contactf">
+        <div class="col-xs-12 col-lg-7 contactf">
           <div class="container">
             <form action="" id="send_email" name="sendemail" method="post">
               {% csrf_token %}
               <div class="form-group row">
                 <div class="col-sm-1-12 pl-3">
-                  <label for="">{% trans "*Your Name" %}</label>
+                  <label for="">{% trans "*Name" %}</label>
                   {% if LANGUAGE_CODE == "es" %}
-                    {{form_email.name|attr:"placeholder:*Nombres"}}
+                    {{form_email.name|attr:"placeholder:*Por Ejemplo:Kat"}}
                   {% elif LANGUAGE_CODE == "en" %}
-                    {{form_email.name|attr:"placeholder:*Your Name"}}
+                    {{form_email.name|attr:"placeholder:*For Example:Kat"}}
                   {% endif %}
                 </div>
                 {{form_email.name.errors}}
                 <div class="col-sm-1-12 pl-3">
-                  <label for="">{% trans "*Your LastName" %}</label>
+                  <label for="">{% trans "*LastName" %}</label>
                   {% if LANGUAGE_CODE == "es" %}
-                    {{form_email.lastname|attr:"placeholder:*Apellidos"}}
+                    {{form_email.lastname|attr:"placeholder:*Por Ejemplo:Smith"}}
                   {% elif LANGUAGE_CODE == "en" %}
-                    {{form_email.lastname|attr:"placeholder:*Your Lastname"}}
+                    {{form_email.lastname|attr:"placeholder:*For Example:Smith"}}
                   {% endif %}
                 </div>
                 {{form_email.lastname.errors}}
               </div>
               <div class="form-group row pt-4">
                 <div class="col-sm-1-12 pl-3">
-                    <label for="">{% trans "*Your Email" %}</label>
+                    <label for="">{% trans "*Email" %}</label>
                     {% if LANGUAGE_CODE == "es" %}
-                      {{form_email.email|attr:"placeholder:*Correo Electrónico"}}
+                      {{form_email.email|attr:"placeholder:*Por Ejemplo:katj@email.com"}}
                     {% elif LANGUAGE_CODE == "en" %}
-                      {{form_email.email|attr:"placeholder:*Your Email"}}
+                      {{form_email.email|attr:"placeholder:*For Example:katj@email.com"}}
                     {% endif %}
                 </div>
                 {{form_email.email.errors}}
@@ -73,9 +73,9 @@
               <div class="form-group">
                 <label for="">{% trans "Message" %}</label>
                 {% if LANGUAGE_CODE == "es" %}
-                  {{form_email.content|attr:"placeholder:*Mensaje"}}
+                  <div>{{form_email.content|attr:"placeholder:*Mensaje"}}</div>
                 {% elif LANGUAGE_CODE == "en" %}
-                  {{form_email.content|attr:"placeholder:*Message"}}
+                  <div style="max-width: 83%;">{{form_email.content|attr:"placeholder:*Message"}}</div>
                 {% endif %}
               </div>
               {{form_email.content.errors}}
@@ -87,7 +87,7 @@
             </form>
           </div>
         </div>
-        <div class="col-xs-12 col-lg-6 text-center">
+        <div class="col-xs-12 col-lg-5 text-center">
             <h5 class="text-center" id="form_message">{% trans "If you got any questions <br>please do not hesitate to send us a message" %}</h5>
             {% if 'ok' in request.GET %}
                   <p style="font-size: 24px; color: green; padding-top: 10px;">{% trans "Your message was sent, We'll in contact with you" %}</p>
@@ -123,7 +123,7 @@
                     {% csrf_token %}
                       <div class="form-group row">
                         <div class="col-sm-1-12 pl-3">
-                              <label for="">{% trans "*Your Name" %}</label>
+                              <label for="">{% trans "*Name" %}</label>
                               {% if LANGUAGE_CODE == "es" %}
                                 {{form_quote.name|attr:"placeholder:*Por Ejemplo:Kat"}}
                               {% elif LANGUAGE_CODE == "en" %}
@@ -132,7 +132,7 @@
                         </div>
                         {{form_quote.name.errors}}
                         <div class="col-sm-1-12 pl-3">
-                              <label for="">{% trans "*Your LastName" %}</label>
+                              <label for="">{% trans "*LastName" %}</label>
                               {% if LANGUAGE_CODE == "es" %}
                                 {{form_quote.lastname|attr:"placeholder:*Por Ejemplo:Smith"}}
                               {% elif LANGUAGE_CODE == "en" %}
@@ -143,7 +143,7 @@
                         </div>
                         <div class="form-group row pt-4">
                           <div class="col-sm-1-12 pl-3">
-                              <label for="">{% trans "*Your Email" %}</label>
+                              <label for="">{% trans "*Email" %}</label>
                               {% if LANGUAGE_CODE == "es" %}
                                 {{form_quote.email|attr:"placeholder:*Por Ejemplo:katj@email.com"}}
                               {% elif LANGUAGE_CODE == "en" %}
@@ -152,7 +152,7 @@
                           </div>
                           {{form_quote.email.errors}}
                         <div class="col-sm-1-12 pl-3">
-                            <label for="">{% trans "*Your Cell-Phone" %}</label>
+                            <label for="">{% trans "*Cell-Phone" %}</label>
                             {% if LANGUAGE_CODE == "es" %}
                               {{form_quote.phone_number|attr:"type:number"|attr:"placeholder:*Por Ejemplo: 123-0000-000"}}
                             {% elif LANGUAGE_CODE == "en" %}

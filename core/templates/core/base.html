@@ -43,7 +43,7 @@
                     <a class="nav-link" href="{% url 'home' %}">{% trans "Home" %}</a>
                   </li>
                   <li class="nav-item {% if request.path == '/who/' %}active{% endif %}">
-                    <a class="nav-link" href="{% url 'who' %}">{% trans "Our Team" %} </a>
+                    <a class="nav-link" href="{% url 'who' %}">{% trans "Who we are" %} </a>
                   </li>
                   <li class="nav-item {% if request.path == '/services/' %}active{% endif %}">
                     <a class="nav-link" href="{% url 'services' %}">{% trans "Consulting Services" %} </a>
@@ -87,9 +87,9 @@
           <div class="row justify-content-center" id="footer">
             <div class="col-4 wow slideInUp" >
                 <img src="{% static 'core/images/logo-blanco.png' %}"  alt="" style="height: 60px; width: 60px;">
-              <p style="padding-top: 20px;">Smart HR Services {{LANGUAGE_CODE}}</p>
-              <p>500 Jerry Francis Street <br>San Francisco, CA 92358</p>
-              <p>123-***-****</p>
+              <p style="padding-top: 20px;">Smart HR Services ({{LANGUAGE_CODE}})</p>
+              <p>106 Nw 133rd Ave #101 <br>Plantation, FL 33325</p>
+              <p>786-486-4491</p>
             </div>
             <div class="col-4 wow slideInUp" >
               <div class="row pt-5 mt-5">

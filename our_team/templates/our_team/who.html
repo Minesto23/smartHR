@@ -3,7 +3,7 @@
 {% load static %}
 {% load i18n %}
 
-{% block title%}{% trans "Our Team" %}{% endblock %}
+{% block title%}{% trans "Who we are" %}{% endblock %}
 
 {% block content %}
 
@@ -19,7 +19,7 @@
         <div class="row">
         {% for who in Who_We_Are %}
             <div class="col-12 pb-5 animated wow slideInUp" id="about-us">
-                <h3 style="padding-top: 30px;">{% trans "Our Culture" %}</h3>
+                <h3 style="padding-top: 30px; font-size: 25px;">{% trans "Our Culture" %}</h3>
                 {% if LANGUAGE_CODE == "es" %}
                   <p style="padding-top: 10px;">{{who.content_es|safe}}</p>
                 {% elif LANGUAGE_CODE == "en" %}
@@ -35,57 +35,14 @@
     <!-- team -->
     <div class="container pt-5">
       <div class="row justify-content-center pb-5 mb-3">
-      {% for worker in object_list %}
-        {% if forloop.counter == 1  %}
-        <div class="col-xs-12 col-lg-4 team wow fadeInUp pb-5" data-wow-delay="1.2s">
-          <img src="{{worker.photo.url}}" alt="" style="max-height: 400px;">
-          {% if LANGUAGE_CODE == "es" %}
-            <p class="job">{{worker.job_es}}</p>
-          {% elif LANGUAGE_CODE == "en" %}
-            <p class="job">{{worker.job_en}}</p>
-          {% endif %}
-          <h1><b>{{worker.name}}<br>{{worker.lastname}}</b></h1>
-          {% if LANGUAGE_CODE == "es" %}
-            <p>{{worker.info_es|safe}}</p>
-          {% elif LANGUAGE_CODE == "en" %}
-            <p>{{worker.info_en|safe}}</p>
-          {% endif %}
-          <p>{{worker.email}}<br>{{worker.phone_number}}</p>
+        <div class="col-4 team">
+          <img src="{% static 'core/images/E1.png' %}" class="img-fluid ${3|rounded-top,rounded-right,rounded-bottom,rounded-left,rounded-circle,|}" alt="">
         </div>
-        {% elif forloop.counter == 2 %}
-        <div class="col-xs-12 col-lg-4 team wow fadeInUp pb-5" data-wow-delay="1.5s">
-          <img src="{{worker.photo.url}}" alt="" style="max-height: 400px;">
-          {% if LANGUAGE_CODE == "es" %}
-            <p class="job">{{worker.job_es}}</p>
-          {% elif LANGUAGE_CODE == "en" %}
-            <p class="job">{{worker.job_en}}</p>
-          {% endif %}
-          <h1><b>{{worker.name}}<br>{{worker.lastname}}</b></h1>
-          {% if LANGUAGE_CODE == "es" %}
-            <p>{{worker.info_es|safe}}</p>
-          {% elif LANGUAGE_CODE == "en" %}
-            <p>{{worker.info_en|safe}}</p>
-          {% endif %}
-          <p>{{worker.email}}<br>{{worker.phone_number}}</p>
+        <div class="col-6 team">
+          <p class="job" style="font-size: 25px;">Partner</p>
+          <h1><b>Glenixa</b></h1>
+          <p>Deserunt cillum amet exercitation laboris. Sint sit laboris elit veniam nisi adipisicing excepteur aliqua ipsum officia aute amet do duis. Labore velit pariatur non exercitation est. Dolore ex consequat officia tempor laboris labore. Nisi ipsum quis consectetur excepteur. Magna sint minim excepteur minim nisi duis ipsum aute cillum duis elit.</p>
         </div>
-        {% elif forloop.counter == 3 %}
-        <div class="col-xs-12 col-lg-4 team wow fadeInUp pb-5" data-wow-delay="1.8s">
-          <img src="{{worker.photo.url}}" alt="">
-          {% if LANGUAGE_CODE == "es" %}
-            <p class="job">{{worker.job_es}}</p>
-          {% elif LANGUAGE_CODE == "en" %}
-            <p class="job">{{worker.job_en}}</p>
-          {% endif %}
-          <h1><b>{{worker.name}}<br>{{worker.lastname}}</b></h1>
-          {% if LANGUAGE_CODE == "es" %}
-            <p>{{worker.info_es|safe}}</p>
-          {% elif LANGUAGE_CODE == "en" %}
-            <p>{{worker.info_en|safe}}</p>
-          {% endif %}
-          <p>{{worker.email}}<br>{{worker.phone_number}}</p>
-        </div>
-        {% endif %}
-        {% endfor %}
       </div>     
     </div>
 

@@ -9,10 +9,9 @@
 <!-- main            -->
       <main>
         <div class="container-fluid" id="main_bg">
-          <div class="row">
+          <div class="row pt-5 mt-2">
               <div class="col-12 animated fadeIn slow" id="main_title" >
-                  <h1 class="title" >{% trans "Smart HR" %}</h1>
-                  <h1 class="title" >{% trans "Services" %}</h1>
+                  <h1 class="title" style="  color: #CA636D;   font-family: 'Playfair Display', serif;" ><b>{% trans "Smart HR Services" %}</b></h1>
               </div>
           </div>
         </div> 
@@ -22,7 +21,7 @@
       <div class="container-fluid">
         <div class="row">
             <div class="col-12 animated wow slideInUp " id="about-us">
-                <h3 style="padding-top: 40px;">{% trans "About us" %}</h3>
+                <h3 style="padding-top: 40px; font-size: 25px;">{% trans "About us" %}</h3>
                 <p style="padding-top: 10px;">{% trans "What Makes Us Different from Other HR Companies? Smart HR of South Florida provides a full Bilingual human resources solutions for small business. We roll up our sleeves and become your small business HR department, or we advise you on the best solutions for your business – based exclusively on what your company needs. Our solutions are always tailored to fit your company’s requirements from just a small task or audit to a full HR Solution." %}</p>
               </div>
         </div>
@@ -33,7 +32,7 @@
       <div class="container" id="service">
            <div class="row">
               <div class="col-12 pl-8 animated wow slideInUp" id="services">
-                  <h3>{% trans "What HR ins't vs What HR is" %}</h3>
+                  <h3 style="font-size: 25px;">{% trans "What HR ins't vs What HR is" %}</h3>
                 </div>
                 <div class="col-xs-12 col-lg-4 animated wow fadeIn p-0" data-wow-delay="0.3s">
                     <img src="{% static 'core/images/1.png' %}" alt="">
@@ -60,7 +59,7 @@
                       <a name="" id="buttonMore" class="btn btn-primary" href="{% url 'services' %}" role="button">{% trans "CHECK" %}</a>
                   </div>
                   <div class="col-12 animated wow slideInUp" id="services">
-                      <h3>{% trans "Frequent Questions" %}</h3>
+                      <h3 style="font-size: 25px;">{% trans "Frequently Asked Questions" %}</h3>
                     </div>
            </div>
         </div>
@@ -106,7 +105,7 @@
       <div class="container" id="content_new">
             <div class="row p-5 d-flex news">
                 <div class="col-12 wow fadeInUp" >
-                    <h3>{% trans "Recent News" %}</h3>
+                    <h3 style="font-size: 25px;">{% trans "Recent News" %}</h3>
                 </div>
                 {% for post in posts %}
                 {% if forloop.counter == 1 %}
