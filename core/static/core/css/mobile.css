@@ -6,7 +6,7 @@
     }
 
     #about-us p{
-        padding-left: 15px;
+        padding-left: 0px;
         padding-right: 0px;
     }
 
@@ -20,12 +20,12 @@
     }
 
     #q_div_l{
-        margin-left: 10px;
+        margin-left: 0px;
         max-width: auto;
     }
     
     #q_div_r{
-        margin-left: 10px;
+        margin-left: 0px;
         margin-right: 0px;
         max-width: auto;
     }  

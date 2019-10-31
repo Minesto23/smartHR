@@ -18,7 +18,7 @@
   <div class="container-fluid ">
       <div class="row">
           <div class="col-12 pb-5 animated wow slideInUp" id="about-us">
-              <h3 style="padding-top: 30px; padding-button:10px;">{% trans Contact %}</h3>
+              <h3 style="padding-top: 30px; padding-bottom:10px;">{% trans Contact %}</h3>
               <p>{% trans "Smart HR Services’ Team is focused on helping you succeed by taking care of the things that may be distracting you from the bigger picture “Your Business”." %}</p>
           </div>
       </div>
@@ -31,7 +31,7 @@
             <form action="" id="send_email" name="sendemail" method="post">
               {% csrf_token %}
               <div class="form-group row">
-                <div class="col-sm-1-12 pl-3">
+                <div class="col-sm-12 col-lg-6 pl-3">
                   <label for="">{% trans "*Name" %}</label>
                   {% if LANGUAGE_CODE == "es" %}
                     {{form_email.name|attr:"placeholder:*Por Ejemplo:Kat"}}
@@ -40,7 +40,7 @@
                   {% endif %}
                 </div>
                 {{form_email.name.errors}}
-                <div class="col-sm-1-12 pl-3">
+                <div class="col-sm-12 col-lg-6 pl-3">
                   <label for="">{% trans "*LastName" %}</label>
                   {% if LANGUAGE_CODE == "es" %}
                     {{form_email.lastname|attr:"placeholder:*Por Ejemplo:Smith"}}
@@ -51,7 +51,7 @@
                 {{form_email.lastname.errors}}
               </div>
               <div class="form-group row pt-4">
-                <div class="col-sm-1-12 pl-3">
+                <div class="col-sm-12 col-lg-6 pl-3">
                     <label for="">{% trans "*Email" %}</label>
                     {% if LANGUAGE_CODE == "es" %}
                       {{form_email.email|attr:"placeholder:*Por Ejemplo:katj@email.com"}}
@@ -60,7 +60,7 @@
                     {% endif %}
                 </div>
                 {{form_email.email.errors}}
-                <div class="col-sm-1-12 pl-3">
+                <div class="col-sm-12 col-lg-6 pl-3">
                     <label for="">{% trans "*Subject" %}</label>
                     {% if LANGUAGE_CODE == "es" %}
                       {{form_email.subject|attr:"placeholder:*Asunto"}}
