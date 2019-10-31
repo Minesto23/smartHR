@@ -74,4 +74,8 @@
     #info_services_1 h4, #info_services_2 h4, #info_services_3 h4, #info_services_4 h4{
         margin-top: 20px;
     }
+
+    .job , .team h1 , .team p{
+        padding-left: 40px;
+      }
 }
