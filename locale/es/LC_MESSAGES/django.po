@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-10-26 18:10-0400\n"
+"POT-Creation-Date: 2019-10-30 21:09-0400\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -18,30 +18,22 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-#: .\blog\templates\blog\blog.html:6 .\core\templates\core\base.html:55
-msgid "Blog"
-msgstr "Blog"
-
-#: .\blog\templates\blog\blog.html:20 .\blog\templates\blog\category.html:19
-#: .\blog\templates\blog\post.html:20
-msgid "All"
-msgstr "Todos"
-
-#: .\blog\templates\blog\blog.html:20
-msgid "(current)"
-msgstr "(actual)"
-
-#: .\blog\templates\blog\blog.html:46
-msgid "views"
-msgstr "vistas"
-
-#: .\blog\templates\blog\post.html:40
+#: .\blog\templates\blog\post.html:48
 msgid "Update:"
 msgstr "Ultima Actualización:"
 
-#: .\blog\templates\blog\post.html:55
-msgid "iconos"
-msgstr "iconos"
+#: .\blog\templates\blog\post.html:89 .\core\templates\core\home.html:108
+msgid "Recent News"
+msgstr "Noticias Recientes"
+
+#: .\blog\templates\blog\post.html:134 .\core\templates\core\home.html:98
+#: .\core\templates\core\home.html:153
+msgid "MORE"
+msgstr "MÁS"
+
+#: .\blog\templates\blog\search.html:41
+msgid "Posts containing"
+msgstr "Posts que contienen "
 
 #: .\contact\templates\contact\contact.html:7
 #: .\core\templates\core\base.html:58
@@ -59,92 +51,100 @@ msgstr ""
 "“Su negocio” "
 
 #: .\contact\templates\contact\contact.html:35
-#: .\contact\templates\contact\contact.html:106
-msgid "*Your Name"
+#: .\contact\templates\contact\contact.html:126
+#, fuzzy
+#| msgid "*Your Name"
+msgid "*Name"
 msgstr "*Nombres"
 
-#: .\contact\templates\contact\contact.html:40
-#: .\contact\templates\contact\contact.html:111
-msgid "*Your LastName"
+#: .\contact\templates\contact\contact.html:44
+#: .\contact\templates\contact\contact.html:135
+#, fuzzy
+#| msgid "*Your LastName"
+msgid "*LastName"
 msgstr "*Apellidos"
 
-#: .\contact\templates\contact\contact.html:47
-#: .\contact\templates\contact\contact.html:118
-msgid "*Your Email"
+#: .\contact\templates\contact\contact.html:55
+#: .\contact\templates\contact\contact.html:146
+#, fuzzy
+#| msgid "*Your Email"
+msgid "*Email"
 msgstr "*Correo Electrónico"
 
-#: .\contact\templates\contact\contact.html:52
+#: .\contact\templates\contact\contact.html:64
 msgid "*Subject"
 msgstr "*Asunto"
 
-#: .\contact\templates\contact\contact.html:58
+#: .\contact\templates\contact\contact.html:74
 msgid "Message"
 msgstr "Mensaje"
 
-#: .\contact\templates\contact\contact.html:64
-#: .\contact\templates\contact\contact.html:143
+#: .\contact\templates\contact\contact.html:84
+#: .\contact\templates\contact\contact.html:183
 msgid "Send"
 msgstr "Enviar"
 
-#: .\contact\templates\contact\contact.html:71
+#: .\contact\templates\contact\contact.html:91
 msgid ""
 "If you got any questions <br>please do not hesitate to send us a message"
 msgstr "Si tiene alguna pregunta, no dude en enviarnos un mensaje"
 
-#: .\contact\templates\contact\contact.html:73
+#: .\contact\templates\contact\contact.html:93
 msgid "Your message was sent, We'll in contact with you"
 msgstr "Su mensaje ha sido enviado, estaremos en contacto con usted"
 
-#: .\contact\templates\contact\contact.html:76
+#: .\contact\templates\contact\contact.html:96
 msgid "Your message was not send, Please enter your data again"
 msgstr "Su mensaje no ha sido enviado, por favor ingrese sus datos de nuevo"
 
-#: .\contact\templates\contact\contact.html:79
+#: .\contact\templates\contact\contact.html:99
 msgid "Your quote was saved, We'll in contact with you"
 msgstr "Su cita ha sido guardada, estaremos en contacto con usted"
 
-#: .\contact\templates\contact\contact.html:82
+#: .\contact\templates\contact\contact.html:102
 msgid "Your quote was not saved, Please enter data again"
 msgstr "Su cita no ha sido guardada, por favor ingrese sus datos de nuevo"
 
-#: .\contact\templates\contact\contact.html:85
+#: .\contact\templates\contact\contact.html:105
 msgid ""
 "Your quote was not saved, The turn was not disponible please choose another"
 msgstr ""
 "Su cita no ha sido guardada, el turno seleccionado no se encuentra disponible"
 
-#: .\contact\templates\contact\contact.html:96
+#: .\contact\templates\contact\contact.html:116
 msgid "Book your 30 minutes free phone consulting"
 msgstr "Reserve su consulta telefónica gratuita de 30 minutos"
 
-#: .\contact\templates\contact\contact.html:97
+#: .\contact\templates\contact\contact.html:117
 msgid "Here"
 msgstr "Aquí"
 
-#: .\contact\templates\contact\contact.html:123
-msgid "*Your Cell-Phone"
+#: .\contact\templates\contact\contact.html:155
+#, fuzzy
+#| msgid "*Your Cell-Phone"
+msgid "*Cell-Phone"
 msgstr "*Número Telefónico"
 
-#: .\contact\templates\contact\contact.html:130
+#: .\contact\templates\contact\contact.html:166
 msgid "Date"
 msgstr "Fecha"
 
-#: .\contact\templates\contact\contact.html:135
+#: .\contact\templates\contact\contact.html:175
 msgid "Turn"
 msgstr "Turno"
 
-#: .\contact\templates\contact\contact.html:137
+#: .\contact\templates\contact\contact.html:177
 #: .\contact\templates\contact\load_turns.html:3
 msgid "Select Your Turn"
 msgstr "Seleccione su Turno"
 
-#: .\core\templates\core\base.html:43
+#: .\core\templates\core\base.html:43 .\core\templates\core\home.html:5
 msgid "Home"
 msgstr "Inicio"
 
 #: .\core\templates\core\base.html:46 .\our_team\templates\our_team\who.html:6
-msgid "Our Team"
-msgstr "Nuestro Equipo"
+msgid "Who we are"
+msgstr "Quiénes Somos"
 
 #: .\core\templates\core\base.html:49
 #: .\services\templates\services\services.html:5
@@ -159,19 +159,20 @@ msgstr "Servicios de Consulta"
 msgid "Questions"
 msgstr "Preguntas"
 
+#: .\core\templates\core\base.html:55
+msgid "Blog"
+msgstr "Blog"
+
 #: .\core\templates\core\home.html:14
-msgid "Smart HR"
-msgstr ""
+#: .\services\templates\services\services.html:35
+msgid "Smart HR Services"
+msgstr "Servivios Smart HR"
 
-#: .\core\templates\core\home.html:15
-msgid "Services"
-msgstr "Servicios"
-
-#: .\core\templates\core\home.html:25
+#: .\core\templates\core\home.html:24
 msgid "About us"
 msgstr "Acerca de Nosotros"
 
-#: .\core\templates\core\home.html:26
+#: .\core\templates\core\home.html:25
 msgid ""
 "What Makes Us Different from Other HR Companies? Smart HR of South Florida "
 "provides a full Bilingual human resources solutions for small business. We "
@@ -189,32 +190,29 @@ msgstr ""
 "empresa, desde una pequeña tarea o auditoría hasta una solución completa de "
 "recursos humanos. "
 
-#: .\core\templates\core\home.html:36
+#: .\core\templates\core\home.html:35
 msgid "What HR ins't vs What HR is"
 msgstr "Qué no es HR versus Qué es HR"
 
-#: .\core\templates\core\home.html:57
-msgid "If you want to know more about what HR offers, check our services​​."
+#: .\core\templates\core\home.html:56
+#, fuzzy
+#| msgid ""
+#| "If you want to know more about what Smart HR offers, check our services​​."
+msgid ""
+"If you want to know more about what Smarth HR offers, check our services​​."
 msgstr ""
-"Si desea saber más sobre lo que ofrece RRHH, consulte nuestros servicios."
+"Si desea saber más sobre lo que ofrece Smarth HR, consulte nuestros "
+"servicios."
 
-#: .\core\templates\core\home.html:60
+#: .\core\templates\core\home.html:59
 msgid "CHECK"
 msgstr "REVISAR"
 
-#: .\core\templates\core\home.html:63
+#: .\core\templates\core\home.html:62
 #, fuzzy
 #| msgid "Frequent questions"
-msgid "Frequent Questions"
+msgid "Frequently Asked Questions"
 msgstr "Preguntas Frecuentes"
-
-#: .\core\templates\core\home.html:89 .\core\templates\core\home.html:132
-msgid "MORE"
-msgstr "MÁS"
-
-#: .\core\templates\core\home.html:99
-msgid "Recent News"
-msgstr "Noticias Recientes"
 
 #: .\our_team\templates\our_team\who.html:22
 msgid "Our Culture"
@@ -242,15 +240,17 @@ msgid ""
 "and thereby profitability."
 msgstr ""
 "Ya sea que necesite una solución a corto, mediano o largo plazo, ofrecemos "
-"soluciones personalizadas y flexibles para satisfacer sus necesidades de Recursos Humanos. "
-"Trabajamos dentro o fuera del sitio, ya sea como consultor independiente o en conjunto "
-"con su equipo de recursos humanos existente,  Las tendencias económicas actuales están "
-"obligando a las empresas a considerar la externalización de procesos de las funciones "
-"administrativas para mejorar los servicios básicos y  mantener el cumplimiento de las "
-"normativas en constante cambio. La externalización de las funciones diarias de recursos "
-"humanos, los procesos de reclutamiento,  la administración de beneficios de los empleados "
-"y la nómina permite a los empleados clave centrarse en iniciativas estratégicas que benefician "
-" a la organización, aumentan la productividad y, por lo tanto, la rentabilidad."
+"soluciones personalizadas y flexibles para satisfacer sus necesidades de "
+"Recursos Humanos. Trabajamos dentro o fuera del sitio, ya sea como consultor "
+"independiente o en conjunto con su equipo de recursos humanos existente,  "
+"Las tendencias económicas actuales están obligando a las empresas a "
+"considerar la externalización de procesos de las funciones administrativas "
+"para mejorar los servicios básicos y  mantener el cumplimiento de las "
+"normativas en constante cambio. La externalización de las funciones diarias "
+"de recursos humanos, los procesos de reclutamiento,  la administración de "
+"beneficios de los empleados y la nómina permite a los empleados clave "
+"centrarse en iniciativas estratégicas que benefician  a la organización, "
+"aumentan la productividad y, por lo tanto, la rentabilidad."
 
 #: .\services\templates\services\services.html:27
 msgid ""
@@ -262,19 +262,15 @@ msgid ""
 "that makes sense for your business and your role in your company taking a "
 "bilingual approach when necessary, to meet your employees needs as well."
 msgstr ""
-"La externalización de recursos humanos ayuda a las pequeñas empresas que necesitan "
-"un profesional de recursos humanos a tiempo parcial, aliviando al abrumado propietario "
-"o gerente de la oficina de las tareas diarias relacionadas con el reclutamiento, los "
-"recursos humanos, los beneficios o la nómina. Smart HR Consulting trabaja con "
-"profesionales de gestión o recursos humanos en una variedad de formas diferentes. "
-"Trabajaremos con usted para desarrollar un modelo de outsourcing que tenga sentido "
-"para su negocio y su papel en su empresa, adoptando un enfoque bilingüe cuando sea "
-"necesario, para satisfacer también las necesidades de sus empleados."
-
-
-#: .\services\templates\services\services.html:35
-msgid "Smart HR Services"
-msgstr "Servivios Smart HR"
+"La externalización de recursos humanos ayuda a las pequeñas empresas que "
+"necesitan un profesional de recursos humanos a tiempo parcial, aliviando al "
+"abrumado propietario o gerente de la oficina de las tareas diarias "
+"relacionadas con el reclutamiento, los recursos humanos, los beneficios o la "
+"nómina. Smart HR Consulting trabaja con profesionales de gestión o recursos "
+"humanos en una variedad de formas diferentes. Trabajaremos con usted para "
+"desarrollar un modelo de outsourcing que tenga sentido para su negocio y su "
+"papel en su empresa, adoptando un enfoque bilingüe cuando sea necesario, "
+"para satisfacer también las necesidades de sus empleados."
 
 #: .\services\templates\services\services.html:44
 msgid "Employment function"
@@ -518,8 +514,20 @@ msgstr "Limpiar"
 msgid "Ok"
 msgstr "Ok"
 
+#~ msgid "All"
+#~ msgstr "Todos"
 
-#: .\blog\templates\blog\search.html:40
-msgid "Posts containing"
-msgstr "Posts que contienen "
+#~ msgid "(current)"
+#~ msgstr "(actual)"
 
+#~ msgid "views"
+#~ msgstr "vistas"
+
+#~ msgid "iconos"
+#~ msgstr "iconos"
+
+#~ msgid "Our Team"
+#~ msgstr "Nuestro Equipo"
+
+#~ msgid "Services"
+#~ msgstr "Servicios"
