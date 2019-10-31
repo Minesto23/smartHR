@@ -76,6 +76,6 @@
     }
 
     .job , .team h1 , .team p{
-        padding-left: 10px;
+        padding-left: 0;
       }
 }
