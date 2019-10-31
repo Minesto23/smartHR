@@ -76,7 +76,7 @@
     }
 
     .job , .team h1 , .team p{
-        padding-left: 0;
-        background-color: blue;
+        padding-left: 10px;
       }
+
 }
