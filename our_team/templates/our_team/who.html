@@ -33,13 +33,13 @@
      
 
     <!-- team -->
-    {% for worker in object_list %}
+  {% for worker in object_list %}
     <div class="container pt-5">
       <div class="row justify-content-center pb-5 mb-3">
-        <div class="col-4 team">
+        <div class="Col-12 col-lg-4 team">
           <img src="{{worker.photo.url}}" class="img-fluid ${3|rounded-top,rounded-right,rounded-bottom,rounded-left,rounded-circle,|}" alt="">
         </div>
-        <div class="col-6 team">
+        <div class="Col-12 col-lg-6 team">
           {% if LANGUAGE_CODE == "es" %}
             <p class="job" style="font-size: 25px;">{{worker.job_es}}</p>
             <h1><b>{{worker.name}} {{worker.lastname}}</b></h1>
