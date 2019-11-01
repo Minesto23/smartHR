@@ -35,22 +35,46 @@
                   <h3 style="font-size: 25px;">{% trans "What HR ins't vs What HR is" %}</h3>
                 </div>
                 <div class="col-xs-12 col-lg-4 animated wow fadeIn p-0" data-wow-delay="0.3s">
-                    <img src="{% static 'core/images/1.png' %}" alt="">
+                    {% if LANGUAGE_CODE == "es" %}  
+                      <img src="{% static 'core/images/ESPA1.png' %}" alt="">
+                    {% elif LANGUAGE_CODE == "en" %}
+                      <img src="{% static 'core/images/1.png' %}" alt="">
+                    {% endif %}
                   </div>
                   <div class="col-xs-12 col-lg-4 wow fadeIn p-0" data-wow-delay="0.6s">
-                    <img src="{% static 'core/images/2.png' %}" alt="">
+                    {% if LANGUAGE_CODE == "es" %}  
+                      <img src="{% static 'core/images/ESPA2.png' %}" alt="">
+                    {% elif LANGUAGE_CODE == "en" %}
+                      <img src="{% static 'core/images/2.png' %}" alt="">
+                    {% endif %}
                   </div>
                   <div class="col-xs-12 col-lg-4  wow fadeIn p-0 " data-wow-delay="0.9s">
-                    <img src="{% static 'core/images/3.png' %}" alt="">
+                    {% if LANGUAGE_CODE == "es" %}  
+                      <img src="{% static 'core/images/ESPA3.png' %}" alt="">
+                    {% elif LANGUAGE_CODE == "en" %}
+                      <img src="{% static 'core/images/3.png' %}" alt="">
+                    {% endif %}
                   </div>
                   <div class="col-xs-12 col-lg-4  wow fadeIn p-0" data-wow-delay="1.2s">
+                    {% if LANGUAGE_CODE == "es" %}  
+                      <img src="{% static 'core/images/ESPA4.png' %}" alt="">
+                    {% elif LANGUAGE_CODE == "en" %}
                       <img src="{% static 'core/images/4.png' %}" alt="">
+                    {% endif %}
                   </div>
                   <div class="col-xs-12 col-lg-4  wow fadeIn p-0" data-wow-delay="1.5s">
+                    {% if LANGUAGE_CODE == "es" %}  
+                      <img src="{% static 'core/images/ESPA5.png' %}" alt="">
+                    {% elif LANGUAGE_CODE == "en" %}
                       <img src="{% static 'core/images/5.png' %}" alt="">
+                    {% endif %}
                   </div>
                   <div class="col-xs-12 col-lg-4  wow fadeIn p-0" data-wow-delay="1.8s">
+                    {% if LANGUAGE_CODE == "es" %}  
+                      <img src="{% static 'core/images/ESPA6.png' %}" alt="">
+                    {% elif LANGUAGE_CODE == "en" %}
                       <img src="{% static 'core/images/6.png' %}" alt="">
+                    {% endif %}
                   </div>
                   <div class="col-6 pt-4 wow fadeIn d-flex justify-content-end" data-wow-delay="0.9s">
                       <p style="font-size: 30px;">{% trans "If you want to know more about what Smarth HR offers, check our services​​." %}</p>
