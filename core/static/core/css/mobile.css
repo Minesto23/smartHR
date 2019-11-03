@@ -79,4 +79,14 @@
         padding-left: 15px;
       }
 
+      .logo_responsive{
+          /* padding-top: 75px; */
+          padding-bottom: 25px;
+          background-color: white;
+      }
+
+      .logo_responsive img{
+          max-width: 250px;
+          height: auto;
+      }
 }

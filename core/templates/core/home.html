@@ -9,9 +9,12 @@
 <!-- main            -->
       <main>
         <div class="container-fluid" id="main_bg">
-          <div class="row pt-5 mt-2">
-              <div class="col-12 animated fadeIn slow" id="main_title" >
+          <div class="row ">
+              <div class="col-12 animated fadeIn slow d-none d-sm-block" id="main_title" >
                   <h1 class="title" style="  color: #CA636D;   font-family: 'Playfair Display', serif;" ><b>{% trans "Smart HR Services" %}</b></h1>
+              </div>
+              <div class="col-12 d-flex justify-content-center d-sm-none logo_responsive">
+                <img src="{% static 'core/images/Horizontal-Positivo@2x.png' %}" class="img-fluid" alt="">
               </div>
           </div>
         </div> 

@@ -169,6 +169,12 @@ EMAIL_HOST_USER = 'smarthr.noreply.test@gmail.com'
 EMAIL_HOST_PASSWORD = 'wfwzyteljncyoqno'
 EMAIL_PORT = 587
 
+# EMAIL_USE_TLS = True
+# EMAIL_HOST = 'smtp.gmail.com'
+# EMAIL_HOST_USER = 'it@smarthrfl.com'
+# EMAIL_HOST_PASSWORD = 'ixjrnbjlhkewybcc'
+# EMAIL_PORT = 587
+
 CSRF_COOKIE_HTTPONLY = 'TRUE'
 
 LOCALE_PATHS = [
