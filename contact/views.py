@@ -1,4 +1,5 @@
 import datetime
+import os
 import time
 from django.shortcuts import render, redirect
 from .forms import ContactForm, QuoteForm
@@ -7,6 +8,8 @@ from django.views.generic.edit import CreateView
 from django.urls import reverse_lazy
 from django.urls import reverse
 from django.core.mail import EmailMessage
+from django.template.loader import get_template
+from email.mime.image import MIMEImage
 from django.conf import settings
 
 def contact(request):
@@ -93,15 +96,29 @@ def contact(request):
                               email = request.POST.get('email', '')
                               subject = request.POST.get('subject','')
                               content = request.POST.get('content', '')
+                              template = get_template('email.html')
+                              
+                              # context = Context({'name':name})
+                              message = template.render({'name':name , 'lastname':lastname, 'email':email, 'content':content})
 
                               # Creamos el correo
                               email = EmailMessage(
                               "SmartHR: New Message ({})".format(subject),
-                              "De {} <{}>\n\nWrite:\n\n{}".format(name, email, content),
+                              # "De {} <{}>\n\nWrite:\n\n{}".format(name, email, content),
+                              message,
                               "it@smarthrfl.com",
-                              to=['minesto23@gmail.com','Info@smarthrfl.com'],
+                              to=['minesto23@gmail.com'],
+                              # 'Info@smarthrfl.com'
                               reply_to=[email]
                               )
+                              email.content_subtype = 'html'
+
+                              for f in ['Horizontal-Positivo@2x.png']:
+                                    fp = open(os.path.join(os.path.dirname(__file__), f), 'rb')
+                                    email_img = MIMEImage(fp.read())
+                                    fp.close()
+                                    email_img.add_header('Content-ID', '<{}>'.format(f))
+                                    email.attach(email_img)
 
                               # Lo enviamos y redireccionamos
                               try:
