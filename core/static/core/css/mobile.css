@@ -79,14 +79,29 @@
         padding-left: 15px;
       }
 
-      .logo_responsive{
-          padding-top: 75px;
-          padding-bottom: 25px;
-          background-color: white;
-      }
+      /* DE AQUI PARA DOWN */
+    .logo_responsive{
+        padding-top: 75px;
+        padding-bottom: 25px;
+        background-color: white;
+    }
 
-      .logo_responsive img{
-          max-width: 250px;
-          height: auto;
+    .logo_responsive img{        
+        width: auto;
+        height: 65px;
+        margin-left: 0;
+    }
+
+    #main_bg{
+        height: 550px;
+    }
+    
+    .logo_the_rest img{
+        width: auto;
+        height: 65px;
+    }
+
+    #title_services{
+        font-size: 20px;
       }
 }

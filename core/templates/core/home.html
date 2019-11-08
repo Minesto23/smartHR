@@ -9,17 +9,13 @@
 <!-- main            -->
       <main>
         <div class="container-fluid" id="main_bg">
-          <div class="row ">
-              <div class="col-12 animated fadeIn slow d-none d-sm-block" id="main_title" >
-                  <h1 class="title" style="  color: #CA636D;   font-family: 'Playfair Display', serif;" ><b>{% trans "Smart HR Services" %}</b></h1>
-              </div>
-              <div class="col-12 d-flex justify-content-center d-sm-none logo_responsive">
-                <img src="{% static 'core/images/Horizontal-Positivo@2x.png' %}" class="img-fluid" alt="">
+          <div class="row">
+              <div class="col-12 d-flex justify-content-center justify-content-md-start logo_responsive">
+                <img src="{% static 'core/images/HOME.png' %}" alt="">
               </div>
           </div>
         </div> 
       </main>
-    
       <!-- Who Dinamic Info   -->
       <div class="container-fluid">
         <div class="row">
@@ -79,10 +75,10 @@
                       <img src="{% static 'core/images/6.png' %}" alt="">
                     {% endif %}
                   </div>
-                  <div class="col-6 pt-4 wow fadeIn d-flex justify-content-end" data-wow-delay="0.9s">
+                  <div class="col-12 col-md-6 pt-4 wow fadeIn d-flex justify-content-end" data-wow-delay="0.9s">
                       <p style="font-size: 30px;">{% trans "If you want to know more about what Smarth HR offers, check our services​​." %}</p>
                   </div>
-                  <div class="col-6 pt-5 wow fadeIn d-flex justify-content-end" data-wow-delay="0.9s">
+                  <div class="col-12 col-md-6 pt-5 wow fadeIn d-flex justify-content-end" data-wow-delay="0.9s">
                       <a name="" id="buttonMore" class="btn btn-primary" href="{% url 'services' %}" role="button">{% trans "CHECK" %}</a>
                   </div>
                   <div class="col-12 animated wow slideInUp" id="services">

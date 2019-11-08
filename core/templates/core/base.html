@@ -29,16 +29,9 @@
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navigation" aria-controls="#navigation"
                 aria-expanded="false" aria-label="Toggle navigation">
               <span class="navbar-toggler-icon"></span>
-            </button>            
-            <a class="navbar-brand" href="{% url 'home' %}">
-              <div class="row">
-                <div class="col offset-2">
-                  <img src="{% static 'core/images/logo-Positivo.png' %}" alt="" class="d-none d-sm-block logo">
-                </div>
-              </div> 
-            </a>         
-            <div class="col offset-lg-2 offset-sm-0 navbar-collapse collapse"  id="navigation">
-                <ul class="navbar-nav mr-auto mt-2 mt-lg-0 text-center">
+            </button>
+             <div class="col navbar-collapse collapse"  id="navigation">
+                <ul class="navbar-nav ml-auto mt-2 mt-lg-0 text-center">
                   <li class="nav-item {% if request.path == '/' %}active{% endif %}">
                     <a class="nav-link" href="{% url 'home' %}">{% trans "Home" %}</a>
                   </li>
@@ -49,14 +42,14 @@
                     <a class="nav-link" href="{% url 'services' %}">{% trans "Consulting Services" %} </a>
                   </li>
                   <li class="nav-item {% if request.path == '/questions/' %}active{% endif %}">
-                    <a class="nav-link" href="{% url 'questions' %}">{% trans "Questions" %} </a>
+                    <a class="nav-link" href="{% url 'questions' %}">{% trans "F.A.Q" %} </a>
                   </li>
                   <li class="nav-item {% if request.path == '/blog/' %}active{% endif %}">
                     <a class="nav-link" href="{% url 'blog' %}">{% trans "Blog" %} </a>
                   </li>
                   <li class="nav-item {% if request.path == '/contact/' %}active{% endif %}">
                     <a class="nav-link" href="{% url 'contact' %}">{% trans "Contact" %} </a>
-                  </li>
+                  </li> 
                   <li class="nav-item pt-2 pl-4">
                     <form name="myform" action="{% url 'set_language' %}" method="post">{% csrf_token %}
                         <input name="next" type="hidden" value="{{ redirect_to }}" >

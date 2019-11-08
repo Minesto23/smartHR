@@ -6,11 +6,27 @@
 
 {% block content %}
 
+<style>
+  .text p{
+    font-size: 18px;
+  }
+</style>
+
+<!-- NEW NEW ESTO SERIA IGUAL PARA CADA PAGINA ES LO DEL LOGO LE AGREGA TODO IGUAL SOLO CAMBIA LA IMAGEN -->
+      <div class="container">
+        <div class="row">
+          <div class="col-12 logo_the_rest">
+            <img src="{% static 'core/images/ConsultingServices.png' %}" class="justify-content-start">
+          </div>
+        </div>
+      </div>
+<!-- HASTA AQUI NEW -->
+
 <!-- main            -->
       <main>
-        <div class="container wow fadeIn slow " style="padding-top: 150px;">
-          <div class="row justify-content-center align-items-center">
-            <div class="col-12 col-lg-6 text-justify mt-3 mt-lg-0">
+        <div class="container wow fadeIn slow pt-3 text" >
+          <div class="row justify-content-center ">
+            <div class="col-12 col-lg-6 text-justify mt-3 mt-lg-0 ">
               <p>HR Outsourcing helps small companies that are in need of a Human Resources Professional on a part time basis
                 relieving the overwhelmed owner or office manager of the daily tasks surrounding recruitment, HR, benefits or
                 payroll.
@@ -25,111 +41,166 @@
         </div>        
       </main>
 
-      <div class="container p-5">
+      <!-- Our services  COPIE ESTO-->
+      <div class="container wow fadeIn slow pt-2 pt-md-3 text">
+        <div class="row justify-content-center ">
+          <div class="col-12 col-lg-6">            
+            <img src="{% static 'core/images/2.jpg' %}" alt="" class="img-fluid">
+          </div>
+          <div class="col-12 col-lg-6 text-justify mt-3 mt-lg-0">
+            <p class="mb-3 mb-lg-0">
+                We offer you, your own dedicated on site Hr Manager for a fraction of the cost! <br><br>             
+                Whether you're in need of a short, mid, or long-term solution, we provide a bilingual
+                customized and flexible HR solutions to suit your HR needs. We work on or off-site,
+                either as a standalone HR services consultant or in conjunction with your existing
+                human resources team.</p>
+          </div>
+        </div>
+      </div>     
+      <!-- /Our services -->
+
+      <!-- COPIE ESTO TAMBIEN -->
+      <div class="container p-5 text">
         <div class="row">
-            <div class="col-xs-12 col-lg-5">
-              <h3 id="our-service">{% trans "Smart HR Services" %}</h3>
-            </div>
-        </div>
-      </div>
-
-      <div class="container-fluid wow fadeIn slow ">
-        
-        <div class="row justify-content-center">
-          <div class="col-6 col-lg-3 p-4 text-center d-flex align-items-center" id="category_1">
-            <h2 style="color: white;" id="h_1">{% trans "Employment function" %}</h2>
-          </div>
-          <div class="col-6 col-lg-3 p-4 bg-white text-center d-flex align-items-center" id="category_2">
-            <h2 style="color: white;" id="h_2">{% trans "Function of personnel administration" %}</h2>
-          </div>
-          <div class="col-6 col-lg-3 p-4 bg-white text-center d-flex align-items-center" id="category_3">
-            <h2 style="color: white;" id="h_3">{% trans "Human resources development function" %}</h2>
-          </div>
-          <div class="col-6 col-lg-3 p-4 bg-white text-center d-flex align-items-center" id="category_4">
-            <h2 style="color: white;" id="h_4">{% trans "Function of industrial relations" %}</h2>
-          </div>
-
-          <div id="info_services_1" class="">
-            <div class="row p-5 justify-content-around text-center">
-              <div class="col-12 col-lg-2 d-flex align-items-center justify-content-center">
-                  <h4>{% trans "Open Enrollment" %}</h4>
-              </div>
-              <div class="col-12 col-lg-2 d-flex align-items-center justify-content-center" >
-                  <h4>{% trans "Employee Training & Development" %}</h4>
-              </div>
-              <div class="col-12 col-lg-2 d-flex align-items-center justify-content-center">
-                  <h4>{% trans "Recruitment Assistance Services, Background Checks, References, Criminal, Credit & Education" %}</h4>
-              </div>
-              <div class="col-12 col-lg-2 d-flex align-items-center justify-content-center">
-                  <h4>{% trans "Applicant Tracking Systems (ATS) – Recommendations, Optimization, Implementation" %}</h4>
-              </div>
-              <div class="col-12 col-lg-2 d-flex align-items-center justify-content-center">
-                  <h4>{% trans "Downsizing" %}</h4>
-              </div>
-            </div>
-          </div>
-        
-          <div class="" id="info_services_2">
-            <div class="row p-5 text-center">
-                <div class="col-12 col-lg-3 d-flex align-items-center justify-content-center">
-                    <h4>{% trans "HR Benefits Administration and Selection" %}</h4>
-                </div>
-                <div class="col-12 col-lg-3 d-flex align-items-center justify-content-center ">
-                    <h4>{% trans "Payroll Services" %}</h4>
-                </div>
-                <div class="col-12 col-lg-3 d-flex align-items-center justify-content-center">
-                    <h4>{% trans "HR General Compliance and Audits" %}</h4>
-                </div>
-                <div class="col-12 col-lg-3 d-flex align-items-center justify-content-center ">
-                    <h4>{% trans "I-9 Audits and Compliance" %}</h4>
-                </div>
-            </div>
-          </div>
-
-          <div class="" id="info_services_3">
-            <div class="row p-5 justify-content-around text-center">
-              <div class="col-12 col-lg-2 d-flex align-items-center justify-content-center">
-                  <h4>{% trans "HRIS (Human Resources Information System) selection and implementation" %}</h4>
-              </div>
-              <div class="col-12 col-lg-2 d-flex align-items-center justify-content-center" >
-                  <h4>{% trans "Employee Handbook Development" %}</h4>
-              </div>
-              <div class="col-12 col-lg-2 d-flex align-items-center justify-content-center">
-                  <h4>{% trans "Psychometric Testing, Competency Modelling" %}</h4>
-              </div>
-              <div class="col-12 col-lg-2 d-flex align-items-center justify-content-center">
-                  <h4>{% trans "Compensation and market analysis" %}</h4>
-              </div>
-              <div class="col-12 col-lg-2 d-flex align-items-center justify-content-center">
-                  <h4>{% trans "Company Culture Analysis and review" %}</h4>
-              </div>
-            </div>
-          </div>
-
-          <div class="" id="info_services_4">
-            <div class="row p-5 text-center">
-                <div class="col-12 col-lg-4 d-flex align-items-center justify-content-center">
-                    <h4>{% trans "Employee Relations and conflict resolution" %}</h4>
-                </div>
-                <div class="col-12 col-lg-4 d-flex align-items-center justify-content-center">
-                    <h4>{% trans "On-call support for employees and manage" %}</h4>
-                </div>
-                <div class="col-12 col-lg-4 d-flex align-items-center justify-content-center">
-                    <h4>{% trans "Policy and Procedure Development" %}</h4>
-                </div>
-            </div>
+          <div class="col-12 text-justify">
+            <h2 id="title_services">But not all consulting services are the same- Smart HR Services 
+              will provide a Personalized and In Person presence to your business,
+              making your employee’s feel that they do have onsite Human Resources
+              support they can reach out to with questions and concerns!</h2>
           </div>
         </div>
       </div>
+
+      <!-- services new  COPIE ESTO-->
+      <div class="container pt-5 text">
+        <div class="row">
+          <div class="col-12 col-md-4 d-flex justify-content-center ">
+            <div class="text-center" id="front_1" style="max-width: 300px;">
+              <div class=" d-flex justify-content-center">
+                <img src="{% static 'core/images/Recruiting.png' %}" alt="" class="img-fluid" style="max-width: 150px;">
+              </div>
+              <h3 class="mt-4 red">Staffing & Recruiting</h3>
+              <p>Many organizations lack the resources needed to effectively
+                 recruit and hire qualified professionals. Consider an on-demand solution.
+              </p>
+            </div>
+            <div id="back_1" style="min-width: 300px; min-height: 350px;">
+              <ul class="mt-2">
+                <li>Temporary Recruitment Solutions</li>
+                <li>Contract Recruitment</li>
+                <li>Job Postings, Screening & Evaluation</li>  
+                <li>Employee Value Proposition (EVP), Employment Branding, Candidate Experience, Social Media Strategy</li>
+                <li>Applicant Tracking Systems (ATS) – Recommendations, Optimization, Implementation</li>
+                <li> Background Checks – References, Criminal, Credit, Education</li>
+                <li>Psychometric Testing, Competency Modelling</li>                 
+              </ul>
+            </div>
+          </div>
+          <div class="col-12 col-md-4 d-flex justify-content-center  mt-5 mt-md-0">
+            <div class="text-center" id="front_2" style="max-width: 300px;">
+              <div class=" d-flex justify-content-center">
+                <img src="{% static 'core/images/Consulting.png' %}" alt="" class="img-fluid" style="max-width: 150px;">
+              </div>
+              <h3 class="mt-4 green">HR General Consulting</h3>
+              <p>Our experienced HR consultants can help you create an employee manual,
+                 handle layoffs, or assist with organizational development.
+              </p>
+            </div>
+            <div id="back_2" style="min-width: 300px;  min-height: 350px;">
+              <ul class="mt-2">
+                <li>Company Handbook development </li>
+                <li>Performance Management</li>
+                <li>HRIS (Human Resources Information Systems)selection and implementation </li>  
+                <li>Contingent Workforce Management</li>
+                <li>HR Project Management</li>
+                <li>Policy and Procedure Development</li>
+                <li>General HR Counsel</li>                 
+              </ul>
+            </div>
+          </div>
+          <div class="col-12 col-md-4 d-flex justify-content-center mt-5 mt-md-0">
+            <div class="text-center" id="front_3" style="max-width: 300px;">
+              <div class=" d-flex justify-content-center">
+                <img src="{% static 'core/images/Analysis.png' %}" alt="" class="img-fluid" style="max-width: 150px;">
+              </div>
+              <h3 class="mt-4 red">Payroll Precessing & Benefits Management</h3>
+              <p>Your HR department may not be qualified to handle certain HR-related tasks.
+                 We can supply qualified specialists on an as-needed basis.
+              </p>
+            </div>
+            <div id="back_3" style="min-width: 300px; min-height: 350px;">
+              <ul class="mt-2">
+                <li>Compensation and market analysis</li>
+                <li>Open Enrollment</li>
+                <li>Processing payroll</li>                
+                <li>Benefits Administration and Selection</li>            
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="offset-md-2 col-12 col-md-4 d-flex justify-content-center mt-5">
+            <div class="text-center" id="front_4" style="max-width: 300px;">
+              <div class=" d-flex justify-content-center">
+                <img src="{% static 'core/images/Counsel.png' %}" alt="" class="img-fluid" style="max-width: 150px;">
+              </div>
+              <h3 class="mt-4 green">HR Audits</h3>
+              <p>Many organizations lack the resources needed to effectively
+                 recruit and hire qualified professionals. Consider an on-demand solution.
+              </p>
+            </div>
+            <div id="back_4" style="min-width: 300px;  min-height: 375px;">
+              <ul class="mt-2">
+                  <li>Health & Safety</li>
+                  <li>Legal Compliance</li>
+                  <li>General HR Counsel</li>                
+              </ul>
+            </div>
+          </div>
+          <div class="col-12 col-md-4 d-flex justify-content-center mt-5 ">
+            <div class="text-center" id="front_5" style="max-width: 300px;">
+              <div class=" d-flex justify-content-center">
+                <img src="{% static 'core/images/Relations.png' %}" alt="" class="img-fluid" style="max-width: 150px;">
+              </div>
+              <h3 class="mt-4 green">Employee Relations</h3>
+              <p>Our experienced HR consultants can help you create an employee manual,
+                 handle layoffs, or assist with organizational development.
+              </p>
+            </div>
+            <div id="back_5" style="min-width: 300px;  min-height: 375px;">
+              <ul class="mt-2">
+                  <li>Conflict resolution</li>
+                  <li>Downsizing</li>
+                  <li>Rewards</li>                
+                  <li>Culture analysis and review</li>  
+                  <li>Workplace Investigations</li>               
+              </ul>
+            </div>
+          </div>          
+        </div>
+      </div>
+      <!-- /services new -->
 
       <!-- COPIE ESTO -->
-      <div class="container">
-        <div class="row text-justify justify-content-center OurServices wow fadeIn slow ">
+      <div class="container text">
+        <div class="row text-justify justify-content-center OurServices wow fadeIn slow">
           <div class="col-xs-12 col-lg-6">
-            <img src="{% static 'core/images/2.jpg' %}" alt="" class="img-fluid">
+            <img src="{% static 'core/images/3.jpg' %}" alt="" class="img-fluid">
+          </div>
+          <div class="col-xs-12 col-lg-6 pt-2 d-none d-lg-block">
+            <p>Whether you're in need of a short, mid, or long-term solution, we provide customized and flexible HR solutions
+              to suit your Human Resources needs. We work on or off-site, either as a standalone HR services consultant or in
+              conjunction with your existing human resources team.
+              Current economic trends are now forcing businesses to consider process outsourcing of administrative functions to
+              improve basic services and maintain compliance with the ever changing regulations. 
+              Outsourcing daily HR functions, recruitment processes, employee benefit administration and payroll allows key
+              employees to focus on strategic initiatives that benefit the organization, increase productivity and thereby
+              profitability.</p>
             <h3 class="mt-3">Bilingual HR Consulting for Small Businesses</h3>
           </div>
-          <div class="col-xs-12 col-lg-6">
+          <!-- RESPONSIVE -->
+          <div class="col-xs-12 col-lg-6 pt-2 d-lg-none d-sm-block">
+            <h3 class="mt-3">Bilingual HR Consulting for Small Businesses</h3>
             <p>Whether you're in need of a short, mid, or long-term solution, we provide customized and flexible HR solutions
               to suit your Human Resources needs. We work on or off-site, either as a standalone HR services consultant or in
               conjunction with your existing human resources team.
@@ -143,59 +214,58 @@
       </div>
       <!-- HASTA AQUI -->
 
-      <div class="container pt-5 pb-5">
-        <div class="row text-justify justify-content-around wow slideInUp">
+      <div class="container pt-5 pb-5 text">
+        <div class="row text-justify justify-content-around wow fadeIn slow">
+
           <!-- NORMAL -->
           <div class="col-xs-12 col-lg-6 pt-2 d-none d-lg-block">
             <p>Smart HR of South Florida gives you a dedicated HR manager who can help you craft a new HR policy, maintain compliance, onboard new employees or process your payroll- You decide what services you need and how often do you require our support.</p>
             <h3 class="mt-3">Your Own Dedicated Bilingual HR Manager</h3>
           </div>
-          <div class="col-xs-12 col-lg-6 d-none d-lg-block">
-            <img src="{% static 'core/images/3.jpg' %}" alt="" class="img-fluid">
+          <div class="col-xs-12 col-lg-6">
+            <img src="{% static 'core/images/4.jpg' %}" alt="" class="img-fluid">
           </div>
 
-          <!-- RESPONSIVE -->
-          <div class="col-xs-12 col-lg-6 d-lg-none d-sm-block">
-            <img src="{% static 'core/images/3.jpg' %}" alt="" class="img-fluid">
-            <h3 class="mt-3">Your Own Dedicated Bilingual HR Manager</h3>
-          </div>
+          <!-- RESPONSIVE AQUI BORRE ALGO -->          
           <div class="col-xs-12 col-lg-6 pt-2 d-lg-none d-sm-block">
+            <h3 class="mt-3">Your Own Dedicated Bilingual HR Manager</h3>
             <p>Smart HR of South Florida gives you a dedicated HR manager who can help you craft a new HR policy, maintain compliance, onboard new employees or process your payroll- You decide what services you need and how often do you require our support.</p>
           </div>
+          <!--HASTA AQUI -->
 
           <div class="col-12 text-center pt-5 wow bounceInUp"  style="max-width: 750px;">
-             <h3 id="our-service">{% trans "HR Policy & Procedures" %}</h3>
-             <p>{% trans "We’ll work with you to craft your internal HR policies that fit the way you run your business." %}</p>
+             <h3 id="our-service">HR Policy & Procedures</h3>
+             <p>We’ll work with you to craft your internal HR policies that fit the way you run your business.</p>
           </div>
           <div class="col-12 text-center pt-5 wow bounceInUp" style="max-width: 750px;">
-            <h3 id="our-service">{% trans "Payroll Processing Services & Benefits Management" %}</h3>
-            <p>{% trans "Your HR department may not be qualified to handle certain payroll and benefits related tasks. We can supply qualified specialists on an as-needed basis" %}</p>
+            <h3 id="our-service">Payroll Processing Services & Benefits Management</h3>
+            <p>Your HR department may not be qualified to handle certain payroll and benefits related tasks. We can supply qualified specialists on an as-needed basis</p>
           </div>
           <div class="col-12 text-center pt-5 wow bounceInUp" style="max-width: 750px;">
-            <h3 id="our-service">{% trans "Employer Coaching & Guidance" %}</h3>
-            <p>{% trans "Full remote or onsite HR support, available to help by phone, email, or in person. Consider us an extension of your team." %}</p>
+            <h3 id="our-service">Employer Coaching & Guidance</h3>
+            <p>Full remote or onsite HR support, available to help by phone, email, or in person. Consider us an extension of your team.</p>
           </div>
           <div class="col-12 text-center pt-5 wow bounceInUp" style="max-width: 750px;">
-            <h3 id="our-service">{% trans "Compliant Onboarding & Terminations" %}</h3>
-            <p>{% trans "We will guide and train your management team to successfully onboard, terminate, and take corrective action with your employees to set them up for success" %}</p>
+            <h3 id="our-service">Compliant Onboarding & Terminations</h3>
+            <p>We will guide and train your management team to successfully onboard, terminate, and take corrective action with your employees to set them up for success</p>
           </div>
           <div class="col-12 text-center pt-5 wow bounceInUp"  style="max-width: 750px;">
-            <h3 id="our-service">{% trans "General & Compensation Compliance" %}</h3>
-            <p>{% trans "Smart HR makes sure your business stays compliant with nuanced wage and hour regulations." %}</p>
+            <h3 id="our-service">General & Compensation Compliance</h3>
+            <p>Smart HR makes sure your business stays compliant with nuanced wage and hour regulations.</p>
           </div>
           <div class="col-12 text-center pt-5 wow bounceInUp"  style="max-width: 750px;">
-            <h3 id="our-service">{% trans "Staffing and Recruiting " %}</h3>
-            <p>{% trans "Many organizations lack the resources needed to effectively recruit and hire qualified professionals. " %}</p>
+            <h3 id="our-service">Staffing and Recruiting </h3>
+            <p>Many organizations lack the resources needed to effectively recruit and hire qualified professionals. </p>
           </div>
           <div class="col-12 text-center pt-5 wow bounceInUp"  style="max-width: 750px;">
-            <h3 id="our-service">{% trans "HR Policy & Procedures" %}</h3>
-            <p>{% trans "Happy employees directly translate to amazing customer services; let your employees be your best advertisement." %}</p>
+            <h3 id="our-service">HR Policy & Procedures</h3>
+            <p>Happy employees directly translate to amazing customer services; let your employees be your best advertisement.</p>
           </div>
           <div class="col-12 text-center pt-5 wow bounceInUp"  style="max-width: 750px;">
-            <h3 id="our-service">{% trans "General HR Consulting" %}</h3>
-            <p>{% trans "Our experienced HR consultants can help you create an employee manual, handle layoffs, or assist with organizational development" %}</p>
+            <h3 id="our-service">General HR Consulting</h3>
+            <p>Our experienced HR consultants can help you create an employee manual, handle layoffs, or assist with organizational development</p>
           </div>
         </div>
-      </div>
+      </div> 
 
 {% endblock %}

@@ -4,7 +4,6 @@
   padding-bottom: 20px;
 }
 
-/* CAMBIE ESTO */
 #our-service{
   font-size: 25px;
   color: #CA636D;
@@ -57,4 +56,20 @@
   background-size: cover;
   width: 100%;
   height: auto;
+}
+
+#title_services{
+  color: #63B3AA;
+  font-size: 32px;
+}
+
+/* DE AQUI PARA ABAJO ES NEW */
+.red{
+  color: #CA636D;
+  height: 75px;
+}
+
+.green{
+  color: #63B3AA;
+  height: 75px;
 }

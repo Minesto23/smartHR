@@ -1,75 +1,78 @@
 $(document).ready(function(){
 
-    $('#info_services_1').hide();
-    $('#info_services_2').hide();
-    $('#info_services_3').hide();
-    $('#info_services_4').hide();
+    $('#back_1').hide();
+    $('#back_2').hide();
+    $('#back_3').hide();
+    $('#back_4').hide();
+    $('#back_5').hide();
 
-    $('#category_1').hover(function () {
-        $('#h_1').attr('style', 'color: rgb(145, 50, 59)');
-        $('#info_services_1').attr('class', 'animated flipInX');
-        $('#info_services_1').show();
+    $('#front_1').hover(function () {
+        $('#front_1').hide();
+        $('#back_1').attr('class', 'animated flipInY p-2');
+        $('#back_1').show();
     }, function () {
-        $('#h_1').attr('style', 'color: white');
-        $('#info_services_1').hide();     
     });
 
-    $('#info_services_1').hover(function () {
-        $('#info_services_1').show(); 
-        $('#h_1').attr('style', 'color: rgb(145, 50, 59)');       
+    $('#back_1').hover(function () {    
     },function () {
-        $('#info_services_1').hide();        
-        $('#h_1').attr('style', 'color: white');
+        $('#front_1').attr('class', 'animated flipInY text-center');
+        $('#front_1').show();
+        $('#back_1').hide();
     });
 
-    $('#category_2').hover(function () {
-        $('#h_2').attr('style', 'color: rgb(145, 50, 59)');
-        $('#info_services_2').attr('class', 'animated flipInX');
-        $('#info_services_2').show();
+    $('#front_2').hover(function () {
+        $('#front_2').hide();
+        $('#back_2').attr('class', 'animated flipInY p-2');
+        $('#back_2').show();
     }, function () {
-        $('#h_2').attr('style', 'color: white');
-        $('#info_services_2').hide();
     });
 
-    $('#info_services_2').hover(function () {
-        $('#info_services_2').show(); 
-        $('#h_2').attr('style', 'color: rgb(145, 50, 59)');       
+    $('#back_2').hover(function () {    
     },function () {
-        $('#info_services_2').hide();        
-        $('#h_2').attr('style', 'color: white');
+        $('#front_2').attr('class', 'animated flipInY text-center');
+        $('#front_2').show();
+        $('#back_2').hide();
     });
 
-    $('#category_3').hover(function () {
-        $('#h_3').attr('style', 'color: rgb(145, 50, 59)');
-        $('#info_services_3').attr('class', 'animated flipInX');
-        $('#info_services_3').show();
+    $('#front_3').hover(function () {
+        $('#front_3').hide();
+        $('#back_3').attr('class', 'animated flipInY p-2');
+        $('#back_3').show();
     }, function () {
-        $('#h_3').attr('style', 'color: white');
-        $('#info_services_3').hide();
     });
 
-    $('#info_services_3').hover(function () {
-        $('#info_services_3').show(); 
-        $('#h_3').attr('style', 'color: rgb(145, 50, 59)');       
+    $('#back_3').hover(function () {    
     },function () {
-        $('#info_services_3').hide();        
-        $('#h_3').attr('style', 'color: white');
+        $('#front_3').attr('class', 'animated flipInY text-center');
+        $('#front_3').show();
+        $('#back_3').hide();
     });
 
-    $('#category_4').hover(function () {
-        $('#h_4').attr('style', 'color: rgb(145, 50, 59)');
-        $('#info_services_4').attr('class', 'animated flipInX');
-        $('#info_services_4').show();
+    $('#front_4').hover(function () {
+        $('#front_4').hide();
+        $('#back_4').attr('class', 'animated flipInY p-2');
+        $('#back_4').show();
     }, function () {
-        $('#h_4').attr('style', 'color: white');
-        $('#info_services_4').hide();
     });
 
-    $('#info_services_4').hover(function () {
-        $('#info_services_4').show(); 
-        $('#h_4').attr('style', 'color: rgb(145, 50, 59)');       
+    $('#back_4').hover(function () {    
     },function () {
-        $('#info_services_4').hide();        
-        $('#h_4').attr('style', 'color: white');
+        $('#front_4').attr('class', 'animated flipInY text-center');
+        $('#front_4').show();
+        $('#back_4').hide();
+    });
+
+    $('#front_5').hover(function () {
+        $('#front_5').hide();
+        $('#back_5').attr('class', 'animated flipInY p-2');
+        $('#back_5').show();
+    }, function () {
+    });
+
+    $('#back_5').hover(function () {    
+    },function () {
+        $('#front_5').attr('class', 'animated flipInY text-center');
+        $('#front_5').show();
+        $('#back_5').hide();
     });
 });

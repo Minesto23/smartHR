@@ -6,7 +6,13 @@
 {% block title%}{% trans "Who we are" %}{% endblock %}
 
 {% block content %}
-
+    <div class="container pb-3">
+        <div class="row">
+          <div class="col-12 logo_the_rest">
+            <img src="{% static 'core/images/WhoWeAre.png' %}" class="justify-content-start">
+          </div>
+        </div>
+    </div>
 
     <div class="container-fluid" id="who_bg">
       <div class="row" >
@@ -19,7 +25,6 @@
         <div class="row">
         {% for who in Who_We_Are %}
             <div class="col-12 pb-5 animated wow slideInUp" id="about-us">
-                <h3 style="padding-top: 30px; font-size: 25px;">{% trans "Our Culture" %}</h3>
                 {% if LANGUAGE_CODE == "es" %}
                   <p style="padding-top: 10px;">{{who.content_es|safe}}</p>
                 {% elif LANGUAGE_CODE == "en" %}

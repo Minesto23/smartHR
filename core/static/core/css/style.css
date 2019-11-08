@@ -307,3 +307,26 @@ margin-left: 10px;
   border-color: #63B3AA;
   border-style: solid;
 }
+
+/* DE AQUI PARA ABAJO NEW */
+.logo_responsive{
+  padding-top: 125px;
+  padding-bottom: 50px;
+  background-color: white;
+}
+
+.logo_responsive img{
+  width: 50%;
+  height: auto;
+  margin-left: 150px;
+}
+
+.logo_the_rest{
+  padding-top: 100px;
+  background-color: white;
+}
+
+.logo_the_rest img{
+  width: auto;
+  height: 65px;
+}
