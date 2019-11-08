@@ -23,8 +23,12 @@
                </button>
                <div class="collapse navbar-collapse" id="collapsibleNavId">
                    <ul class="navbar-nav mr-auto mt-2 mt-lg-0 text-center ml">
-                       <li class="nav-item">
-                           <a class="nav-link" href="{% url 'blog' %}">All <span class="sr-only">(current)</span></a>
+                       <li class="nav-item active">
+                          {% if LANGUAGE_CODE == "es" %}
+                            <a class="nav-link" href="{% url 'blog' %}">Todos <span class="sr-only">(current)</span></a>
+                          {% elif LANGUAGE_CODE == "en" %}
+                            <a class="nav-link" href="{% url 'blog' %}">All <span class="sr-only">(current)</span></a>
+                          {% endif %}
                        </li>
                        {% for category in categories  %}
                             <li class="nav-item" id="category-name">
