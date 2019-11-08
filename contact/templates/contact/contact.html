@@ -80,9 +80,9 @@
               <div class="form-group">
                 <label for="">{% trans "Message" %}</label>
                 {% if LANGUAGE_CODE == "es" %}
-                  <div style="max-width: 83%;">{{form_email.content|attr:"placeholder:*Mensaje"}}</div>
+                  <div style="max-width: 100%;">{{form_email.content|attr:"placeholder:*Mensaje"}}</div>
                 {% elif LANGUAGE_CODE == "en" %}
-                  <div style="max-width: 83%;">{{form_email.content|attr:"placeholder:*Message"}}</div>
+                  <div style="max-width: 100%;">{{form_email.content|attr:"placeholder:*Message"}}</div>
                 {% endif %}
               </div>
               {{form_email.content.errors}}
