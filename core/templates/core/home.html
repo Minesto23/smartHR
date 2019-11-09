@@ -107,10 +107,10 @@
             <div class="col-12 pt-5 animated wow slideInRight d-flex justify-content-end " id="questions">
               <div class="question_div" id="q_div_r">
               {% if LANGUAGE_CODE == "es" %}
-                <p class="text-right" id="questions-title"><b>{{question.question_es}}</b></h2>
+                <p class="text-left" id="questions-title"><b>{{question.question_es}}</b></h2>
                 <p class="text-justify" id="question-text" >{{question.content_es|safe}}</p>
               {% elif LANGUAGE_CODE == "en" %}         
-                <p class="text-right" id="questions-title"><b>{{question.question_en}}</b></h2>
+                <p class="text-left" id="questions-title"><b>{{question.question_en}}</b></h2>
                 <p class="text-justify" id="question-text" >{{question.content_en|safe}}</p>
               {% endif%}
               </div>
