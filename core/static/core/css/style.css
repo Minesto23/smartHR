@@ -91,13 +91,15 @@ body{
 /* ------------------ questions -----------------------------*/
 
 #q_div_l{
-  margin-left: 50px;
-  max-width: 650px;
+  margin-left: 100px;
+  /* max-width: 650px; */
+  margin-right: 20px;
 }
 
 #q_div_r{
-  margin-right: 50px;
-  max-width: 650px;
+  margin-right: 100px;
+  /* max-width: 650px; */
+  margin-left: 20px;
 }
 
 #questions{
