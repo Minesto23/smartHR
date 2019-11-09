@@ -15,7 +15,7 @@ from django.conf import settings
 def contact(request):
       contact_form = ContactForm()
       quote_form = QuoteForm()
-      print('hecho')
+      # print('hecho')
       val = 0
       if request.method=='POST':
             if request.POST.get('button') == 'quote':
@@ -24,14 +24,14 @@ def contact(request):
                   quote_number = Quote.objects.all().count()
                   date_comp = str_to_date(request.POST['date'])
                   turn_comp = request.POST['turn']
-                  print("turn:"+turn_comp)
-                  print("date:"+str(date_comp))
-                  print("numero registros:"+str(quote_number))
-                  print('Abriendo Guardado')
+                  # print("turn:"+turn_comp)
+                  # print("date:"+str(date_comp))
+                  # print("numero registros:"+str(quote_number))
+                  # print('Abriendo Guardado')
                   # quote_compare = 
                   if quote_number == 0:
                         if quote_form.is_valid():
-                              print('Guardando')
+                              # print('Guardando')
                               quote_n = quote_form.save()
                               quote_n.turn = request.POST['turn']
                               quote_n.save()      
@@ -42,12 +42,12 @@ def contact(request):
                         for quote in quote_comp:
                               if quote_form.is_valid():
                                     if date_comp != quote.date and turn_comp != quote.turn:
-                                          print('no es igual')
+                                          # print('no es igual')
                                           val = 0
                                     elif date_comp == quote.date and turn_comp == quote.turn:
-                                          print(str(quote.date))
-                                          print(str(quote.turn))
-                                          print('es igual')
+                                          # print(str(quote.date))
+                                          # print(str(quote.turn))
+                                          # print('es igual')
                                           val = 1
                                           break
                               else:
@@ -59,29 +59,42 @@ def contact(request):
                               quote_form = QuoteForm()
                               return redirect(reverse('contact')+"?same_q")
                         elif val == 0:
-                              print('Guardando')
+                              # print('Guardando')
                               quote = quote_form.save()
                               quote.turn = request.POST['turn']
                               quote.save()  
                               #enviamos correo
                               name = request.POST.get('name', '')
                               lastname = request.POST.get('lastname','')
-                              email = request.POST.get('email', '')
+                              emailc = request.POST.get('email', '')
                               phone_number = request.POST.get('phone_number','')
                               date = request.POST.get('date', '')
                               turn = request.POST.get('turn', '')
+                              template = get_template('email_quotes.html')
+                              template2 = get_template('email_quotes2.html')
+
+                              message = template.render({'name':name , 'lastname':lastname, 'email':emailc,'date':date,'turn':turn})
+                              message2 = template2.render({'name':name , 'lastname':lastname, 'email':emailc, 'phone_number':phone_number,'date':date,'turn':turn})
+
 
                               # Creamos el correo
                               email = EmailMessage(
-                              "SmartHR: New Quote",
-                              "From {} <{}>\n\nPhone number:{}\n\nDate:{}\n\nTurn:{}".format(name, email,phone_number,date,turn),
+                              "SmartHR: Confirmation Quote",
+                              message,
                               "it@smarthrfl.com",
-                              to=['minesto23@gmail.com','Info@smarthrfl.com'],
-                              reply_to=[email]
+                              to=[emailc],
+                              )
+                              email2 = EmailMessage(
+                              "SmartHR: New Quote",
+                              message2,
+                              "it@smarthrfl.com",
+                              to=['Info@smarthrfl.com'],
+                              reply_to=[emailc]
                               )
                               # Lo enviamos y redireccionamos
                               try:
                                     email.send()
+                                    email2.send()
                                     return redirect(reverse('contact')+"?ok_q")
                               except:
                                     # Algo no ha ido bien, redireccionamos a FAIL
