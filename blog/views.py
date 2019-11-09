@@ -1,4 +1,4 @@
-from django.shortcuts import render, get_object_or_404, redirect
+from django.shortcuts import render, get_object_or_404
 from django.views.generic.list import ListView
 from django.views.generic.detail import DetailView
 from hitcount.views import HitCountDetailView
@@ -31,7 +31,7 @@ def category(request, category_id):
     page = request.GET.get('page')
     categori = paginator.get_page(page)
 
-    return render(request, "blog/category.html", {'categori':categori, 'categories':categories})
+    return render(request, "blog/category.html", {'categori':categori, 'categories':categories, 'cat_p':category})
 
 class PostDetailView(DetailView):
     
@@ -52,14 +52,10 @@ class PostDetailView(DetailView):
 def search(request):
     query = request.GET.get('q')
     lang = request.LANGUAGE_CODE
-
-    if query != '':
-        if lang ==  "es":
-            posts = Post.objects.filter(Q(title_es__icontains=query))
-        elif lang =="en":
-            posts = Post.objects.filter(Q(title_en__icontains=query))
+    if lang ==  "es":
+        posts = Post.objects.filter(Q(title_es__icontains=query))
+    elif lang =="en":
+        posts = Post.objects.filter(Q(title_en__icontains=query))
     
-        categories = Category.objects.all()
-        return render(request, 'blog/search.html', {'posts': posts,'categories':categories, 'query':query})
-    else:
-        redirect(PostListView)
+    categories = Category.objects.all()
+    return render(request, 'blog/search.html', {'posts': posts,'categories':categories, 'query':query})
