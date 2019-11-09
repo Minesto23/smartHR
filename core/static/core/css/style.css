@@ -92,14 +92,12 @@ body{
 
 #q_div_l{
   margin-left: 100px;
-  /* max-width: 650px; */
-  margin-right: 20px;
+  max-width: 800px;
 }
 
 #q_div_r{
   margin-right: 100px;
-  /* max-width: 650px; */
-  margin-left: 20px;
+  max-width: 800px;
 }
 
 #questions{
@@ -111,7 +109,7 @@ body{
 #questions-title{
   text-decoration: underline  #F7FaF0;
   text-underline-position: under;
-  font-size: 40px;
+  font-size: 22px;
 }
 #question-text{
   font-size: 20px;
