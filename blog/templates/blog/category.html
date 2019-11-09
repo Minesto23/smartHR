@@ -34,7 +34,7 @@
                             {% endif %}
                        </li>
                             {% for cat in categories  %}
-                            <li class="nav-item {% if forloop.counter == category.id %}active{% endif %}" id="category-name">
+                            <li class="nav-item {% if cat_p.id == cat.id %}active{% endif %}" id="category-name">
                                 {% if LANGUAGE_CODE == "es" %}
                                   <a class="nav-link" href="{% url 'category' cat.id %}">{{cat.name_es}}</a>
                                 {% elif LANGUAGE_CODE == "en" %}
@@ -65,10 +65,10 @@
                 <h2>{{post.author}}</h2>
                 {% if LANGUAGE_CODE == "es" %}
                   <h3><b>{{post.title_es}}</b></h3>
-                  <p>{{post.content_es|safe}}</p>
+                  <p>{{post.content_es|safe|truncatewords:30}}</p>
                 {% elif LANGUAGE_CODE == "en" %}
                   <h3><b>{{post.title_en}}</b></h3>
-                  <p>{{post.content_en|safe}}</p>
+                  <p>{{post.content_en|safe|truncatewords:30}}</p>
                 {% endif %}
                  <div class="row" >
                     <img src="{% static 'core/images/eye.png' %}" alt="" style="width: 30px; height: 30px; margin-right: 10px;">
