@@ -1,4 +1,4 @@
-from django.shortcuts import render, get_object_or_404
+from django.shortcuts import render, get_object_or_404, redirect
 from django.views.generic.list import ListView
 from django.views.generic.detail import DetailView
 from hitcount.views import HitCountDetailView
@@ -62,4 +62,4 @@ def search(request):
         categories = Category.objects.all()
         return render(request, 'blog/search.html', {'posts': posts,'categories':categories, 'query':query})
     else:
-        PostListView.as_view()
+        redirect('')
