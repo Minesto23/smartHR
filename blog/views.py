@@ -52,10 +52,14 @@ class PostDetailView(DetailView):
 def search(request):
     query = request.GET.get('q')
     lang = request.LANGUAGE_CODE
-    if lang ==  "es":
-        posts = Post.objects.filter(Q(title_es__icontains=query))
-    elif lang =="en":
-        posts = Post.objects.filter(Q(title_en__icontains=query))
+
+    if query != '':
+        if lang ==  "es":
+            posts = Post.objects.filter(Q(title_es__icontains=query))
+        elif lang =="en":
+            posts = Post.objects.filter(Q(title_en__icontains=query))
     
-    categories = Category.objects.all()
-    return render(request, 'blog/search.html', {'posts': posts,'categories':categories, 'query':query})
+        categories = Category.objects.all()
+        return render(request, 'blog/search.html', {'posts': posts,'categories':categories, 'query':query})
+    else:
+        PostListView.as_view()
