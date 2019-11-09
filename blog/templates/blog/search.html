@@ -9,7 +9,11 @@
 <div class="container">
         <div class="row">
           <div class="col-12 logo_the_rest">
-            <img src="{% static 'core/images/Blog.png' %}" class="justify-content-start">
+            {% if LANGUAGE_CODE == "en" %}
+              <img src="{% static 'core/images/Blog.png' %}" class="justify-content-start">
+            {% elif LANGUAGE_CODE == "es" %}
+              <img src="{% static 'core/images/NewsES.png' %}" class="justify-content-start">
+            {% endif %}
           </div>
         </div>
 </div>
