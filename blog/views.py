@@ -62,4 +62,4 @@ def search(request):
         categories = Category.objects.all()
         return render(request, 'blog/search.html', {'posts': posts,'categories':categories, 'query':query})
     else:
-        redirect('')
+        redirect('blog')
