@@ -186,9 +186,6 @@ msgid "What HR ins't vs What HR is"
 msgstr "Qué no es HR versus Qué es HR"
 
 #: .\core\templates\core\home.html:79
-#, fuzzy
-#| msgid ""
-#| "If you want to know more about what Smart HR offers, check our services​​."
 msgid ""
 "If you want to know more about what Smarth HR offers, check our services​​."
 msgstr ""
@@ -200,8 +197,6 @@ msgid "CHECK"
 msgstr "REVISAR"
 
 #: .\core\templates\core\home.html:85
-#, fuzzy
-#| msgid "Frequent questions"
 msgid "Frequently Asked Questions"
 msgstr "Preguntas Frecuentes"
 
