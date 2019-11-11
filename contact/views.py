@@ -104,23 +104,23 @@ def contact(request):
             elif request.POST.get('button') == 'email':
                   contact_form = ContactForm(data=request.POST)
                   if contact_form.is_valid():
-                              name = request.POST.get('name', '')
-                              lastname = request.POST.get('lastname','')
+                              company_name = request.POST.get('company_name', '')
+                              contact_name = request.POST.get('contact_name','')
                               email = request.POST.get('email', '')
-                              subject = request.POST.get('subject','')
+                              number_employees = request.POST.get('number_employees','')
                               content = request.POST.get('content', '')
                               template = get_template('email.html')
                               
                               # context = Context({'name':name})
-                              message = template.render({'name':name , 'lastname':lastname, 'email':email, 'content':content})
+                              message = template.render({'name':name , 'company_name':company_name, 'email':email, 'number_of_employees':number_employees, 'content':content})
 
                               # Creamos el correo
                               email = EmailMessage(
-                              "SmartHR: New Message ({})".format(subject),
+                              "SmartHR: New Message ({})".format(company_name),
                               # "De {} <{}>\n\nWrite:\n\n{}".format(name, email, content),
                               message,
                               "it@smarthrfl.com",
-                              to=['minesto23@gmail.com'],
+                              to=['it@smarthrfl.com'],
                               # 'Info@smarthrfl.com'
                               reply_to=[email]
                               )
