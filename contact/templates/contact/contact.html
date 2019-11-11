@@ -43,50 +43,66 @@
               {% csrf_token %}
               <div class="form-group row">
                 <div class="col-sm-12 col-lg-6 pl-3">
-                  <label for="">{% trans "*Name" %}</label>
                   {% if LANGUAGE_CODE == "es" %}
-                    {{form_email.name|attr:"placeholder:*Por Ejemplo:Kat"}}
+                    <label for="">Nombre de la Compañia</label>
+                    {{form_email.company_name|attr:"placeholder:*Por Ejemplo:Company C.A"}}
                   {% elif LANGUAGE_CODE == "en" %}
-                    {{form_email.name|attr:"placeholder:*For Example:Kat"}}
+                    <label for="">Company Name</label>
+                    {{form_email.company_name|attr:"placeholder:*For Example:Company C.A"}}
                   {% endif %}
                 </div>
                 {{form_email.name.errors}}
                 <div class="col-sm-12 col-lg-6 pl-3">
-                  <label for="">{% trans "*LastName" %}</label>
                   {% if LANGUAGE_CODE == "es" %}
-                    {{form_email.lastname|attr:"placeholder:*Por Ejemplo:Smith"}}
+                  <label for="">Nombre del Contacto</label>
+                    {{form_email.contact_name|attr:"placeholder:*Por Ejemplo:Jones Smith"}}
                   {% elif LANGUAGE_CODE == "en" %}
-                    {{form_email.lastname|attr:"placeholder:*For Example:Smith"}}
+                    <label for="">Contact Name</label>
+                    {{form_email.contact_name|attr:"placeholder:*For Example:Jones Smith"}}
                   {% endif %}
                 </div>
-                {{form_email.lastname.errors}}
+                {{form_email.contact_name.errors}}
               </div>
               <div class="form-group row pt-4">
                 <div class="col-sm-12 col-lg-6 pl-3">
-                    <label for="">{% trans "*Email" %}</label>
+                    <label for="">{% trans "Email *" %}</label>
                     {% if LANGUAGE_CODE == "es" %}
-                      {{form_email.email|attr:"placeholder:*Por Ejemplo:katj@email.com"}}
+                      {{form_email.email|attr:"placeholder:*Por Ejemplo:mailj@ejemplo.com"}}
                     {% elif LANGUAGE_CODE == "en" %}
-                      {{form_email.email|attr:"placeholder:*For Example:katj@email.com"}}
+                      {{form_email.email|attr:"placeholder:*For Example:mailj@example.com"}}
                     {% endif %}
                 </div>
                 {{form_email.email.errors}}
                 <div class="col-sm-12 col-lg-6 pl-3">
-                    <label for="">{% trans "*Subject" %}</label>
                     {% if LANGUAGE_CODE == "es" %}
-                      {{form_email.subject|attr:"placeholder:*Asunto"}}
+                      <label for="">Número de Teléfono</label>
+                      {{form_email.phone_number|attr:"type:number"|attr:"placeholder:*Por Ejemplo: 123-0000-000"}}
                     {% elif LANGUAGE_CODE == "en" %}
-                      {{form_email.subject|attr:"placeholder:*Subject"}}
+                      <label for="">Phone Number</label>
+                      {{form_email.phone_number|attr:"type:number"|attr:"placeholder:*For Example: 123-0000-000"}}
                     {% endif %}
                 </div>
-                {{form_email.subject.errors}}
+                {{form_email.number_employees.errors}}
+              </div>
+              <div class="form-group row pt-4">
+                  <div class="col-sm-12 col-lg-6 pl-3">
+                      {% if LANGUAGE_CODE == "es" %}
+                        <label for="">Número de Empleados</label>
+                        {{form_email.number_employees|attr:"placeholder:Elige una opción"}}
+                      {% elif LANGUAGE_CODE == "en" %}
+                        <label for="">Number of employees</label>
+                        {{form_email.number_employees|attr:"placeholder:Choose an option"}}
+                      {% endif %}
+                  </div>
+                  {{form_email.number_employees.errors}}
               </div>
               <div class="form-group">
-                <label for="">{% trans "Message" %}</label>
                 {% if LANGUAGE_CODE == "es" %}
-                  <div style="max-width: 100%;">{{form_email.content|attr:"placeholder:*Mensaje"}}</div>
+                  <label for="">Mensage</label>
+                  <div style="max-width: 100%;">{{form_email.content|attr:"placeholder:Mensaje"}}</div>
                 {% elif LANGUAGE_CODE == "en" %}
-                  <div style="max-width: 100%;">{{form_email.content|attr:"placeholder:*Message"}}</div>
+                  <label for="">Message</label>
+                  <div style="max-width: 100%;">{{form_email.content|attr:"placeholder:Message"}}</div>
                 {% endif %}
               </div>
               {{form_email.content.errors}}
@@ -134,19 +150,21 @@
                     {% csrf_token %}
                       <div class="form-group row">
                         <div class="col-sm-1-12 pl-3">
-                              <label for="">{% trans "*Name" %}</label>
                               {% if LANGUAGE_CODE == "es" %}
+                                <label for="">Nombre</label>
                                 {{form_quote.name|attr:"placeholder:*Por Ejemplo:Kat"}}
                               {% elif LANGUAGE_CODE == "en" %}
+                                <label for="">Name</label>
                                 {{form_quote.name|attr:"placeholder:*For Example:Kat"}}
                               {% endif %}
                         </div>
                         {{form_quote.name.errors}}
                         <div class="col-sm-1-12 pl-3">
-                              <label for="">{% trans "*LastName" %}</label>
                               {% if LANGUAGE_CODE == "es" %}
+                                <label for="">Apellido</label>
                                 {{form_quote.lastname|attr:"placeholder:*Por Ejemplo:Smith"}}
                               {% elif LANGUAGE_CODE == "en" %}
+                                <label for="">Lastname</label>
                                 {{form_quote.lastname|attr:"placeholder:*For Example:Smith"}}
                               {% endif %}
                         </div>
@@ -154,7 +172,7 @@
                         </div>
                         <div class="form-group row pt-4">
                           <div class="col-sm-1-12 pl-3">
-                              <label for="">{% trans "*Email" %}</label>
+                              <label for="">Email *</label>
                               {% if LANGUAGE_CODE == "es" %}
                                 {{form_quote.email|attr:"placeholder:*Por Ejemplo:katj@email.com"}}
                               {% elif LANGUAGE_CODE == "en" %}
@@ -163,10 +181,11 @@
                           </div>
                           {{form_quote.email.errors}}
                         <div class="col-sm-1-12 pl-3">
-                            <label for="">{% trans "*Cell-Phone" %}</label>
                             {% if LANGUAGE_CODE == "es" %}
+                              <label for="">Número de Teléfono</label>
                               {{form_quote.phone_number|attr:"type:number"|attr:"placeholder:*Por Ejemplo: 123-0000-000"}}
                             {% elif LANGUAGE_CODE == "en" %}
+                              <label for="">Phone Number</label>
                               {{form_quote.phone_number|attr:"type:number"|attr:"placeholder:*For Exmaple: 123-0000-000"}}
                             {% endif %}
                         </div>
@@ -174,16 +193,21 @@
                       </div>
                       <div class="form-group row pt-4">
                         <div class="col-sm-1-12 pl-3">
-                            <label for="">{% trans "Date" %}</label>
                             {% if LANGUAGE_CODE == "es" %}
+                              <label for="">Fecha</label>
                               {{form_quote.date|attr:"type:date"|attr:"class:form-control quotes"}}
                             {% elif LANGUAGE_CODE == "en" %}
+                              <label for="">Date</label>
                               {{form_quote.date|attr:"type:date"|attr:"class:form-control quotes"}}
                             {% endif %}
                       </div>
                         {{form_quote.date.errors}}
                         <div class="col-sm-1-12 pl-3">
-                            <label for="">{% trans "Turn" %}</label>
+                            {% if LANGUAGE_CODE == "es" %}
+                              <label for="">Turno</label>
+                            {% elif LANGUAGE_CODE == "en" %}
+                              <label for="">Turn</label>
+                            {% endif %}
                             <select class="form-control quotes" name="turn" id="id_turn">
                             <option value="" disabled selected>{% trans "Select Your Turn" %}</option>
                              </select>
