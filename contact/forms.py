@@ -1,20 +1,30 @@
 from django import forms
 from .models import Quote, Model_Quote, Turns
 
+CHOICES=(
+    ('1-10','1-10'),
+    ('11-50','11-50'),
+    ('51-200','51-200'),
+    ('+200','+200'),
+)
+
 class ContactForm(forms.Form):
-    name = forms.CharField(label="*Your Name", required=True, widget=forms.TextInput(
+    company_name = forms.CharField(label="Company Name", required=True, widget=forms.TextInput(
         attrs={'class':'form-control' }
     ))
-    lastname = forms.CharField(label="*Your LastName", required=True, widget=forms.TextInput(
+    contact_name = forms.CharField(label="Contact Name", required=True, widget=forms.TextInput(
         attrs={'class':'form-control'}
     ))
-    email = forms.EmailField(label="*Email", required=True, widget=forms.TextInput(
+    email = forms.EmailField(label="Email*", required=True, widget=forms.TextInput(
         attrs={'class':'form-control'}
     ))
-    subject = forms.CharField(label="*Subject",required=True, widget=forms.TextInput(
+    phone_number = forms.CharField(label="Phone Number",required=True, widget=forms.TextInput(
         attrs={'class':'form-control'}
     ))
-    content = forms.CharField(label="*Message", required=True, widget=forms.Textarea(
+    number_employees= forms.ChoiceField(label="Number of Employees" ,choices=CHOICES, required=True, widget=forms.Select(
+        attrs={'class':'form-control'}
+    ))
+    content = forms.CharField(label="Message", required=True, widget=forms.Textarea(
         attrs={'class':'form-control', 'rows': 3}
     ))
 
