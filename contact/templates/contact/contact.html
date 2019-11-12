@@ -208,8 +208,12 @@
                             {% elif LANGUAGE_CODE == "en" %}
                               <label for="">Turn</label>
                             {% endif %}
-                            <select class="form-control quotes" name="turn" id="id_turn">
-                            <option value="" disabled selected>{% trans "Select Your Turn" %}</option>
+                              <select class="form-control quotes" name="turn" id="id_turn">
+                                {% if LANGUAGE_CODE == "es" %}
+                                  <option value="" disabled selected>Seleccione una Fecha</option>
+                                {% elif LANGUAGE_CODE == "en" %}
+                                  <option value="" disabled selected>Select a date first</option>
+                                {% endif %}
                              </select>
                             </div>
                         </div>
