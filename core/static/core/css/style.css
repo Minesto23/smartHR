@@ -47,14 +47,14 @@ body{
 
 #about-us h3{
   color: #CA636D;
-  padding-left: 200px;
+  /*padding-left: 200px;*/
   font-size: 20px;
 }
 
 #about-us p{
   color: #323335;
-  padding-left: 200px;
-  padding-right: 200px;
+  /*padding-left: 200px;*/
+  /*padding-right: 200px;*/
   font-size: 25px;
   text-align: justify;
 }
