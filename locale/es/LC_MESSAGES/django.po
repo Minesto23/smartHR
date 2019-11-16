@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-11-08 22:13-0400\n"
+"POT-Creation-Date: 2019-11-15 22:40-0400\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -18,29 +18,29 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-#: .\blog\templates\blog\post.html:59
+#: .\blog\templates\blog\post.html:63
 msgid "Update:"
 msgstr "Ultima Actualización:"
 
-#: .\blog\templates\blog\post.html:100 .\core\templates\core\home.html:131
+#: .\blog\templates\blog\post.html:104 .\core\templates\core\home.html:131
 msgid "Recent News"
 msgstr "Noticias Recientes"
 
-#: .\blog\templates\blog\post.html:145 .\core\templates\core\home.html:121
+#: .\blog\templates\blog\post.html:149 .\core\templates\core\home.html:121
 #: .\core\templates\core\home.html:176
 msgid "MORE"
 msgstr "MÁS"
 
-#: .\blog\templates\blog\search.html:52
+#: .\blog\templates\blog\search.html:56
 msgid "Posts containing"
 msgstr "Posts que contienen "
 
 #: .\contact\templates\contact\contact.html:7
-#: .\core\templates\core\base.html:51
+#: .\core\templates\core\base.html:49
 msgid "Contact"
 msgstr "Contacto"
 
-#: .\contact\templates\contact\contact.html:29
+#: .\contact\templates\contact\contact.html:33
 msgid ""
 "Smart HR Services’ Team is focused on helping you succeed by taking care of "
 "the things that may be distracting you from the bigger picture “Your "
@@ -50,112 +50,75 @@ msgstr ""
 "ocuparse de las cosas que pueden estar distrayéndolo del panorama general "
 "“Su negocio” "
 
-#: .\contact\templates\contact\contact.html:42
-#: .\contact\templates\contact\contact.html:133
-#, fuzzy
-#| msgid "*Your Name"
-msgid "*Name"
-msgstr "*Nombres"
-
-#: .\contact\templates\contact\contact.html:51
-#: .\contact\templates\contact\contact.html:142
-#, fuzzy
-#| msgid "*Your LastName"
-msgid "*LastName"
-msgstr "*Apellidos"
-
-#: .\contact\templates\contact\contact.html:62
-#: .\contact\templates\contact\contact.html:153
+#: .\contact\templates\contact\contact.html:68
 #, fuzzy
 #| msgid "*Your Email"
-msgid "*Email"
+msgid "Email *"
 msgstr "*Correo Electrónico"
 
-#: .\contact\templates\contact\contact.html:71
-msgid "*Subject"
-msgstr "*Asunto"
-
-#: .\contact\templates\contact\contact.html:81
-msgid "Message"
-msgstr "Mensaje"
-
-#: .\contact\templates\contact\contact.html:91
-#: .\contact\templates\contact\contact.html:190
+#: .\contact\templates\contact\contact.html:111
+#: .\contact\templates\contact\contact.html:222
 msgid "Send"
 msgstr "Enviar"
 
-#: .\contact\templates\contact\contact.html:98
+#: .\contact\templates\contact\contact.html:118
 msgid ""
 "If you got any questions <br>please do not hesitate to send us a message"
 msgstr "Si tiene alguna pregunta, no dude en enviarnos un mensaje"
 
-#: .\contact\templates\contact\contact.html:100
+#: .\contact\templates\contact\contact.html:120
 msgid "Your message was sent, We'll in contact with you"
 msgstr "Su mensaje ha sido enviado, estaremos en contacto con usted"
 
-#: .\contact\templates\contact\contact.html:103
+#: .\contact\templates\contact\contact.html:123
 msgid "Your message was not send, Please enter your data again"
 msgstr "Su mensaje no ha sido enviado, por favor ingrese sus datos de nuevo"
 
-#: .\contact\templates\contact\contact.html:106
+#: .\contact\templates\contact\contact.html:126
 msgid "Your quote was saved, We'll in contact with you"
 msgstr "Su cita ha sido guardada, estaremos en contacto con usted"
 
-#: .\contact\templates\contact\contact.html:109
+#: .\contact\templates\contact\contact.html:129
 msgid "Your quote was not saved, Please enter data again"
 msgstr "Su cita no ha sido guardada, por favor ingrese sus datos de nuevo"
 
-#: .\contact\templates\contact\contact.html:112
+#: .\contact\templates\contact\contact.html:132
 msgid ""
 "Your quote was not saved, The turn was not disponible please choose another"
 msgstr ""
 "Su cita no ha sido guardada, el turno seleccionado no se encuentra disponible"
 
-#: .\contact\templates\contact\contact.html:123
-msgid "Book your 30 minutes free phone consulting"
+#: .\contact\templates\contact\contact.html:143
+msgid "Book your 30 minutes free phone consultation"
 msgstr "Reserve su consulta telefónica gratuita de 30 minutos"
 
-#: .\contact\templates\contact\contact.html:124
+#: .\contact\templates\contact\contact.html:144
 msgid "Here"
 msgstr "Aquí"
 
-#: .\contact\templates\contact\contact.html:162
-#, fuzzy
-#| msgid "*Your Cell-Phone"
-msgid "*Cell-Phone"
-msgstr "*Número Telefónico"
-
-#: .\contact\templates\contact\contact.html:173
-msgid "Date"
-msgstr "Fecha"
-
-#: .\contact\templates\contact\contact.html:182
-msgid "Turn"
-msgstr "Turno"
-
-#: .\contact\templates\contact\contact.html:184
 #: .\contact\templates\contact\load_turns.html:3
 msgid "Select Your Turn"
 msgstr "Seleccione su Turno"
 
-#: .\core\templates\core\base.html:36 .\core\templates\core\home.html:5
+#: .\core\templates\core\base.html:34 .\core\templates\core\home.html:5
 msgid "Home"
 msgstr "Inicio"
 
-#: .\core\templates\core\base.html:39 .\our_team\templates\our_team\who.html:6
+#: .\core\templates\core\base.html:37 .\our_team\templates\our_team\who.html:6
 msgid "Who we are"
 msgstr "Quiénes Somos"
 
-#: .\core\templates\core\base.html:42
+#: .\core\templates\core\base.html:40
+#: .\services\templates\services\services.html:5
 msgid "Consulting Services"
 msgstr "Servicios de Consulta"
 
-#: .\core\templates\core\base.html:45
+#: .\core\templates\core\base.html:43
 #: .\questions\templates\questions\questions.html:5
 msgid "F.A.Q"
 msgstr "Preguntas Frecuentes"
 
-#: .\core\templates\core\base.html:48
+#: .\core\templates\core\base.html:46
 msgid "Blog"
 msgstr "Blog"
 
@@ -165,8 +128,8 @@ msgstr "Acerca de Nosotros"
 
 #: .\core\templates\core\home.html:24
 msgid ""
-"What Makes Us Different from Other HR Companies? Smart HR of South Florida "
-"provides a full Bilingual human resources solutions for small business. We "
+"What makes us different from other HR companies? Smart HR of South Florida "
+"provides a full bilingual human resources solutions for small business. We "
 "roll up our sleeves and become your small business HR department, or we "
 "advise you on the best solutions for your business – based exclusively on "
 "what your company needs. Our solutions are always tailored to fit your "
@@ -200,15 +163,15 @@ msgstr "REVISAR"
 msgid "Frequently Asked Questions"
 msgstr "Preguntas Frecuentes"
 
-#: .\questions\templates\questions\questions.html:22
+#: .\questions\templates\questions\questions.html:26
 msgid "What can a Human Resources"
 msgstr "¿Qué puede hacer un "
 
-#: .\questions\templates\questions\questions.html:23
+#: .\questions\templates\questions\questions.html:27
 msgid "Consultant do for me?"
 msgstr "consultor de recursos humanos por mí?"
 
-#: .\questions\templates\questions\questions.html:24
+#: .\questions\templates\questions\questions.html:28
 msgid ""
 "Outsourcing has become increasingly important as Human Resources "
 "professionals or small business owners seek ways to reduce time and "
@@ -223,8 +186,8 @@ msgstr ""
 "estratégicas. Esta reducción en tiempo y recursos también se traduce en "
 "ahorros para el negocio."
 
-#: .\questions\templates\questions\questions.html:24
-#: .\services\templates\services\services.html:57
+#: .\questions\templates\questions\questions.html:28
+#: .\services\templates\services\services.html:61
 msgid ""
 "But not all consulting services are the same- Smart HR Services will provide "
 "a Personalized and In Person presence to your business, making your "
@@ -236,7 +199,7 @@ msgstr ""
 "¡haciendo que sus empleados sientan que sí tienen soporte de Recursos "
 "Humanos en el lugar al que pueden comunicarse con preguntas y preocupaciones!"
 
-#: .\questions\templates\questions\questions.html:24
+#: .\questions\templates\questions\questions.html:28
 msgid ""
 "Besides giving in-house HR professionals or office personnel more "
 "opportunity to focus on strategy, outsourcing can:"
@@ -245,17 +208,17 @@ msgstr ""
 "personal de oficina más oportunidades para concentrarse en la estrategia, la "
 "subcontratación puede:"
 
-#: .\questions\templates\questions\questions.html:24
+#: .\questions\templates\questions\questions.html:28
 msgid "• Provide companies access to specialized HR expertise."
 msgstr ""
 "• Proporcionar a las empresas acceso a experiencia especializada en recursos "
 "humanos."
 
-#: .\questions\templates\questions\questions.html:24
+#: .\questions\templates\questions\questions.html:28
 msgid "• Help with regulatory compliance."
 msgstr "• Ayuda con el cumplimiento normativo."
 
-#: .\questions\templates\questions\questions.html:24
+#: .\questions\templates\questions\questions.html:28
 msgid ""
 "• Speed up response times on transactional HR functions such as benefits "
 "enrollment and payroll."
@@ -263,26 +226,26 @@ msgstr ""
 "• Acelerar los tiempos de respuesta en las funciones de recursos humanos "
 "transaccionales, como la inscripción de beneficios y la nómina."
 
-#: .\questions\templates\questions\questions.html:24
+#: .\questions\templates\questions\questions.html:28
 msgid "• Develop your company policies and processes among others…"
 msgstr "• Desarrolle las políticas y procesos de su empresa, entre otros ..."
 
-#: .\questions\templates\questions\questions.html:28
+#: .\questions\templates\questions\questions.html:32
 msgid "When to go In-House and when"
 msgstr "Cuando hacerlo uno mismo y cuando"
 
-#: .\questions\templates\questions\questions.html:29
+#: .\questions\templates\questions\questions.html:33
 msgid "to outsource HR?"
 msgstr "buscar un espcialista en Recursos Humanos"
 
-#: .\questions\templates\questions\questions.html:30
+#: .\questions\templates\questions\questions.html:34
 msgid ""
 "Have you considered outsourcing HR? If your business is new, perhaps not."
 msgstr ""
 "¿Has considerado la externalización de recursos humanos? Si su negocio es "
 "nuevo, tal vez no."
 
-#: .\questions\templates\questions\questions.html:30
+#: .\questions\templates\questions\questions.html:34
 msgid ""
 "When you first start your business, your priority is to hire people who are "
 "integral to building the product and growing the company."
@@ -291,7 +254,7 @@ msgstr ""
 "que sean parte integral de la construcción del producto y el crecimiento de "
 "la empresa."
 
-#: .\questions\templates\questions\questions.html:30
+#: .\questions\templates\questions\questions.html:34
 msgid ""
 "At some point though, a business grows big enough that it needs people to "
 "take care of the back office operations of the company. You need someone "
@@ -304,7 +267,7 @@ msgstr ""
 "entrevistas, enviar cartas de oferta, administrar la administración de "
 "beneficios y mucho, mucho más."
 
-#: .\questions\templates\questions\questions.html:30
+#: .\questions\templates\questions\questions.html:34
 msgid ""
 "The problem with that job is that it’s incredibly multifaceted, and it can "
 "be hard to find all those skills in one person."
@@ -312,15 +275,15 @@ msgstr ""
 "El problema con ese trabajo es que es increíblemente multifacético y puede "
 "ser difícil encontrar todas esas habilidades en una sola persona."
 
-#: .\questions\templates\questions\questions.html:34
+#: .\questions\templates\questions\questions.html:38
 msgid "Outsourcing HR? Understanding"
 msgstr "¿Outsourcing de recursos humanos?"
 
-#: .\questions\templates\questions\questions.html:35
+#: .\questions\templates\questions\questions.html:39
 msgid "the Costs and Benefits"
 msgstr "Comprenda los costos y beneficios"
 
-#: .\questions\templates\questions\questions.html:36
+#: .\questions\templates\questions\questions.html:40
 msgid ""
 "The question today is, do you need an internal HR staff? When is staffing up "
 "an HR department important, and when should you consider HR outsourcing?"
@@ -330,7 +293,7 @@ msgstr ""
 "humanos y cuándo debería considerar la contratación externa de recursos "
 "humanos?"
 
-#: .\questions\templates\questions\questions.html:36
+#: .\questions\templates\questions\questions.html:40
 msgid ""
 "The reality is, a well-functioning HR department (often in consultation with "
 "counsel) can ensure that you are compliant, have payroll figured out, "
@@ -345,15 +308,15 @@ msgstr ""
 "asegura de que los empleados actuales estén cómodos y que la cultura "
 "continúa mejorando."
 
-#: .\questions\templates\questions\questions.html:40
+#: .\questions\templates\questions\questions.html:44
 msgid "How Smart HR Services can"
 msgstr "¿Cómo Smart HR Services puede"
 
-#: .\questions\templates\questions\questions.html:41
+#: .\questions\templates\questions\questions.html:45
 msgid "save me money?"
 msgstr "ahórrarme dinero?"
 
-#: .\questions\templates\questions\questions.html:42
+#: .\questions\templates\questions\questions.html:46
 msgid ""
 "Whether you're in need of a short, mid, or long-term solution, we provide "
 "customized and flexible HR solutions to suit your Human Resources needs. We "
@@ -366,7 +329,7 @@ msgstr ""
 "sea como consultor independiente de servicios de recursos humanos o en "
 "conjunto con su equipo de recursos humanos existente."
 
-#: .\questions\templates\questions\questions.html:42
+#: .\questions\templates\questions\questions.html:46
 msgid ""
 "Current economic trends are now forcing businesses to consider process "
 "outsourcing of administrative functions to improve basic services and "
@@ -377,7 +340,7 @@ msgstr ""
 "para mejorar los servicios básicos y mantener el cumplimiento de las "
 "normativas en constante cambio."
 
-#: .\questions\templates\questions\questions.html:42
+#: .\questions\templates\questions\questions.html:46
 msgid ""
 "Outsourcing daily HR functions, recruitment processes, employee benefit "
 "administration and payroll allows key employees to focus on strategic "
@@ -390,7 +353,7 @@ msgstr ""
 "que benefician a la organización, aumentar la productividad y, por lo tanto, "
 "la rentabilidad."
 
-#: .\questions\templates\questions\questions.html:42
+#: .\questions\templates\questions\questions.html:46
 msgid ""
 "A full time HR manager in South Florida can conservatively cost the company "
 "$70,000 a year; having Smart HR Services as your trusted Human Resources "
@@ -405,15 +368,15 @@ msgstr ""
 "de experiencia disponibles para su negocio y sus empleados seguirán "
 "recibiendo la asistencia en persona que necesitarán."
 
-#: .\questions\templates\questions\questions.html:46
+#: .\questions\templates\questions\questions.html:50
 msgid "Which HR Functions Can be"
 msgstr "¿Qué funciones de recursos humanos se pueden "
 
-#: .\questions\templates\questions\questions.html:47
+#: .\questions\templates\questions\questions.html:51
 msgid "Outsourced?"
 msgstr "subcontratar?"
 
-#: .\questions\templates\questions\questions.html:48
+#: .\questions\templates\questions\questions.html:52
 msgid ""
 "HR covers a lot of ground, so it’s not always apparent which functions can "
 "be outsourced effectively. A good first step is defining what role you want "
@@ -426,7 +389,7 @@ msgstr ""
 "empresa; ¡Una consulta gratuita de 30 minutos con uno de nuestros "
 "consultores puede ayudarlo a crear una mejor imagen!"
 
-#: .\questions\templates\questions\questions.html:48
+#: .\questions\templates\questions\questions.html:52
 msgid ""
 "In general, HR provides the most value on strategic initiatives that have to "
 "do with building strong work teams, like recruiting, hiring, and developing "
@@ -441,53 +404,53 @@ msgstr ""
 "gestión de beneficios, la creación de políticas y la redacción de "
 "descripciones de trabajo."
 
-#: .\questions\templates\questions\questions.html:48
+#: .\questions\templates\questions\questions.html:52
 msgid "Here are a few common functions that HR outsourcing can be good for:"
 msgstr ""
 "Aquí hay algunas funciones comunes para las que la externalización de "
 "recursos humanos puede ser buena:"
 
-#: .\questions\templates\questions\questions.html:48
+#: .\questions\templates\questions\questions.html:52
 msgid "• Payroll services"
 msgstr "• Servicios de nómina"
 
-#: .\questions\templates\questions\questions.html:48
+#: .\questions\templates\questions\questions.html:52
 msgid "• Benefits administration, such as health coverage and 401(k)"
 msgstr "• Administración de beneficios, como cobertura de salud y 401 (k)"
 
-#: .\questions\templates\questions\questions.html:48
+#: .\questions\templates\questions\questions.html:52
 msgid "• Employee Assistance Program (EAP) and counseling"
 msgstr "• Programa de asistencia al empleado (EAP) y asesoramiento"
 
-#: .\questions\templates\questions\questions.html:48
+#: .\questions\templates\questions\questions.html:52
 msgid "• Training"
 msgstr "• Entrenamiento"
 
-#: .\questions\templates\questions\questions.html:48
+#: .\questions\templates\questions\questions.html:52
 msgid "• Employment-related compliance"
 msgstr "• Ayuda con el cumplimiento normativo."
 
-#: .\questions\templates\questions\questions.html:48
+#: .\questions\templates\questions\questions.html:52
 msgid "• Background screenings"
 msgstr "• Proyecciones de fondo"
 
-#: .\questions\templates\questions\questions.html:48
+#: .\questions\templates\questions\questions.html:52
 msgid "• On-boarding and Terminations"
 msgstr "• Incorporación y terminaciones compatibles"
 
-#: .\questions\templates\questions\questions.html:48
+#: .\questions\templates\questions\questions.html:52
 msgid "• Recruiting"
 msgstr "• Reclutamiento"
 
-#: .\questions\templates\questions\questions.html:48
+#: .\questions\templates\questions\questions.html:52
 msgid "• Employee/Culture assessment "
 msgstr "• Evaluación de empleo y cultura"
 
-#: .\questions\templates\questions\questions.html:48
+#: .\questions\templates\questions\questions.html:52
 msgid "• Annual planning and budgeting"
 msgstr "• Planificación y presupuesto anual."
 
-#: .\questions\templates\questions\questions.html:52
+#: .\questions\templates\questions\questions.html:56
 msgid ""
 "It’s so easy to take an all-or-nothing approach to the outsourcing of HR. "
 "But since each business is unique, one way to simplify the conversation "
@@ -500,11 +463,11 @@ msgstr ""
 "humanos o mantenerlo en la empresa es considerar la etapa de crecimiento de "
 "su negocio."
 
-#: .\questions\templates\questions\questions.html:52
+#: .\questions\templates\questions\questions.html:56
 msgid "0-10 Employees"
 msgstr "0-10 Empleados"
 
-#: .\questions\templates\questions\questions.html:52
+#: .\questions\templates\questions\questions.html:56
 msgid ""
 "If you’re running a new business; it can be easy to believe you can do it "
 "yourself. There are only a few of you, so what’s the worst that can happen?"
@@ -513,7 +476,7 @@ msgstr ""
 "usted mismo. Solo hay unos pocos de ustedes, entonces, ¿qué es lo peor que "
 "puede pasar? "
 
-#: .\questions\templates\questions\questions.html:52
+#: .\questions\templates\questions\questions.html:56
 msgid ""
 "Between managing benefits, payroll, time off, writing employee policies, "
 "hiring, firing, on-boarding, and everything else that’s going on, when will "
@@ -526,7 +489,7 @@ msgstr ""
 "inversores, desarrollar el producto o realizar desarrollos comerciales "
 "significativos?"
 
-#: .\questions\templates\questions\questions.html:52
+#: .\questions\templates\questions\questions.html:56
 msgid ""
 "At this stage, it often makes sense to outsource many HR functions. There "
 "are many companies and software platforms available to help you manage the "
@@ -543,7 +506,7 @@ msgstr ""
 "enfoque debe estar en el crecimiento y la gestión de su equipo, no si están "
 "recibiendo su sueldo a tiempo."
 
-#: .\questions\templates\questions\questions.html:52
+#: .\questions\templates\questions\questions.html:56
 msgid ""
 "Companies at this stage often consider hiring a part time Human Resources "
 "consultant, that can offer a very customized approach to cover your needs "
@@ -559,11 +522,11 @@ msgstr ""
 "muchas preguntas que surjan sobre la administración de su equipo y el "
 "cumplimiento legal."
 
-#: .\questions\templates\questions\questions.html:52
+#: .\questions\templates\questions\questions.html:56
 msgid "10-40 Employees"
 msgstr "10-40 Empleados"
 
-#: .\questions\templates\questions\questions.html:52
+#: .\questions\templates\questions\questions.html:56
 msgid ""
 "Your business is humming along and growing every day. At this stage, staying "
 "compliant becomes more of a concern and creating/maintaining the right "
@@ -574,7 +537,7 @@ msgstr ""
 "cultura, la moral y los valores correctos de la compañía pueden ser de suma "
 "importancia."
 
-#: .\questions\templates\questions\questions.html:52
+#: .\questions\templates\questions\questions.html:56
 msgid ""
 "Companies of this size might not big enough to have an HR manager, but they "
 "are big enough to know that Human Resources help is needed! And if you are "
@@ -585,7 +548,7 @@ msgstr ""
 "grandes como para saber que se necesita ayuda de Recursos Humanos. Y si está "
 "considerando si las empresas como Smart HR Services son una buena inversión."
 
-#: .\questions\templates\questions\questions.html:52
+#: .\questions\templates\questions\questions.html:56
 msgid ""
 "HR Outsourcing helps small companies that are in need of a Human Resources "
 "Professional on a part time basis relieving the overwhelmed owner or office "
@@ -601,7 +564,7 @@ msgstr ""
 "papel en su empresa, adoptando un enfoque bilingüe cuando sea necesario, "
 "para satisfacer también las necesidades de sus empleados."
 
-#: .\questions\templates\questions\questions.html:52
+#: .\questions\templates\questions\questions.html:56
 msgid ""
 "Smart HR Consulting works with management or HR professionals in a variety "
 "of different ways. We will work with you to develop an outsourcing model "
@@ -618,7 +581,7 @@ msgstr ""
 "papel en su empresa, adoptando un enfoque bilingüe cuando sea necesario, "
 "para satisfacer también las necesidades de sus empleados."
 
-#: .\services\templates\services\services.html:30
+#: .\services\templates\services\services.html:34
 msgid ""
 "HR Outsourcing helps small companies that are in need of a Human Resources "
 "Professional on a part time basis relieving the overwhelmed owner or office "
@@ -638,15 +601,15 @@ msgstr ""
 "papel en su empresa, adoptando un enfoque bilingüe cuando sea necesario, "
 "para satisfacer también las necesidades de sus empleados."
 
-#: .\services\templates\services\services.html:47
+#: .\services\templates\services\services.html:51
 msgid ""
 "We offer you, your own dedicated on site Hr Manager for a fraction of the "
 "cost!"
 msgstr ""
-"¡Le ofrecemos su propio Administrador de recursos humanos en su empresa por una "
-"fracción del costo!"
+"¡Le ofrecemos su propio Administrador de recursos humanos en su empresa por "
+"una fracción del costo!"
 
-#: .\services\templates\services\services.html:47
+#: .\services\templates\services\services.html:51
 msgid ""
 "Whether you're in need of a short, mid, or long-term solution, we provide a "
 "bilingual customized and flexible HR solutions to suit your HR needs. We "
@@ -659,12 +622,12 @@ msgstr ""
 "sea como consultor independiente de servicios de recursos humanos o en "
 "conjunto con su equipo de recursos humanos existente."
 
-#: .\services\templates\services\services.html:70
+#: .\services\templates\services\services.html:74
 msgid "Staffing & Recruiting"
 msgstr "Dotación de Personal y Reclutamiento"
 
-#: .\services\templates\services\services.html:71
-#: .\services\templates\services\services.html:131
+#: .\services\templates\services\services.html:75
+#: .\services\templates\services\services.html:135
 msgid ""
 "Many organizations lack the resources needed to effectively recruit and hire "
 "qualified professionals. Consider an on-demand solution."
@@ -673,27 +636,27 @@ msgstr ""
 "contratar de manera efectiva a profesionales calificados. Considere una "
 "solución a pedido."
 
-#: .\services\templates\services\services.html:76
+#: .\services\templates\services\services.html:80
 msgid "Temporary Recruitment Solutions"
 msgstr "Soluciones de Reclutamiento Temporal"
 
-#: .\services\templates\services\services.html:77
+#: .\services\templates\services\services.html:81
 msgid "Contract Recruitment"
 msgstr "Reclutadores por Contrato"
 
-#: .\services\templates\services\services.html:78
+#: .\services\templates\services\services.html:82
 msgid "Job Postings, Screening & Evaluation"
 msgstr "Ofertas de Trabajo, Proyección y Evaluación"
 
-#: .\services\templates\services\services.html:79
+#: .\services\templates\services\services.html:83
 msgid ""
 "Employee Value Proposition (EVP), Employment Branding, Candidate Experience, "
 "Social Media Strategy"
 msgstr ""
-"Propuesta de Valor del Empleado (EVP), Marca de Empleo, Experiencia del Candidato, "
-"Estrategia de Redes Sociales"
+"Propuesta de Valor del Empleado (EVP), Marca de Empleo, Experiencia del "
+"Candidato, Estrategia de Redes Sociales"
 
-#: .\services\templates\services\services.html:80
+#: .\services\templates\services\services.html:84
 msgid ""
 "Applicant Tracking Systems (ATS) – Recommendations, Optimization, "
 "Implementation"
@@ -701,20 +664,21 @@ msgstr ""
 "Sistemas de Seguimiento de Candidatos (ATS): Recomendaciones, Optimización, "
 "Implementación"
 
-#: .\services\templates\services\services.html:81
+#: .\services\templates\services\services.html:85
 msgid " Background Checks – References, Criminal, Credit, Education"
-msgstr " Verificaciones de Antecedentes: Referencias, Penal, de Crédito, Educación"
+msgstr ""
+" Verificaciones de Antecedentes: Referencias, Penal, de Crédito, Educación"
 
-#: .\services\templates\services\services.html:82
+#: .\services\templates\services\services.html:86
 msgid "Psychometric Testing, Competency Modelling"
 msgstr "Pruebas Psicométricas, Modelado de Competencias"
 
-#: .\services\templates\services\services.html:91
+#: .\services\templates\services\services.html:95
 msgid "HR General Consulting"
 msgstr "Auditoría y cumplimiento general de recursos humanos"
 
-#: .\services\templates\services\services.html:92
-#: .\services\templates\services\services.html:147
+#: .\services\templates\services\services.html:96
+#: .\services\templates\services\services.html:151
 msgid ""
 "Our experienced HR consultants can help you create an employee manual, "
 "handle layoffs, or assist with organizational development."
@@ -723,102 +687,104 @@ msgstr ""
 "ayudarlo a crear un manual para empleados, manejar despidos o ayudar con el "
 "desarrollo organizacional."
 
-#: .\services\templates\services\services.html:96
+#: .\services\templates\services\services.html:100
 msgid "Company Handbook development"
 msgstr "Desarrollo del Manual de la Empresa"
 
-#: .\services\templates\services\services.html:97
+#: .\services\templates\services\services.html:101
 msgid "Performance Management"
 msgstr "Gestión del Rendimiento"
 
-#: .\services\templates\services\services.html:98
+#: .\services\templates\services\services.html:102
 msgid "HRIS (Human Resources Information Systems)selection and implementation"
-msgstr "Selección e implementación de sistemas de información de recursos humanos (HRIS)"
+msgstr ""
+"Selección e implementación de sistemas de información de recursos humanos "
+"(HRIS)"
 
-#: .\services\templates\services\services.html:99
+#: .\services\templates\services\services.html:103
 msgid "Contingent Workforce Management"
 msgstr "Gestión Contingente de la Fuerza Laboral"
 
-#: .\services\templates\services\services.html:100
+#: .\services\templates\services\services.html:104
 msgid "HR Project Management"
 msgstr "Gestión de Proyectos de Recursos Humanos"
 
-#: .\services\templates\services\services.html:101
+#: .\services\templates\services\services.html:105
 msgid "Policy and Procedure Development"
 msgstr "Desarrollo de Políticas y Procedimientos"
 
-#: .\services\templates\services\services.html:102
-#: .\services\templates\services\services.html:137
+#: .\services\templates\services\services.html:106
+#: .\services\templates\services\services.html:141
 msgid "General HR Counsel"
 msgstr "Consejero General de Recursos Humanos"
 
-#: .\services\templates\services\services.html:111
+#: .\services\templates\services\services.html:115
 msgid "Payroll Precessing & Benefits Management"
 msgstr "Procesamiento de Nómina y Gestión de Beneficios"
 
-#: .\services\templates\services\services.html:112
+#: .\services\templates\services\services.html:116
 msgid ""
 "Your HR department may not be qualified to handle certain HR-related tasks. "
 "We can supply qualified specialists on an as-needed basis."
 msgstr ""
 "Es posible que su departamento de recursos humanos no esté calificado para "
-"manejar ciertas tareas relacionadas con recursos humanos."
-"Podemos suministrar especialistas calificados según sea necesario."
+"manejar ciertas tareas relacionadas con recursos humanos.Podemos suministrar "
+"especialistas calificados según sea necesario."
 
-#: .\services\templates\services\services.html:116
+#: .\services\templates\services\services.html:120
 msgid "Compensation and market analysis"
 msgstr "Compensación y análisis de mercado."
 
-#: .\services\templates\services\services.html:117
+#: .\services\templates\services\services.html:121
 msgid "Open Enrollment"
 msgstr "Inscripción Abierta"
 
-#: .\services\templates\services\services.html:118
+#: .\services\templates\services\services.html:122
 msgid "Processing payroll"
 msgstr "Procesamiento de Nómina"
 
-#: .\services\templates\services\services.html:119
+#: .\services\templates\services\services.html:123
 msgid "Benefits Administration and Selection"
 msgstr "Administración y Selección de Beneficios"
 
-#: .\services\templates\services\services.html:130
+#: .\services\templates\services\services.html:134
 msgid "HR Audit"
 msgstr "Auditoría de Recursos Humanos"
 
-#: .\services\templates\services\services.html:135
+#: .\services\templates\services\services.html:139
 msgid "Health & Safety"
 msgstr "Salud y Seguridad"
 
-#: .\services\templates\services\services.html:136
+#: .\services\templates\services\services.html:140
 msgid "Legal Compliance"
 msgstr "Cómplice Legal"
 
-#: .\services\templates\services\services.html:146
+#: .\services\templates\services\services.html:150
 msgid "Employee Relations"
 msgstr "Relaciones Laborales"
 
-#: .\services\templates\services\services.html:152
+#: .\services\templates\services\services.html:156
 msgid "Conflict resolution"
 msgstr "La resolución de conflictos"
 
-#: .\services\templates\services\services.html:153
+#: .\services\templates\services\services.html:157
 msgid "Downsizing"
 msgstr "Reducción de personal"
 
-#: .\services\templates\services\services.html:154
+#: .\services\templates\services\services.html:158
 msgid "Rewards"
 msgstr "Recompensas"
 
-#: .\services\templates\services\services.html:155
+#: .\services\templates\services\services.html:159
 msgid "Culture analysis and review"
 msgstr "Análisis y Revisión de Cultura."
 
-#: .\services\templates\services\services.html:156
+#: .\services\templates\services\services.html:160
 msgid "Workplace Investigations"
 msgstr "Investigaciones Laborales"
 
-#: .\services\templates\services\services.html:171
-#: .\services\templates\services\services.html:177
+#: .\services\templates\services\services.html:175
+#: .\services\templates\services\services.html:181
 msgid ""
 "Whether you're in need of a short, mid, or long-term solution, we provide "
 "customized and flexible HR solutions to suit your Human Resources needs. We "
@@ -833,86 +799,87 @@ msgid ""
 msgstr ""
 "Ya sea que necesite una solución a corto, mediano o largo plazo, ofrecemos "
 "soluciones de recursos humanos personalizadas y flexibles para satisfacer "
-"sus necesidades de Recursos Humanos. Trabajamos dentro o fuera del sitio, "
-"ya sea como consultor independiente de servicios de recursos humanos o en "
+"sus necesidades de Recursos Humanos. Trabajamos dentro o fuera del sitio, ya "
+"sea como consultor independiente de servicios de recursos humanos o en "
 "conjunto con su equipo de recursos humanos existente. Las tendencias "
 "económicas actuales están obligando a las empresas a considerar la "
-"externalización de procesos de las funciones administrativas para "
-"mejorar los servicios básicos y mantener el cumplimiento de las "
-"normativas en constante cambio. La externalización de las funciones "
-"diarias de recursos humanos, los procesos de reclutamiento, la administración "
-"de beneficios de los empleados y la nómina permite a los empleados clave "
-"centrarse en iniciativas estratégicas que benefician a la organización, "
-"aumentar la productividad y, por lo tanto, la rentabilidad."
+"externalización de procesos de las funciones administrativas para mejorar "
+"los servicios básicos y mantener el cumplimiento de las normativas en "
+"constante cambio. La externalización de las funciones diarias de recursos "
+"humanos, los procesos de reclutamiento, la administración de beneficios de "
+"los empleados y la nómina permite a los empleados clave centrarse en "
+"iniciativas estratégicas que benefician a la organización, aumentar la "
+"productividad y, por lo tanto, la rentabilidad."
 
-#: .\services\templates\services\services.html:172
 #: .\services\templates\services\services.html:176
+#: .\services\templates\services\services.html:180
 msgid "Bilingual HR Consulting for Small Businesses"
 msgstr "Consultoría Bilingüe de Recursos Humanos para Pequeñas Empresas"
 
-#: .\services\templates\services\services.html:188
-#: .\services\templates\services\services.html:198
+#: .\services\templates\services\services.html:192
+#: .\services\templates\services\services.html:202
 msgid ""
 "Smart HR of South Florida gives you a dedicated HR manager who can help you "
 "craft a new HR policy, maintain compliance, onboard new employees or process "
 "your payroll- You decide what services you need and how often do you require "
 "our support."
 msgstr ""
-"Smart HR of South Florida le brinda un administrador de recursos humanos dedicado "
-"que puede ayudarlo a elaborar una nueva política de recursos humanos, mantener el "
-"cumplimiento, incorporar nuevos empleados o procesar su nómina: usted decide qué "
-"servicios necesita y con qué frecuencia necesita nuestro apoyo."
+"Smart HR of South Florida le brinda un administrador de recursos humanos "
+"dedicado que puede ayudarlo a elaborar una nueva política de recursos "
+"humanos, mantener el cumplimiento, incorporar nuevos empleados o procesar su "
+"nómina: usted decide qué servicios necesita y con qué frecuencia necesita "
+"nuestro apoyo."
 
-#: .\services\templates\services\services.html:189
-#: .\services\templates\services\services.html:197
+#: .\services\templates\services\services.html:193
+#: .\services\templates\services\services.html:201
 msgid "Your Own Dedicated Bilingual HR Manager"
 msgstr "Su Propio Gerente de Recursos Humanos Bilingüe Dedicado"
 
-#: .\services\templates\services\services.html:203
-#: .\services\templates\services\services.html:227
+#: .\services\templates\services\services.html:207
+#: .\services\templates\services\services.html:231
 msgid "HR Policy & Procedures"
 msgstr "Política y Procedimientos de recursos humanos"
 
-#: .\services\templates\services\services.html:204
+#: .\services\templates\services\services.html:208
 msgid ""
 "We’ll work with you to craft your internal HR policies that fit the way you "
 "run your business."
 msgstr ""
-"Trabajaremos con usted para elaborar sus políticas internas de recursos humanos "
-"que se ajusten a la forma en que maneja su negocio."
+"Trabajaremos con usted para elaborar sus políticas internas de recursos "
+"humanos que se ajusten a la forma en que maneja su negocio."
 
-#: .\services\templates\services\services.html:207
+#: .\services\templates\services\services.html:211
 msgid "Payroll Processing Services & Benefits Management"
 msgstr "Servicios de Procesamiento de Nómina y Gestión de Beneficios"
 
-#: .\services\templates\services\services.html:208
+#: .\services\templates\services\services.html:212
 msgid ""
 "Your HR department may not be qualified to handle certain payroll and "
 "benefits related tasks. We can supply qualified specialists on an as-needed "
 "basis"
 msgstr ""
-"Es posible que su departamento de recursos humanos no esté calificado para manejar "
-"ciertas tareas relacionadas con la nómina y los beneficios. Podemos suministrar "
-"especialistas calificados según sea necesario"
+"Es posible que su departamento de recursos humanos no esté calificado para "
+"manejar ciertas tareas relacionadas con la nómina y los beneficios. Podemos "
+"suministrar especialistas calificados según sea necesario"
 
-#: .\services\templates\services\services.html:211
+#: .\services\templates\services\services.html:215
 msgid "Employer Coaching & Guidance"
 msgstr "Entrenamiento y Guia del empleador"
 
-#: .\services\templates\services\services.html:212
+#: .\services\templates\services\services.html:216
 msgid ""
 "Full remote or onsite HR support, available to help by phone, email, or in "
 "person. Consider us an extension of your team."
 msgstr ""
-"Soporte de recursos humanos remoto o en el sitio, disponible para "
-"ayudar por teléfono, correo electrónico o en persona. Considéranos una "
-"extensión de tu equipo." 
+"Soporte de recursos humanos remoto o en el sitio, disponible para ayudar por "
+"teléfono, correo electrónico o en persona. Considéranos una extensión de tu "
+"equipo."
 
-#: .\services\templates\services\services.html:215
+#: .\services\templates\services\services.html:219
 msgid "Compliant Onboarding & Terminations"
 msgstr "Incorporación y Terminaciones Compatibles"
 
-#: .\services\templates\services\services.html:216
+#: .\services\templates\services\services.html:220
 msgid ""
 "We will guide and train your management team to successfully onboard, "
 "terminate, and take corrective action with your employees to set them up for "
@@ -922,23 +889,23 @@ msgstr ""
 "termine y tome medidas correctivas con sus empleados con éxito para "
 "prepararlos para el éxito"
 
-#: .\services\templates\services\services.html:219
+#: .\services\templates\services\services.html:223
 msgid "General & Compensation Compliance"
 msgstr "Cumplimiento General y de Compensación"
 
-#: .\services\templates\services\services.html:220
+#: .\services\templates\services\services.html:224
 msgid ""
 "Smart HR makes sure your business stays compliant with nuanced wage and hour "
 "regulations."
 msgstr ""
-"Smart HR se asegura de que su empresa cumpla con las regulaciones matizadas de "
-"salarios y horas."
+"Smart HR se asegura de que su empresa cumpla con las regulaciones matizadas "
+"de salarios y horas."
 
-#: .\services\templates\services\services.html:223
+#: .\services\templates\services\services.html:227
 msgid "Staffing and Recruiting"
 msgstr "Dotación de Personal y Reclutamiento"
 
-#: .\services\templates\services\services.html:224
+#: .\services\templates\services\services.html:228
 msgid ""
 "Many organizations lack the resources needed to effectively recruit and hire "
 "qualified professionals."
@@ -946,7 +913,7 @@ msgstr ""
 "Muchas organizaciones carecen de los recursos necesarios para reclutar y "
 "contratar de manera efectiva a profesionales calificados."
 
-#: .\services\templates\services\services.html:228
+#: .\services\templates\services\services.html:232
 msgid ""
 "Happy employees directly translate to amazing customer services; let your "
 "employees be your best advertisement."
@@ -954,18 +921,18 @@ msgstr ""
 "Los empleados felices se traducen directamente en increíbles servicios al "
 "cliente; deja que tus empleados sean tu mejor anuncio."
 
-#: .\services\templates\services\services.html:231
+#: .\services\templates\services\services.html:235
 msgid "General HR Consulting"
 msgstr "Consultoría General de Recursos Humanos"
 
-#: .\services\templates\services\services.html:232
+#: .\services\templates\services\services.html:236
 msgid ""
 "Our experienced HR consultants can help you create an employee manual, "
 "handle layoffs, or assist with organizational development"
 msgstr ""
-"Nuestros experimentados consultores de recursos humanos pueden ayudarlo "
-"a crear un manual para empleados, manejar despidos o ayudar con "
-"el desarrollo organizacional"
+"Nuestros experimentados consultores de recursos humanos pueden ayudarlo a "
+"crear un manual para empleados, manejar despidos o ayudar con el desarrollo "
+"organizacional"
 
 #: .\templates\admin\base_site.html:60
 msgid "View site"
@@ -998,6 +965,33 @@ msgstr "Limpiar"
 #: .\templates\admin\base_site.html:101 .\templates\admin\base_site.html:111
 msgid "Ok"
 msgstr "Ok"
+
+#, fuzzy
+#~| msgid "*Your Name"
+#~ msgid "*Name"
+#~ msgstr "*Nombres"
+
+#, fuzzy
+#~| msgid "*Your LastName"
+#~ msgid "*LastName"
+#~ msgstr "*Apellidos"
+
+#~ msgid "*Subject"
+#~ msgstr "*Asunto"
+
+#~ msgid "Message"
+#~ msgstr "Mensaje"
+
+#, fuzzy
+#~| msgid "*Your Cell-Phone"
+#~ msgid "*Cell-Phone"
+#~ msgstr "*Número Telefónico"
+
+#~ msgid "Date"
+#~ msgstr "Fecha"
+
+#~ msgid "Turn"
+#~ msgstr "Turno"
 
 #, fuzzy
 #~ msgid "Questions"
